@@ -1,0 +1,50 @@
+基于GridGraph的图计算应用实现
+
+
+作业说明
+
+基于GridGraph ( https://github.com/thu-pacman/GridGraph ) 实现任意两个下列的图计算应用：
+
+PageRank-Delta (https://github.com/epfl-labos/x-stream/blob/master/algorithms/pagerank/pagerank_ddf.hpp)
+
+K-Cores (https://github.com/GraphChi/graphchi-cpp/blob/master/toolkits/graph_analytics/kcores.cpp)
+
+Hyper-ANF (https://github.com/epfl-labos/x-stream/blob/master/algorithms/hyper-anf/hyper-anf.hpp)
+
+Conductance (https://github.com/epfl-labos/x-stream/blob/master/algorithms/scan/conductance.hpp)
+
+
+
+
+数据集：
+
+twitter-2010 (|V|=41652230): http://pacman.cs.tsinghua.edu.cn/~zxw/data/gridgraph_hw/twitter.rar
+
+uk-2007-05 (|V|=105896555): http://pacman.cs.tsinghua.edu.cn/~zxw/data/gridgraph_hw/uk.rar
+
+解压后即可作为GridGraph预处理程序的输入使用。
+
+
+
+
+实验环境：
+
+任意一台电脑（请在报告中描述此电脑的配置信息，包括CPU/内存/硬盘配置等）。
+
+
+
+
+作业提交内容：
+
+1) 基于GridGraph的实现代码。
+
+2) 技术报告（实现的思路、细节、优化、在twitter-2010或uk-2007-05上的性能等）。
+
+
+
+
+提示：
+
+1) 括号内为GraphChi/X-Stream对应程序的实现，供参考。
+
+2) 有些应用要求输入为无向图，而提供的数据集均为有向图，此时需要先将输入转为无向图再进行处理。
