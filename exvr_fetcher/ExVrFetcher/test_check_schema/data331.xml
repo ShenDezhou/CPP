@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="gbk"?>
+<DOCUMENT>
+	<item>
+		<key>经济学</key>
+		<display>
+			<title><![CDATA[北京经济学专业历年高考录取分数线__中国教育在线]]></title>
+			<url><![CDATA[http://gkcx.eol.cn/soudaxue/querySpecialtyScore.html?province=%E5%8C%97%E4%BA%AC&fstype=&keyWord=%E7%BB%8F%E6%B5%8E%E5%AD%A6]]></url>
+			<showurl><![CDATA[gkcx.eol.cn]]></showurl>
+			<date>${sogouToday}</date>
+			<tab content="2012年" current="1">
+				<sub_tab content="理科分数线" current="1">	
+					<form th="1"> 
+						<col content="院校" position="left"/> 
+						<col content="专业名称" position="left" >
+							<col2 content="专业名称ddd" position="left" />
+						</col>
+						<col content="生源地" position="left"/> 
+						<col content="批次" position="left"/> 
+						<col content="年份" position="left"/> 
+						<col content="平均分" position="left"/> 
+					</form> 
+					<form> 
+					<col content="北京大学" link="http://gkcx.eol.cn/schoolhtm/schoolTemple/school31.htm" position="left"/> 
+					<col content="经济学类" link="" position="left"> 
+                        <col2 content="经济学类fzzzzzzzz" link="" position="left" />
+					</col>
+					<col content="北京" position="left"/> 
+					<col content="一批" link="" position="left"/> 
+					<col content="2012" position="left"/> 
+					<col content="664" position="left"/> 
+					</form> 
+					<form> 
+					<col content="南京大学" link="http://gkcx.eol.cn/schoolhtm/schoolTemple/school111.htm" position="left"/> 
+					<col content="经济学类" link="" position="left"/> 
+					<col content="北京" position="left"/> 
+					<col content="一批" link="" position="left"/> 
+					<col content="2012" position="left"/> 
+					<col content="651" position="left"/> 
+					</form> 
+					<form> 
+					<col content="中国人民大学" link="http://gkcx.eol.cn/schoolhtm/schoolTemple/school46.htm" position="left"/> 
+					<col content="经济学" link="" position="left"/> 
+					<col content="北京" position="left"/> 
+					<col content="一批" link="" position="left"/> 
+					<col content="2012" position="left"/> 
+					<col content="650" position="left"/> 
+					</form> 
+					<form> 
+					<col content="上海交通大学" link="http://gkcx.eol.cn/schoolhtm/schoolTemple/school125.htm" position="left"/> 
+					<col content="经济学类" link="" position="left"/> 
+					<col content="北京" position="left"/> 
+					<col content="一批" link="" position="left"/> 
+					<col content="2012" position="left"/> 
+					<col content="646" position="left"/> 
+					</form> 
+					<form> 
+					<col content="对外经济贸易大学" link="http://gkcx.eol.cn/schoolhtm/schoolTemple/school53.htm" position="left"/> 
+					<col content="经济学类" link="" position="left"/> 
+					<col content="北京" position="left"/> 
+					<col content="一批" link="" position="left"/> 
+					<col content="2012" position="left"/> 
+					<col content="634" position="left"/> 
+					</form> 
+					<extinfo> 
+					<link_left content="查看所有分数线" url="http://gkcx.eol.cn/soudaxue/querySpecialtyScore.html?keyWord=%E7%BB%8F%E6%B5%8E%E5%AD%A6&amp;province=%E5%8C%97%E4%BA%AC&amp;fstype=%E7%90%86%E7%A7%91&amp;fsyear=2012"/> 
+					</extinfo>
+				</sub_tab>
+				<sub_tab content="文科分数线" current="0">	
+					<form th="1"> 
+						<col content="院校" position="left"/> 
+						<col content="专业名称" position="left"/> 
+						<col content="生源地" position="left"/> 
+						<col content="批次" position="left"/> 
+						<col content="年份" position="left"/> 
+						<col content="平均分" position="left"/> 
+					</form> 
+					<form> 
+					<col content="北京大学" link="http://gkcx.eol.cn/schoolhtm/schoolTemple/school31.htm" position="left"/> 
+					<col content="经济学类" link="" position="left"/> 
+					<col content="北京" position="left"/> 
+					<col content="一批" link="" position="left"/> 
+					<col content="2012" position="left"/> 
+					<col content="630" position="left"/> 
+					</form> 
+					<form> 
+					<col content="中山大学" link="http://gkcx.eol.cn/schoolhtm/schoolTemple/school104.htm" position="left"/> 
+					<col content="经济学类" link="" position="left"/> 
+					<col content="北京" position="left"/> 
+					<col content="一批" link="" position="left"/> 
+					<col content="2012" position="left"/> 
+					<col content="612" position="left"/> 
+					</form> 
+					<form> 
+					<col content="中国人民大学" link="http://gkcx.eol.cn/schoolhtm/schoolTemple/school46.htm" position="left"/> 
+					<col content="经济学" link="" position="left"/> 
+					<col content="北京" position="left"/> 
+					<col content="一批" link="" position="left"/> 
+					<col content="2012" position="left"/> 
+					<col content="607" position="left"/> 
+					</form> 
+					<form> 
+					<col content="上海交通大学" link="http://gkcx.eol.cn/schoolhtm/schoolTemple/school125.htm" position="left"/> 
+					<col content="经济学类" link="" position="left"/> 
+					<col content="北京" position="left"/> 
+					<col content="一批" link="" position="left"/> 
+					<col content="2012" position="left"/> 
+					<col content="607" position="left"/> 
+					</form> 
+					<form> 
+					<col content="对外经济贸易大学" link="http://gkcx.eol.cn/schoolhtm/schoolTemple/school53.htm" position="left"/> 
+					<col content="经济学类" link="" position="left"/> 
+					<col content="北京" position="left"/> 
+					<col content="一批" link="" position="left"/> 
+					<col content="2012" position="left"/> 
+					<col content="600" position="left"/> 
+					</form> 
+					<extinfo> 
+					<link_left content="查看所有分数线" url="http://gkcx.eol.cn/soudaxue/querySpecialtyScore.html?keyWord=%E7%BB%8F%E6%B5%8E%E5%AD%A6&amp;province=%E5%8C%97%E4%BA%AC&amp;fstype=%E6%96%87%E7%A7%91&amp;fsyear=2012"/> 
+					</extinfo>
+				</sub_tab>
+			</tab>			
+			<tab content="2011年" current="0">
+				<sub_tab content="理科分数线" current="1">	
+					<form th="1"> 
+						<col content="院校" position="left"/> 
+						<col content="专业名称" position="left"/> 
+						<col content="生源地" position="left"/> 
+						<col content="批次" position="left"/> 
+						<col content="年份" position="left"/> 
+						<col content="平均分" position="left"/> 
+					</form> 
+					<form> 
+					<col content="北京大学" link="http://gkcx.eol.cn/schoolhtm/schoolTemple/school31.htm" position="left"/> 
+					<col content="经济学类" link="" position="left"/> 
+					<col content="北京" position="left"/> 
+					<col content="一批" link="" position="left"/> 
+					<col content="2011" position="left"/> 
+					<col content="665" position="left"/> 
+					</form> 
+					<form> 
+					<col content="中国人民大学" link="http://gkcx.eol.cn/schoolhtm/schoolTemple/school46.htm" position="left"/> 
+					<col content="经济学" link="" position="left"/> 
+					<col content="北京" position="left"/> 
+					<col content="一批" link="" position="left"/> 
+					<col content="2011" position="left"/> 
+					<col content="650" position="left"/> 
+					</form> 
+					<form> 
+					<col content="南京大学" link="http://gkcx.eol.cn/schoolhtm/schoolTemple/school111.htm" position="left"/> 
+					<col content="经济学类" link="" position="left"/> 
+					<col content="北京" position="left"/> 
+					<col content="一批" link="" position="left"/> 
+					<col content="2011" position="left"/> 
+					<col content="633" position="left"/> 
+					</form> 
+					<form> 
+					<col content="南开大学" link="http://gkcx.eol.cn/schoolhtm/schoolTemple/school59.htm" position="left"/> 
+					<col content="经济学" link="" position="left"/> 
+					<col content="北京" position="left"/> 
+					<col content="一批" link="" position="left"/> 
+					<col content="2011" position="left"/> 
+					<col content="632" position="left"/> 
+					</form> 
+					<form> 
+					<col content="上海交通大学" link="http://gkcx.eol.cn/schoolhtm/schoolTemple/school125.htm" position="left"/> 
+					<col content="经济学类" link="" position="left"/> 
+					<col content="北京" position="left"/> 
+					<col content="一批" link="" position="left"/> 
+					<col content="2011" position="left"/> 
+					<col content="631" position="left"/> 
+					</form> 
+					<extinfo> 
+					<link_left content="查看所有分数线" url="http://gkcx.eol.cn/soudaxue/querySpecialtyScore.html?keyWord=%E7%BB%8F%E6%B5%8E%E5%AD%A6&amp;province=%E5%8C%97%E4%BA%AC&amp;fstype=%E7%90%86%E7%A7%91&amp;fsyear=2011"/> 
+					</extinfo>
+				</sub_tab>
+				<sub_tab content="文科分数线" current="0">	
+					<form th="1"> 
+						<col content="院校" position="left"/> 
+						<col content="专业名称" position="left"/> 
+						<col content="生源地" position="left"/> 
+						<col content="批次" position="left"/> 
+						<col content="年份" position="left"/> 
+						<col content="平均分" position="left"/> 
+					</form> 
+					<form> 
+					<col content="北京大学" link="http://gkcx.eol.cn/schoolhtm/schoolTemple/school31.htm" position="left"/> 
+					<col content="经济学类" link="" position="left"/> 
+					<col content="北京" position="left"/> 
+					<col content="一批" link="" position="left"/> 
+					<col content="2011" position="left"/> 
+					<col content="650" position="left"/> 
+					</form> 
+					<form> 
+					<col content="中国人民大学" link="http://gkcx.eol.cn/schoolhtm/schoolTemple/school46.htm" position="left"/> 
+					<col content="经济学" link="" position="left"/> 
+					<col content="北京" position="left"/> 
+					<col content="一批" link="" position="left"/> 
+					<col content="2011" position="left"/> 
+					<col content="634" position="left"/> 
+					</form> 
+					<form> 
+					<col content="上海交通大学" link="http://gkcx.eol.cn/schoolhtm/schoolTemple/school125.htm" position="left"/> 
+					<col content="经济学类" link="" position="left"/> 
+					<col content="北京" position="left"/> 
+					<col content="一批" link="" position="left"/> 
+					<col content="2011" position="left"/> 
+					<col content="629" position="left"/> 
+					</form> 
+					<form> 
+					<col content="南京大学" link="http://gkcx.eol.cn/schoolhtm/schoolTemple/school111.htm" position="left"/> 
+					<col content="经济学类" link="" position="left"/> 
+					<col content="北京" position="left"/> 
+					<col content="一批" link="" position="left"/> 
+					<col content="2011" position="left"/> 
+					<col content="625" position="left"/> 
+					</form> 
+					<form> 
+					<col content="对外经济贸易大学" link="http://gkcx.eol.cn/schoolhtm/schoolTemple/school53.htm" position="left"/> 
+					<col content="经济学类" link="" position="left"/> 
+					<col content="北京" position="left"/> 
+					<col content="一批" link="" position="left"/> 
+					<col content="2011" position="left"/> 
+					<col content="619" position="left"/> 
+					</form> 
+					<extinfo> 
+					<link_left content="查看所有分数线" url="http://gkcx.eol.cn/soudaxue/querySpecialtyScore.html?keyWord=%E7%BB%8F%E6%B5%8E%E5%AD%A6&amp;province=%E5%8C%97%E4%BA%AC&amp;fstype=%E6%96%87%E7%A7%91&amp;fsyear=2011"/> 
+					</extinfo>
+				</sub_tab>
+			</tab>			
+			<tab content="2010年" current="0">
+				<sub_tab content="理科分数线" current="1">	
+					<form th="1"> 
+						<col content="院校" position="left"/> 
+						<col content="专业名称" position="left"/> 
+						<col content="生源地" position="left"/> 
+						<col content="批次" position="left"/> 
+						<col content="年份" position="left"/> 
+						<col content="平均分" position="left"/> 
+					</form> 
+					<form> 
+					<col content="北京大学" link="http://gkcx.eol.cn/schoolhtm/schoolTemple/school31.htm" position="left"/> 
+					<col content="经济学类" link="" position="left"/> 
+					<col content="北京" position="left"/> 
+					<col content="一批" link="" position="left"/> 
+					<col content="2010" position="left"/> 
+					<col content="676" position="left"/> 
+					</form> 
+					<form> 
+					<col content="复旦大学" link="http://gkcx.eol.cn/schoolhtm/schoolTemple/school132.htm" position="left"/> 
+					<col content="经济学类" link="" position="left"/> 
+					<col content="北京" position="left"/> 
+					<col content="一批" link="" position="left"/> 
+					<col content="2010" position="left"/> 
+					<col content="652" position="left"/> 
+					</form> 
+					<form> 
+					<col content="南京大学" link="http://gkcx.eol.cn/schoolhtm/schoolTemple/school111.htm" position="left"/> 
+					<col content="经济学类" link="" position="left"/> 
+					<col content="北京" position="left"/> 
+					<col content="一批" link="" position="left"/> 
+					<col content="2010" position="left"/> 
+					<col content="645" position="left"/> 
+					</form> 
+					<form> 
+					<col content="上海交通大学" link="http://gkcx.eol.cn/schoolhtm/schoolTemple/school125.htm" position="left"/> 
+					<col content="经济学类" link="" position="left"/> 
+					<col content="北京" position="left"/> 
+					<col content="一批" link="" position="left"/> 
+					<col content="2010" position="left"/> 
+					<col content="641" position="left"/> 
+					</form> 
+					<form> 
+					<col content="对外经济贸易大学" link="http://gkcx.eol.cn/schoolhtm/schoolTemple/school53.htm" position="left"/> 
+					<col content="经济学类" link="" position="left"/> 
+					<col content="北京" position="left"/> 
+					<col content="一批" link="" position="left"/> 
+					<col content="2010" position="left"/> 
+					<col content="637" position="left"/> 
+					</form> 
+					<extinfo> 
+					<link_left content="查看所有分数线" url="http://gkcx.eol.cn/soudaxue/querySpecialtyScore.html?keyWord=%E7%BB%8F%E6%B5%8E%E5%AD%A6&amp;province=%E5%8C%97%E4%BA%AC&amp;fstype=%E7%90%86%E7%A7%91&amp;fsyear=2010"/> 
+					</extinfo>
+				</sub_tab>
+				<sub_tab content="文科分数线" current="0">	
+					<form th="1"> 
+						<col content="院校" position="left"/> 
+						<col content="专业名称" position="left"/> 
+						<col content="生源地" position="left"/> 
+						<col content="批次" position="left"/> 
+						<col content="年份" position="left"/> 
+						<col content="平均分" position="left"/> 
+					</form> 
+					<form> 
+					<col content="北京大学" link="http://gkcx.eol.cn/schoolhtm/schoolTemple/school31.htm" position="left"/> 
+					<col content="经济学类" link="" position="left"/> 
+					<col content="北京" position="left"/> 
+					<col content="一批" link="" position="left"/> 
+					<col content="2010" position="left"/> 
+					<col content="651" position="left"/> 
+					</form> 
+					<form> 
+					<col content="中国人民大学" link="http://gkcx.eol.cn/schoolhtm/schoolTemple/school46.htm" position="left"/> 
+					<col content="经济学" link="" position="left"/> 
+					<col content="北京" position="left"/> 
+					<col content="一批" link="" position="left"/> 
+					<col content="2010" position="left"/> 
+					<col content="633" position="left"/> 
+					</form> 
+					<form> 
+					<col content="西南交通大学" link="http://gkcx.eol.cn/schoolhtm/schoolTemple/school51.htm" position="left"/> 
+					<col content="经济学" link="" position="left"/> 
+					<col content="北京" position="left"/> 
+					<col content="一批" link="" position="left"/> 
+					<col content="2010" position="left"/> 
+					<col content="619" position="left"/> 
+					</form> 
+					<form> 
+					<col content="复旦大学" link="http://gkcx.eol.cn/schoolhtm/schoolTemple/school132.htm" position="left"/> 
+					<col content="经济学类" link="" position="left"/> 
+					<col content="北京" position="left"/> 
+					<col content="一批" link="" position="left"/> 
+					<col content="2010" position="left"/> 
+					<col content="618" position="left"/> 
+					</form> 
+					<form> 
+					<col content="南京大学" link="http://gkcx.eol.cn/schoolhtm/schoolTemple/school111.htm" position="left"/> 
+					<col content="经济学类" link="" position="left"/> 
+					<col content="北京" position="left"/> 
+					<col content="一批" link="" position="left"/> 
+					<col content="2010" position="left"/> 
+					<col content="615" position="left"/> 
+					</form> 
+					<extinfo> 
+					<link_left content="查看所有分数线" url="http://gkcx.eol.cn/soudaxue/querySpecialtyScore.html?keyWord=%E7%BB%8F%E6%B5%8E%E5%AD%A6&amp;province=%E5%8C%97%E4%BA%AC&amp;fstype=%E6%96%87%E7%A7%91&amp;fsyear=2010"/> 
+					</extinfo>
+				</sub_tab>
+			</tab>			
+		</display>
+		<location><![CDATA[北京]]></location> 
+	</item>
+</DOCUMENT>

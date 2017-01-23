@@ -1,0 +1,32 @@
+Fake_Spider 使用说明-2014.12.24
+===============================
+
+  1.所有可配置项均在fake_spider.cfg中进行配置,fake的可执行程序无需带任何参数运行
+  2.配置文件中的可配置项是固定的,不可以添加新的配置项,可改变顺序,可删除属性
+  3.配置文件中配置的属性均在双引号中
+
+-------------------------------
+配置文件说明：
+  
+  ClassId - 配置当前处理xml的VRID
+  Tag     - 配置当前VR的名称
+  
+  IsGetOnline - 配置是/否(1/0)从url获取数据源xml
+  XmlUrl      - 配置获取数据源xml的url,IsGetOnline为1时有效
+  SrcXml      - 配置本地数据源xml的路径,IsGetOnline为0时有效
+
+  XmlPageReaderAddress     - Reader地址
+  MultiHitXmlReaderAddress - 多命中Reader地址
+
+  多命中VR属性配置
+  ----------------
+  Annotation - 配置标红字段,xpath0:value0;xpath1:value1...
+  Index      - 配置索引字段,xpath0:value0;xpath1:value1...
+  Sort       - 配置排序字段,xpath0:value0;xpath1:value1...
+  Group      - 配置多命中分组字段,xpath0:value0;xpath1:value1...
+   
+  配置格式为[xpath:value],":"后跟属性值,多条配置用";"分隔
+  
+  例如:
+    "Annotation"="//item/display/name:1;//item/display/title:0"
+    **如果不添加属性则将等号右侧置为空串("")即可,如"Index"=""

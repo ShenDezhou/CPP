@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="gbk"?>
+<DOCUMENT>
+<item>
+<key><![CDATA[北京分数线]]></key>
+<display>
+<url><![CDATA[http://kaoshi.edu.sina.com.cn/collegedb/pici.php?provid=1&year=2011]]></url>
+<title><![CDATA[2011北京高考分数线_新浪高考]]></title>
+<showurl><![CDATA[kaoshi.edu.sina.com.cn]]></showurl>
+<date>${sogouToday}</date>
+<form col0="文理科" col0link="" col1="批次名称" col1link="" col2="最低控制分数线" col2link="" />
+<form col0="理科" col0link="" col1="本科一批" col1link="" col2="484" col2link="" />
+<form col0="理科" col0link="" col1="本科二批" col1link="" col2="435" col2link="" />
+<form col0="文科" col0link="" col1="本科一批" col1link="" col2="524" col2link="" />
+<form col0="文科" col0link="" col1="本科二批" col1link="" col2="481" col2link="" />
+<link linkurl="http://kaoshi.edu.sina.com.cn/collegedb/pici.php?provid=1&amp;year=2011" linkcontent="更多" />
+</display>
+</item>
+</DOCUMENT>

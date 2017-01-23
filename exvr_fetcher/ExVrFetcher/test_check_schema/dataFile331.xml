@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="gbk"?>
+<!-- XML文档需以gbk方式编码-->
+<!-- 带两层tab的通用模板 -->
+<!-- 段落不可混排 -->
+<DOCUMENT>
+<!--需要大写，标记整个xml文件的开始和结束-->	
+<!--各字段的前后不可以允许空格、tab和回车的存在，可通过_调节各信息段之间的距离 -->	
+	<item>
+	<!--标记每个关键词所对应信息的开始和结束，不得嵌套出现。每个item对应一个关键词和该关键词对应的展现内容。
+	当需要提交多个item时，可以在一个xml文件中填入多个item。同一份XML文档中item的个数上限为 10000个-->
+		<key>老鹰</key>
+		<!--关键词，当用户在搜狗检索此关键词时，即可检索到item中指定的内容。每个key的长度限制为1－76字节-->
+		<display>
+		<!--表示该关键词要显示的搜索结果信息，包含以下的url、title等标签。-->
+		
+			<title><![CDATA[NBA2010-2011赛季_老鹰队赛程赛果_新浪体育]]></title>
+			<!--资源名称，即展示在搜狗搜索结果页中的标题。长度限制为4－74字节-->
+			<url><![CDATA[http://nba.sports.sina.com.cn/team.php?id=1]]></url>
+			<!--表示资源的链接地址，即title指向的链接。url的长度限制为6－512字节-->
+			<showurl><![CDATA[sports.sina.com]]></showurl>
+			<!--资源所在页面的链接地址，用于显示在搜索结果的下方。不需要有”http://”的部分；Showurl的长度限制为2－42字节，如果超过42字节，请截断，并增加省略符号“…”，并保证截断后的showurl加上省略符号总长度不超过42字节。-->
+			<date>${sogouToday}</date>
+			<!--资源的最后更新日期，${sogouToday}为展位符，保留不用动，sogou会填入相应的date-->
+			
+			<introduction>
+				<icon url="" height="" width="" alt="" link="" >
+					<title_and_word title="" title_color="" word="" word_url="" word_color="" img_url="" img_width="" img_height="" img_alt="" img_link="" img_position="" />
+					<link content="" url="" img_url="" img_width="" img_height="" img_alt="" img_link="" img_position="" />
+					<link content="" url="" img_url="" img_width="" img_height="" img_alt="" img_link="" img_position="" />
+					<link content="" url="" img_url="" img_width="" img_height="" img_alt="" img_link="" img_position="" />
+				</icon>
+			</introduction>
+			<!-- introduction为表格上方简介部分。 -->
+			<!-- icon代表图片，属性url为图片链接，height设置图高，width设置图宽，alt设置图片提示，link代表图片点出链接 -->
+			<!-- title_and_word代表图片左侧内容，title代表小标题，为空则无小标题，word为内容，word_url为文字链接，title_color代表小标题颜色，word_color代表文字颜色，请填标准颜色码。
+				 img_url为文字左侧或右侧小图的图片地址，img_width为图片宽，img_heigth为图片高，img_alt为图片提示，img_link为图片点出链接，img_position为图片位置，取值固定，=l添加在文字左侧，=r添加在文字右侧。
+				 title_and_word字段可有多个 -->
+			<!-- link代表图片左侧的外链，1-6个，且每个均可添加小图片
+				 属性content代表链接文字内容，url代表链接地址，
+				 img_url为文字左侧或右侧小图的图片地址，img_width为图片宽，img_heigth为图片高，img_alt为图片提示，img_link为图片点出链接，img_position为图片位置，取值固定，=l添加在文字左侧，=r添加在文字右侧。 -->
+			
+			<tab content="xx" current="1" >
+				<sub_tab content="xx" current="">
+					<form th="1">
+						<col content="" link="" position="" color="" background_color="" strong="" img_url="" img_width="" img_height="" img_alt="" img_link="" img_position="">
+							<col2 content="" link="" position="" color="" background_color="" strong="" img_url="" img_width="" img_height="" img_alt="" img_link="" img_position="" />
+						</col>
+					</form>
+					<form>
+						<col type="rank" content="" link="" position="" color="" background_color="" strong="" img_url="" img_width="" img_height="" img_alt="" img_link="javascript:o2('%7b%22songList%22%3a%5b%7b%22title%22%3a%22%25C1%25B5%25B0%25AE%25B3%25CC%25CA%25BD%22%2c%22singer%22%3a%22%25D6%25DC%25BD%25DC%25C2%25D7%22%7d%5d%2c%22mode%22%3a0%7d');void(0)" img_position="" />
+					</form>
+					
+					<extinfo>
+						<link_left content="" url="" />						
+						<link_right content="" url="" />						
+						<droplist>
+							<option content="" url="" />
+							<option content="" url="" />
+							<option content="" url="" />
+						</droplist>					
+						<word content="" color="" />					
+					</extinfo>
+				</sub_tab>			
+			</tab>
+			<tab content="xx" current="" >
+				<form th="1">
+					<col content="" link="" position="" color="" background_color="" strong="" img_url="" img_width="" img_height="" img_alt="" img_link="" img_position="">
+						<col2 content="" link="" position="" color="" background_color="" strong="" img_url="" img_width="" img_height="" img_alt="" img_link="" img_position="" />
+					</col>
+				</form>
+				<form>
+					<col type="rank" content="" link="" position="" color="" background_color="" strong="" img_url="" img_width="" img_height="" img_alt="" img_link="" img_position="" />
+				</form>
+				
+				<extinfo>
+					<link_left content="" url="" />						
+					<link_right content="" url="" />						
+					<droplist>
+						<option content="" url="" />
+						<option content="" url="" />
+						<option content="" url="" />
+					</droplist>					
+					<word content="" color="" />					
+				</extinfo>	
+			</tab>	
+			<!-- tab代表一级标签，1-6个。属性content代表tab显示的文字，1-14个字节。current代表当前tab是否为选中状态，取值固定，=1为选中，=0或不填为不选中。
+				 tab下可有多个sub_tab字段，若无二级标签，直接跟form字段 -->	
+			<!-- sub_tab代表二级标签，0-10个。属性content代表tab显示的文字，current代表当前tab是否为选中状态，取值固定，=1为选中，=0或不填为不选中。 -->
+			<!-- form代表表格的一行，属性th代表此行是否为表头，即th，只能出现在第一个form节点，且取值固定，=1代表是表头，=0或不填代表不是表头。 -->
+			<!-- col代表一行中的一个元素，即td。属性content代表col文字，link代表文字链接，position代表文字对其方式，取值固定，=right为右对其，=left为左对齐，不填默认居中对齐。
+				 color代表文字颜色，background_color代表背景颜色，strong代表是否加粗，取值固定，=bold为加粗，=不填默认正常。
+				 img_url为文字左侧或右侧小图的图片地址，img_width为图片宽，img_heigth为图片高，img_alt为图片提示，img_link为图片点出链接，可以执行javascript函数，img_position为图片位置，取值固定，=l添加在文字左侧，=r添加在文字右侧。 -->
+			<!-- 若希望调用排名样式，请给col字段加属性type="rank" -->
+			<!-- 若希望调用双行样式，请给col字段加子节点<col2>，格式与col一致 -->
+			<!-- extinfo代表下方补充信息 -->
+			<!-- left_link代表附加信息中的左侧链接，0-6个。属性content代表链接内容，url代表链接地址。 -->
+			<!-- right_link代表附加信息中的左侧链接，0-6个。属性content代表链接内容，url代表链接地址。 -->
+			<!-- 注：left_link和right_link加一起不要超过6个。 -->
+			<!-- droplist代表下拉框。每个option代表下拉框的一个选项。属性content代表选项内容，url代表选项地址。 第一个option代表下拉框关闭状态显示的内容。-->
+			<!-- word代表附加信息中的文字，属性content代表文字内容，color代表文字颜色。 -->
+		</display>
+	</item>
+</DOCUMENT>

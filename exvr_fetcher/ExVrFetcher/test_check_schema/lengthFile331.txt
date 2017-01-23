@@ -1,0 +1,24 @@
+//DOCUMENT/item/key	1	76
+//DOCUMENT/item/display	0	65535
+//DOCUMENT/item/display/url	6	512
+//DOCUMENT/item/display/title	4	63
+//DOCUMENT/item/display/showurl	2	42
+
+//DOCUMENT/item/display/introduction/icon/title_and_word	title	0	14	word	0	230
+//DOCUMENT/item/display/introduction/icon/link	content	0	20
+
+//DOCUMENT/item/display/tab	content	1	14
+//DOCUMENT/item/display/tab/sub_tab	content	1	14
+//DOCUMENT/item/display/tab/sub_tab/form/col	content	1	72
+
+//DOCUMENT/item/display/tab/form/col	content	1	72
+
+//DOCUMENT/item/display/tab/extinfo/link_left	content	0	20
+//DOCUMENT/item/display/tab/extinfo/link_right	content	0	20
+//DOCUMENT/item/display/tab/extinfo/droplist/option	content	0	20
+//DOCUMENT/item/display/tab/extinfo/word	content	0	230
+
+//DOCUMENT/item/display/tab/sub_tab/extinfo/link_left	content	0	20
+//DOCUMENT/item/display/tab/sub_tab/extinfo/link_right	content	0	20
+//DOCUMENT/item/display/tab/sub_tab/extinfo/droplist/option	content	0	20
+//DOCUMENT/item/display/tab/sub_tab/extinfo/word	content	0	230

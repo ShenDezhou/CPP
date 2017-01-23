@@ -1,0 +1,8 @@
+//DOCUMENT/item/key	1	76
+//DOCUMENT/item/display	0	65535
+//DOCUMENT/item/display/url	6	512
+//DOCUMENT/item/display/title	4	63
+
+//DOCUMENT/item/display/form	col0	1	30	col1	1	30	col2	0	20	
+//DOCUMENT/item/display/link	linkurl	6	512	linkcontent	1	14
+//DOCUMENT/item/display/showurl	2	42

@@ -1,0 +1,9 @@
+key	1	76
+display	0	2048
+url	6	512
+title	4	63
+showurl	2	42
+pagesize	2	4
+content1	0	89
+unique_url	6	512
+classtag	5	64

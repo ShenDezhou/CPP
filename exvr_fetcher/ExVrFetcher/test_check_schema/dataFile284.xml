@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="gbk"?>
+<!-- XML文档需以gbk方式编码-->
+<DOCUMENT>
+<!--需要大写，标记整个xml文件的开始和结束-->
+	
+<item>
+<!--标记每个关键词所对应信息的开始和结束，不得嵌套出现。-->
+	<key>2009北京分数线</key>
+	<!--搜索关键字-->
+	<display>
+	<!--表示该关键词要显示的搜索结果信息，包含以下的url、title等标签。display标签中的文本长度上限为2k-->
+		<url><![CDATA[http://exam.edu.sina.com.cn/collegedb/pici.php?provid=1&year=2009]]></url>
+		<!--表示资源的链接地址，即title指向的链接。url的长度限制为6－512字节-->
+		<title>2009北京高考分数线_新浪高考</title>
+		<!--标题内容，长度限制为4－63字节-->
+		<showurl><![CDATA[exam.edu.sina.com.cn]]></showurl>
+		<!--资源所在页面的链接地址，用于显示在搜索结果的下方。不需要有”http://”的部分；
+		Showurl的长度限制为2－42字节，如果超过42字节，请截断，并增加省略符号“…”，并保证截断后的showurl加上省略符号总长度不超过42字节。-->
+		<date>${sogouToday}</date>
+		<!--资源的最后更新日期，${sogouToday}为展位符，保留不用动，sogou会填入相应的date-->
+		<form col0="文理科" col0link="" col1="批次名称" col1link="" col2="最低控制分数线" col2link=""/>
+		<!--表头信息，必须在from的第一行，col0，col1，col2分别为1-14字节，collink不填-->
+		<form col0="理科本科一批本科一批" col0link="" col1="本科一批本科一批本科一批本科一批" col1link="" col2="501" col2link=""/>
+		<form col0="理科" col0link="" col1="本科二批" col1link="" col2="459" col2link=""/>
+		<form col0="理科" col0link="" col1="本科三批" col1link="" col2="432" col2link=""/>
+		<form col0="文科" col0link="" col1="本科一批" col1link="" col2="532" col2link=""/>
+		<form col0="文科" col0link="" col1="本科二批" col1link="" col2link=""/>
+		<!--表格内容信息，col0，col2分别为1-14字节，col1为1-36字节，collink不填-->
+		<link linkurl="http://exam.edu.sina.com.cn/collegedb" linkcontent="更多"/>
+		<!--更多链接，6-512字节-->
+	</display>
+</item>
+</DOCUMENT>
+
+
+
