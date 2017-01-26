@@ -1,0 +1,461 @@
+./exvr_scheduler exvr_fetcher_scheduler.cfg
+Log_Util::load_log_masks(): All Modules: ods_utils, vrspider, platform, ods_utils_util
+[vrspider:LM_INFO] [20170124 16:12:48] [d9f57860] load vr_resource configiguration: 10.139.22.134 root root open_data
+[vrspider:LM_INFO] [20170124 16:12:48] [d9f57860] load vr_resource configiguration: 10.139.22.134 root root external
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f57860] FetcherScheduleScan::svc: spider_type : 5, scan sql is select * from vr_resource as t1 where cast(t1.v as unsigned)>0 and t1.is_quick=1 and (unix_timestamp(now()) - unix_timestamp(fetch_time) > frequency) and manual_update != 1
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f57860] FetcherScheduleScan::svc: spider_type : 5, manual sql is select * from vr_resource as t1 where cast(t1ag as unsigned)>0 and t1.is_quick=1 and manual_update = 1
+[Mysql::execute] time:1520
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::svc(0081cb60):Mysql vr success
+[Mysql::execute] time:1365
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::svc(0081cb60):Mysql vr success
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::svc(0081cb60): print_sql_5 manual_sql select * from vr_resource as t1 where cast(flag as unsigned)>0 and t1.is_quick=1 and manual_update = 1
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::svc(0081cb60): print_sql_5 auto_sql select * from vr_resource as t1 where cast(t1ag as unsigned)>0 and t1.is_quick=1 and (unix_timestamp(now()) - unix_timestamp(fetch_time) > frequency) and manual_update != 1
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::svc(0081cb60): print_sql_5 delete_sql select * from vr_resource as t1 where cast(flag as unsigned)=0 and t1.auto_del=1 and t1.is_quick=1
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::svc(0081cb60): begin to loop -638241024
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::svc(0081cb60): scan resource and data 5
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): [exstat] sql[select * from vr_resource as t1 where cast(tlag as unsigned)>0 and t1.is_quick=1 and manual_update = 1]. found record_count=0
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): [exstat] sql[select * from vr_resource as t1 where cast(tlag as unsigned)>0 and t1.is_quick=1 and (unix_timestamp(now()) - unix_timestamp(fetch_time) > frequency) and manual_update != 1]. found record_count=54
+lastFetch:2017-01-09 08:52:40
+TEST:2017-01-09 08:52:40
+[timeProcess]2017-01-09 08:52:40=1483923160
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 6103#70000300#0#4, spider_type : 5, id : 610id 70000300
+lastFetch:2017-01-09 08:53:40
+TEST:2017-01-09 08:53:40
+[timeProcess]2017-01-09 08:53:40=1483923220
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 6373#70000500#0#4, spider_type : 5, id : 637id 70000500
+lastFetch:2017-01-09 08:55:40
+TEST:2017-01-09 08:55:40
+[timeProcess]2017-01-09 08:55:40=1483923340
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 6451#70000700#0#4, spider_type : 5, id : 645id 70000700
+lastFetch:2017-01-09 08:57:39
+TEST:2017-01-09 08:57:39
+[timeProcess]2017-01-09 08:57:39=1483923459
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 6491#70001300#0#4, spider_type : 5, id : 649id 70001300
+lastFetch:2017-01-09 08:58:39
+TEST:2017-01-09 08:58:39
+[timeProcess]2017-01-09 08:58:39=1483923519
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 6529#70001000#0#3, spider_type : 5, id : 652id 70001000
+lastFetch:2017-01-09 09:01:39
+TEST:2017-01-09 09:01:39
+[timeProcess]2017-01-09 09:01:39=1483923699
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 6541#70002900#0#2, spider_type : 5, id : 654id 70002900
+lastFetch:2017-01-09 09:02:39
+TEST:2017-01-09 09:02:39
+[timeProcess]2017-01-09 09:02:39=1483923759
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 6543#70002800#0#2, spider_type : 5, id : 654id 70002800
+lastFetch:2017-01-09 09:04:40
+TEST:2017-01-09 09:04:40
+[timeProcess]2017-01-09 09:04:40=1483923880
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 6547#70002100#0#3, spider_type : 5, id : 654id 70002100
+lastFetch:2017-01-09 09:05:40
+TEST:2017-01-09 09:05:40
+[timeProcess]2017-01-09 09:05:40=1483923940
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 6549#70002000#0#3, spider_type : 5, id : 654id 70002000
+lastFetch:2017-01-09 09:05:43
+TEST:2017-01-09 09:05:43
+[timeProcess]2017-01-09 09:05:43=1483923943
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 6551#70001900#0#1, spider_type : 5, id : 655id 70001900
+lastFetch:2017-01-09 09:05:46
+TEST:2017-01-09 09:05:46
+[timeProcess]2017-01-09 09:05:46=1483923946
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 6635#70000800#0#1, spider_type : 5, id : 663id 70000800
+lastFetch:2017-01-09 09:07:40
+TEST:2017-01-09 09:07:40
+[timeProcess]2017-01-09 09:07:40=1483924060
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 6649#70002400#0#3, spider_type : 5, id : 664id 70002400
+lastFetch:2017-01-09 09:08:40
+TEST:2017-01-09 09:08:40
+[timeProcess]2017-01-09 09:08:40=1483924120
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 6659#70002300#0#1, spider_type : 5, id : 665id 70002300
+lastFetch:2017-01-09 09:08:42
+TEST:2017-01-09 09:08:42
+[timeProcess]2017-01-09 09:08:42=1483924122
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 6703#70001700#0#1, spider_type : 5, id : 670id 70001700
+lastFetch:2017-01-09 09:09:39
+TEST:2017-01-09 09:09:39
+[timeProcess]2017-01-09 09:09:39=1483924179
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 6707#70004700#0#1, spider_type : 5, id : 670id 70004700
+lastFetch:2017-01-09 09:09:41
+TEST:2017-01-09 09:09:41
+[timeProcess]2017-01-09 09:09:41=1483924181
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 6709#70001600#0#3, spider_type : 5, id : 670id 70001600
+lastFetch:2017-01-09 09:10:39
+TEST:2017-01-09 09:10:39
+[timeProcess]2017-01-09 09:10:39=1483924239
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 6711#70004400#0#1, spider_type : 5, id : 671id 70004400
+lastFetch:2017-01-09 09:13:40
+TEST:2017-01-09 09:13:40
+[timeProcess]2017-01-09 09:13:40=1483924420
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 6713#70004500#0#1, spider_type : 5, id : 671id 70004500
+lastFetch:2017-01-09 09:14:40
+TEST:2017-01-09 09:14:40
+[timeProcess]2017-01-09 09:14:40=1483924480
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 6715#70004600#0#2, spider_type : 5, id : 671id 70004600
+lastFetch:2017-01-09 09:15:40
+TEST:2017-01-09 09:15:40
+[timeProcess]2017-01-09 09:15:40=1483924540
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 6773#70000600#0#1, spider_type : 5, id : 677id 70000600
+lastFetch:2017-01-09 09:15:44
+TEST:2017-01-09 09:15:44
+[timeProcess]2017-01-09 09:15:44=1483924544
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 6803#70002500#0#3, spider_type : 5, id : 680id 70002500
+lastFetch:2017-01-09 09:15:46
+TEST:2017-01-09 09:15:46
+[timeProcess]2017-01-09 09:15:46=1483924546
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 6895#70007600#0#2, spider_type : 5, id : 689id 70007600
+lastFetch:2017-01-09 09:15:49
+TEST:2017-01-09 09:15:49
+[timeProcess]2017-01-09 09:15:49=1483924549
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 6917#70003000#0#2, spider_type : 5, id : 691id 70003000
+lastFetch:2017-01-09 09:15:51
+TEST:2017-01-09 09:15:51
+[timeProcess]2017-01-09 09:15:51=1483924551
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 6939#70007100#0#4, spider_type : 5, id : 693id 70007100
+lastFetch:2017-01-09 09:15:53
+TEST:2017-01-09 09:15:53
+[timeProcess]2017-01-09 09:15:53=1483924553
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 6941#70007200#0#4, spider_type : 5, id : 694id 70007200
+lastFetch:2017-01-09 09:15:55
+TEST:2017-01-09 09:15:55
+[timeProcess]2017-01-09 09:15:55=1483924555
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 6991#70004900#0#2, spider_type : 5, id : 699id 70004900
+lastFetch:2017-01-09 09:15:57
+TEST:2017-01-09 09:15:57
+[timeProcess]2017-01-09 09:15:57=1483924557
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 7005#70008000#0#2, spider_type : 5, id : 700id 70008000
+lastFetch:2017-01-09 09:15:59
+TEST:2017-01-09 09:15:59
+[timeProcess]2017-01-09 09:15:59=1483924559
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 7007#70007900#0#1, spider_type : 5, id : 700id 70007900
+lastFetch:2017-01-09 09:16:01
+TEST:2017-01-09 09:16:01
+[timeProcess]2017-01-09 09:16:01=1483924561
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 7027#70008100#0#1, spider_type : 5, id : 702id 70008100
+lastFetch:2017-01-09 09:16:03
+TEST:2017-01-09 09:16:03
+[timeProcess]2017-01-09 09:16:03=1483924563
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 7047#70005100#0#4, spider_type : 5, id : 704id 70005100
+lastFetch:2017-01-09 09:16:40
+TEST:2017-01-09 09:16:40
+[timeProcess]2017-01-09 09:16:40=1483924600
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 7049#70005200#0#4, spider_type : 5, id : 704id 70005200
+lastFetch:2017-01-09 09:17:40
+TEST:2017-01-09 09:17:40
+[timeProcess]2017-01-09 09:17:40=1483924660
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 7051#70005300#0#1, spider_type : 5, id : 705id 70005300
+lastFetch:2017-01-09 09:18:40
+TEST:2017-01-09 09:18:40
+[timeProcess]2017-01-09 09:18:40=1483924720
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 7053#70005400#0#1, spider_type : 5, id : 705id 70005400
+lastFetch:2017-01-09 09:18:42
+TEST:2017-01-09 09:18:42
+[timeProcess]2017-01-09 09:18:42=1483924722
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 7135#70003800#0#2, spider_type : 5, id : 713id 70003800
+lastFetch:2017-01-09 09:18:44
+TEST:2017-01-09 09:18:44
+[timeProcess]2017-01-09 09:18:44=1483924724
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 7175#70006600#0#1, spider_type : 5, id : 717id 70006600
+lastFetch:2017-01-09 09:19:39
+TEST:2017-01-09 09:19:39
+[timeProcess]2017-01-09 09:19:39=1483924779
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 7179#70009600#0#2, spider_type : 5, id : 717id 70009600
+lastFetch:2017-01-09 09:19:42
+TEST:2017-01-09 09:19:42
+[timeProcess]2017-01-09 09:19:42=1483924782
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 7201#70006500#0#4, spider_type : 5, id : 720id 70006500
+lastFetch:2017-01-09 09:20:39
+TEST:2017-01-09 09:20:39
+[timeProcess]2017-01-09 09:20:39=1483924839
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 7203#70006200#0#3, spider_type : 5, id : 720id 70006200
+lastFetch:2017-01-09 09:21:39
+TEST:2017-01-09 09:21:39
+[timeProcess]2017-01-09 09:21:39=1483924899
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 7237#70007300#0#1, spider_type : 5, id : 723id 70007300
+lastFetch:2017-01-09 09:21:43
+TEST:2017-01-09 09:21:43
+[timeProcess]2017-01-09 09:21:43=1483924903
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 7253#70000900#0#2, spider_type : 5, id : 725id 70000900
+lastFetch:2017-01-09 09:36:40
+TEST:2017-01-09 09:36:40
+[timeProcess]2017-01-09 09:36:40=1483925800
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 7267#70006100#0#4, spider_type : 5, id : 726id 70006100
+lastFetch:2017-01-09 09:38:40
+TEST:2017-01-09 09:38:40
+[timeProcess]2017-01-09 09:38:40=1483925920
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 7309#70006800#0#3, spider_type : 5, id : 730id 70006800
+lastFetch:2017-01-09 09:39:40
+TEST:2017-01-09 09:39:40
+[timeProcess]2017-01-09 09:39:40=1483925980
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 7383#70005500#0#2, spider_type : 5, id : 738id 70005500
+lastFetch:2017-01-09 09:41:39
+TEST:2017-01-09 09:41:39
+[timeProcess]2017-01-09 09:41:39=1483926099
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 7389#70005000#0#3, spider_type : 5, id : 738id 70005000
+lastFetch:2017-01-09 09:42:39
+TEST:2017-01-09 09:42:39
+[timeProcess]2017-01-09 09:42:39=1483926159
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 7489#70009900#0#3, spider_type : 5, id : 748id 70009900
+lastFetch:2017-01-09 09:45:39
+TEST:2017-01-09 09:45:39
+[timeProcess]2017-01-09 09:45:39=1483926339
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 7561#70006000#0#1, spider_type : 5, id : 756id 70006000
+lastFetch:2017-01-09 09:46:39
+TEST:2017-01-09 09:46:39
+[timeProcess]2017-01-09 09:46:39=1483926399
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 7597#70005600#0#2, spider_type : 5, id : 759id 70005600
+lastFetch:2017-01-09 09:46:42
+TEST:2017-01-09 09:46:42
+[timeProcess]2017-01-09 09:46:42=1483926402
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 7683#70009500#0#2, spider_type : 5, id : 768id 70009500
+lastFetch:2017-01-09 09:47:40
+TEST:2017-01-09 09:47:40
+[timeProcess]2017-01-09 09:47:40=1483926460
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 7685#70008300#0#2, spider_type : 5, id : 768id 70008300
+lastFetch:2017-01-09 09:50:15
+TEST:2017-01-09 09:50:15
+[timeProcess]2017-01-09 09:50:15=1483926615
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 7937#70008800#0#3, spider_type : 5, id : 793id 70008800
+lastFetch:2017-01-09 09:54:04
+TEST:2017-01-09 09:54:04
+[timeProcess]2017-01-09 09:54:04=1483926844
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 8231#70006300#0#3, spider_type : 5, id : 823id 70006300
+lastFetch:2017-01-09 10:00:40
+TEST:2017-01-09 10:00:40
+[timeProcess]2017-01-09 10:00:40=1483927240
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 8367#70009000#0#4, spider_type : 5, id : 836id 70009000
+lastFetch:2017-01-09 09:19:44
+TEST:2017-01-09 09:19:44
+[timeProcess]2017-01-09 09:19:44=1483924784
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 8391#70013800#0#2, spider_type : 5, id : 839id 70013800
+lastFetch:2017-01-09 10:05:39
+TEST:2017-01-09 10:05:39
+[timeProcess]2017-01-09 10:05:39=1483927539
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): put to redis 9055#70009700#0#2, spider_type : 5, id : 905id 70009700
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): [exstat] sql[select * from vr_resource as t1 where cast(tlag as unsigned)=0 and t1.auto_del=1 and t1.is_quick=1]. found record_count=0
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::CheckSpider_5(0081cb60): check 0 1800
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::svc(0081cb60): spider_type : 5,  scan complete
+[vrspider:LM_TRACE] [20170124 16:12:48] [d9f53700] FetcherScheduleScan::svc(0081cb60): [exstat] time to rest: 60
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::svc(0081cb60): scan resource and data 5
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): [exstat] sql[select * from vr_resource as t1 where cast(tlag as unsigned)>0 and t1.is_quick=1 and manual_update = 1]. found record_count=0
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): [exstat] sql[select * from vr_resource as t1 where cast(tlag as unsigned)>0 and t1.is_quick=1 and (unix_timestamp(now()) - unix_timestamp(fetch_time) > frequency) and manual_update != 1]. found record_count=54
+lastFetch:2017-01-09 08:52:40
+TEST:2017-01-09 08:52:40
+[timeProcess]2017-01-09 08:52:40=1483923160
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  6103#70000300#0#4, spider_type : 5,6103, vr_id 70000300
+lastFetch:2017-01-09 08:53:40
+TEST:2017-01-09 08:53:40
+[timeProcess]2017-01-09 08:53:40=1483923220
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  6373#70000500#0#4, spider_type : 5,6373, vr_id 70000500
+lastFetch:2017-01-09 08:55:40
+TEST:2017-01-09 08:55:40
+[timeProcess]2017-01-09 08:55:40=1483923340
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  6451#70000700#0#4, spider_type : 5,6451, vr_id 70000700
+lastFetch:2017-01-09 08:57:39
+TEST:2017-01-09 08:57:39
+[timeProcess]2017-01-09 08:57:39=1483923459
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  6491#70001300#0#4, spider_type : 5,6491, vr_id 70001300
+lastFetch:2017-01-09 08:58:39
+TEST:2017-01-09 08:58:39
+[timeProcess]2017-01-09 08:58:39=1483923519
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  6529#70001000#0#3, spider_type : 5,6529, vr_id 70001000
+lastFetch:2017-01-09 09:01:39
+TEST:2017-01-09 09:01:39
+[timeProcess]2017-01-09 09:01:39=1483923699
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  6541#70002900#0#2, spider_type : 5,6541, vr_id 70002900
+lastFetch:2017-01-09 09:02:39
+TEST:2017-01-09 09:02:39
+[timeProcess]2017-01-09 09:02:39=1483923759
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  6543#70002800#0#2, spider_type : 5,6543, vr_id 70002800
+lastFetch:2017-01-09 09:04:40
+TEST:2017-01-09 09:04:40
+[timeProcess]2017-01-09 09:04:40=1483923880
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  6547#70002100#0#3, spider_type : 5,6547, vr_id 70002100
+lastFetch:2017-01-09 09:05:40
+TEST:2017-01-09 09:05:40
+[timeProcess]2017-01-09 09:05:40=1483923940
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  6549#70002000#0#3, spider_type : 5,6549, vr_id 70002000
+lastFetch:2017-01-09 09:05:43
+TEST:2017-01-09 09:05:43
+[timeProcess]2017-01-09 09:05:43=1483923943
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  6551#70001900#0#1, spider_type : 5,6551, vr_id 70001900
+lastFetch:2017-01-09 09:05:46
+TEST:2017-01-09 09:05:46
+[timeProcess]2017-01-09 09:05:46=1483923946
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  6635#70000800#0#1, spider_type : 5,6635, vr_id 70000800
+lastFetch:2017-01-09 09:07:40
+TEST:2017-01-09 09:07:40
+[timeProcess]2017-01-09 09:07:40=1483924060
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  6649#70002400#0#3, spider_type : 5,6649, vr_id 70002400
+lastFetch:2017-01-09 09:08:40
+TEST:2017-01-09 09:08:40
+[timeProcess]2017-01-09 09:08:40=1483924120
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  6659#70002300#0#1, spider_type : 5,6659, vr_id 70002300
+lastFetch:2017-01-09 09:08:42
+TEST:2017-01-09 09:08:42
+[timeProcess]2017-01-09 09:08:42=1483924122
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  6703#70001700#0#1, spider_type : 5,6703, vr_id 70001700
+lastFetch:2017-01-09 09:09:39
+TEST:2017-01-09 09:09:39
+[timeProcess]2017-01-09 09:09:39=1483924179
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  6707#70004700#0#1, spider_type : 5,6707, vr_id 70004700
+lastFetch:2017-01-09 09:09:41
+TEST:2017-01-09 09:09:41
+[timeProcess]2017-01-09 09:09:41=1483924181
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  6709#70001600#0#3, spider_type : 5,6709, vr_id 70001600
+lastFetch:2017-01-09 09:10:39
+TEST:2017-01-09 09:10:39
+[timeProcess]2017-01-09 09:10:39=1483924239
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  6711#70004400#0#1, spider_type : 5,6711, vr_id 70004400
+lastFetch:2017-01-09 09:13:40
+TEST:2017-01-09 09:13:40
+[timeProcess]2017-01-09 09:13:40=1483924420
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  6713#70004500#0#1, spider_type : 5,6713, vr_id 70004500
+lastFetch:2017-01-09 09:14:40
+TEST:2017-01-09 09:14:40
+[timeProcess]2017-01-09 09:14:40=1483924480
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  6715#70004600#0#2, spider_type : 5,6715, vr_id 70004600
+lastFetch:2017-01-09 09:15:40
+TEST:2017-01-09 09:15:40
+[timeProcess]2017-01-09 09:15:40=1483924540
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  6773#70000600#0#1, spider_type : 5,6773, vr_id 70000600
+lastFetch:2017-01-09 09:15:44
+TEST:2017-01-09 09:15:44
+[timeProcess]2017-01-09 09:15:44=1483924544
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  6803#70002500#0#3, spider_type : 5,6803, vr_id 70002500
+lastFetch:2017-01-09 09:15:46
+TEST:2017-01-09 09:15:46
+[timeProcess]2017-01-09 09:15:46=1483924546
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  6895#70007600#0#2, spider_type : 5,6895, vr_id 70007600
+lastFetch:2017-01-09 09:15:49
+TEST:2017-01-09 09:15:49
+[timeProcess]2017-01-09 09:15:49=1483924549
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  6917#70003000#0#2, spider_type : 5,6917, vr_id 70003000
+lastFetch:2017-01-09 09:15:51
+TEST:2017-01-09 09:15:51
+[timeProcess]2017-01-09 09:15:51=1483924551
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  6939#70007100#0#4, spider_type : 5,6939, vr_id 70007100
+lastFetch:2017-01-09 09:15:53
+TEST:2017-01-09 09:15:53
+[timeProcess]2017-01-09 09:15:53=1483924553
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  6941#70007200#0#4, spider_type : 5,6941, vr_id 70007200
+lastFetch:2017-01-09 09:15:55
+TEST:2017-01-09 09:15:55
+[timeProcess]2017-01-09 09:15:55=1483924555
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  6991#70004900#0#2, spider_type : 5,6991, vr_id 70004900
+lastFetch:2017-01-09 09:15:57
+TEST:2017-01-09 09:15:57
+[timeProcess]2017-01-09 09:15:57=1483924557
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  7005#70008000#0#2, spider_type : 5,7005, vr_id 70008000
+lastFetch:2017-01-09 09:15:59
+TEST:2017-01-09 09:15:59
+[timeProcess]2017-01-09 09:15:59=1483924559
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  7007#70007900#0#1, spider_type : 5,7007, vr_id 70007900
+lastFetch:2017-01-09 09:16:01
+TEST:2017-01-09 09:16:01
+[timeProcess]2017-01-09 09:16:01=1483924561
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  7027#70008100#0#1, spider_type : 5,7027, vr_id 70008100
+lastFetch:2017-01-09 09:16:03
+TEST:2017-01-09 09:16:03
+[timeProcess]2017-01-09 09:16:03=1483924563
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  7047#70005100#0#4, spider_type : 5,7047, vr_id 70005100
+lastFetch:2017-01-09 09:16:40
+TEST:2017-01-09 09:16:40
+[timeProcess]2017-01-09 09:16:40=1483924600
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  7049#70005200#0#4, spider_type : 5,7049, vr_id 70005200
+lastFetch:2017-01-09 09:17:40
+TEST:2017-01-09 09:17:40
+[timeProcess]2017-01-09 09:17:40=1483924660
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  7051#70005300#0#1, spider_type : 5,7051, vr_id 70005300
+lastFetch:2017-01-09 09:18:40
+TEST:2017-01-09 09:18:40
+[timeProcess]2017-01-09 09:18:40=1483924720
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  7053#70005400#0#1, spider_type : 5,7053, vr_id 70005400
+lastFetch:2017-01-09 09:18:42
+TEST:2017-01-09 09:18:42
+[timeProcess]2017-01-09 09:18:42=1483924722
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  7135#70003800#0#2, spider_type : 5,7135, vr_id 70003800
+lastFetch:2017-01-09 09:18:44
+TEST:2017-01-09 09:18:44
+[timeProcess]2017-01-09 09:18:44=1483924724
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  7175#70006600#0#1, spider_type : 5,7175, vr_id 70006600
+lastFetch:2017-01-09 09:19:39
+TEST:2017-01-09 09:19:39
+[timeProcess]2017-01-09 09:19:39=1483924779
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  7179#70009600#0#2, spider_type : 5,7179, vr_id 70009600
+lastFetch:2017-01-09 09:19:42
+TEST:2017-01-09 09:19:42
+[timeProcess]2017-01-09 09:19:42=1483924782
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  7201#70006500#0#4, spider_type : 5,7201, vr_id 70006500
+lastFetch:2017-01-09 09:20:39
+TEST:2017-01-09 09:20:39
+[timeProcess]2017-01-09 09:20:39=1483924839
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  7203#70006200#0#3, spider_type : 5,7203, vr_id 70006200
+lastFetch:2017-01-09 09:21:39
+TEST:2017-01-09 09:21:39
+[timeProcess]2017-01-09 09:21:39=1483924899
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  7237#70007300#0#1, spider_type : 5,7237, vr_id 70007300
+lastFetch:2017-01-09 09:21:43
+TEST:2017-01-09 09:21:43
+[timeProcess]2017-01-09 09:21:43=1483924903
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  7253#70000900#0#2, spider_type : 5,7253, vr_id 70000900
+lastFetch:2017-01-09 09:36:40
+TEST:2017-01-09 09:36:40
+[timeProcess]2017-01-09 09:36:40=1483925800
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  7267#70006100#0#4, spider_type : 5,7267, vr_id 70006100
+lastFetch:2017-01-09 09:38:40
+TEST:2017-01-09 09:38:40
+[timeProcess]2017-01-09 09:38:40=1483925920
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  7309#70006800#0#3, spider_type : 5,7309, vr_id 70006800
+lastFetch:2017-01-09 09:39:40
+TEST:2017-01-09 09:39:40
+[timeProcess]2017-01-09 09:39:40=1483925980
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  7383#70005500#0#2, spider_type : 5,7383, vr_id 70005500
+lastFetch:2017-01-09 09:41:39
+TEST:2017-01-09 09:41:39
+[timeProcess]2017-01-09 09:41:39=1483926099
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  7389#70005000#0#3, spider_type : 5,7389, vr_id 70005000
+lastFetch:2017-01-09 09:42:39
+TEST:2017-01-09 09:42:39
+[timeProcess]2017-01-09 09:42:39=1483926159
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  7489#70009900#0#3, spider_type : 5,7489, vr_id 70009900
+lastFetch:2017-01-09 09:45:39
+TEST:2017-01-09 09:45:39
+[timeProcess]2017-01-09 09:45:39=1483926339
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  7561#70006000#0#1, spider_type : 5,7561, vr_id 70006000
+lastFetch:2017-01-09 09:46:39
+TEST:2017-01-09 09:46:39
+[timeProcess]2017-01-09 09:46:39=1483926399
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  7597#70005600#0#2, spider_type : 5,7597, vr_id 70005600
+lastFetch:2017-01-09 09:46:42
+TEST:2017-01-09 09:46:42
+[timeProcess]2017-01-09 09:46:42=1483926402
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  7683#70009500#0#2, spider_type : 5,7683, vr_id 70009500
+lastFetch:2017-01-09 09:47:40
+TEST:2017-01-09 09:47:40
+[timeProcess]2017-01-09 09:47:40=1483926460
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  7685#70008300#0#2, spider_type : 5,7685, vr_id 70008300
+lastFetch:2017-01-09 09:50:15
+TEST:2017-01-09 09:50:15
+[timeProcess]2017-01-09 09:50:15=1483926615
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  7937#70008800#0#3, spider_type : 5,7937, vr_id 70008800
+lastFetch:2017-01-09 09:54:04
+TEST:2017-01-09 09:54:04
+[timeProcess]2017-01-09 09:54:04=1483926844
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  8231#70006300#0#3, spider_type : 5,8231, vr_id 70006300
+lastFetch:2017-01-09 10:00:40
+TEST:2017-01-09 10:00:40
+[timeProcess]2017-01-09 10:00:40=1483927240
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  8367#70009000#0#4, spider_type : 5,8367, vr_id 70009000
+lastFetch:2017-01-09 09:19:44
+TEST:2017-01-09 09:19:44
+[timeProcess]2017-01-09 09:19:44=1483924784
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  8391#70013800#0#2, spider_type : 5,8391, vr_id 70013800
+lastFetch:2017-01-09 10:05:39
+TEST:2017-01-09 10:05:39
+[timeProcess]2017-01-09 10:05:39=1483927539
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): already in redis set  9055#70009700#0#2, spider_type : 5,9055, vr_id 70009700
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::get_resource(0081cb60): [exstat] sql[select * from vr_resource as t1 where cast(tlag as unsigned)=0 and t1.auto_del=1 and t1.is_quick=1]. found record_count=0
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::CheckSpider_5(0081cb60): check 0 1800
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::svc(0081cb60): spider_type : 5,  scan complete
+[vrspider:LM_TRACE] [20170124 16:13:48] [d9f53700] FetcherScheduleScan::svc(0081cb60): [exstat] time to rest: 60
+^C[vrspider:LM_TRACE] [20170124 16:14:07] [d9f53700] FetcherScheduleScan::sl_update = 1 manual_update = 1 svc(0081cb60): exit from loop

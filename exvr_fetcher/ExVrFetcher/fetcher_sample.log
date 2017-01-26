@@ -1,0 +1,551 @@
+./exvr_fetcher exvr_fetcher.cfg
+Log_Util::load_log_masks(): All Modules: ods_utils, vrspider, platform, ods_utils_util
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] [ConfigManager::loadOptions] FetchTaskNum: 8
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] [ConfigManager::loadOptions] MysqlHandleNum: 1
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] [ConfigManager::loadOptions] OnlineTaskNum: 3
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] [ConfigManager::loadOptions] UrlupdateTaskNum: 8
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] [ConfigManager::loadOptions] WriteTaskNum: 6
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] [ConfigManager::loadOptions] updateDeleteNum: 6
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] [ConfigManager::loadOptions] load UrlTransformServers is ok: 10.12.141.66:9096
+[vrspider:LM_INFO] [20170124 16:14:31] [cf76e860] [CWriteTask::open ]load vr_resource configiguration: 10.139.22.134 root root open_data
+[vrspider:LM_INFO] [20170124 16:14:31] [cf76e860] [CWriteTask::open]load vr_info configiguration: 10.139.22.134 root root ubs_spider
+[vrspider:LM_INFO] [20170124 16:14:31] [cf76e860] [CWriteTask::open]load cr_info configiguration: 10.139.22.134 root root external
+[vrspider:LM_INFO] [20170124 16:14:31] [cf76e860] cycy spider_type:5 res_priority:0
+[vrspider:LM_INFO] [20170124 16:14:31] [cf76e860] [CWriteTask::open ]load ValidateCount configiguration: data/base/schemaFileXX.xsd data/base/lengthFileX
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] [load_location] list data/location.dat begin
+ [vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒ 110000[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒ 120000[vrspider:LE] [20170124 16:14:31] [cf76e860] location ▒ӱ▒ 130000[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒ӱ▒    ʯ▒▒ׯ 130100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒ӱ▒ ▒▒ɽ 130200
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒ӱ▒ ▒ػʵ▒ 130300
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒ӱ▒ ▒▒▒▒ 130400
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒ӱ▒ ▒▒̨ 130500
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒ӱ▒ ▒▒▒▒ 130600
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒ӱ▒ ▒żҿ▒ 130700
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒ӱ▒ ▒е▒ 130800
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒ӱ▒ ▒▒▒▒ 130900
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒ӱ▒ ▒ȷ▒ 131000
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒ӱ▒ ▒▒ˮ 131100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ɽ▒▒ 140000[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ɽ▒▒   ̫ԭ 140100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ɽ▒▒ ▒▒ͬ 140200
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ɽ▒▒ ▒▒Ȫ 140300
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ɽ▒▒ ▒▒▒▒ 140400
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ɽ▒▒ ▒▒▒ 140500
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ɽ▒▒ ˷▒▒ 140600
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ɽ▒▒ ▒▒▒▒ 140700
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ɽ▒▒ ▒˳▒ 140800
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ɽ▒▒ ▒▒▒▒ 140900
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ɽ▒▒ ▒ٷ▒ 141000
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ɽ▒▒ ▒▒▒ 141100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒ɹ▒ 150000[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒ɹ▒       ▒▒ͺ▒▒▒ 15
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒ɹ▒       ▒▒ͷ 150200
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒ɹ▒       ▒ں▒ 150300
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒ɹ▒       ▒▒▒ 150400
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒ɹ▒       ͨ▒▒ 150500
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒ɹ▒       ▒▒▒▒˹ 150600
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒ɹ▒       ▒▒▒ױ▒▒▒ 150700
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒ɹ▒       ▒▒▒▒▒׶▒ 150800
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒ɹ▒       ▒▒▒▒첼 150900
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒ɹ▒       ▒˰▒▒▒ 152200
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒ɹ▒       ▒▒▒ֹ▒▒▒▒▒ 152500
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒ɹ▒       ▒▒▒▒▒▒▒ 152900
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒ 210000[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒ ▒▒▒▒ 210100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒ 210200
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒ɽ 210300
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒˳ 210400
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒Ϫ 210500
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 210600
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 210700
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        Ӫ▒▒ 210800
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 210900
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 211000
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒̽▒ 211100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 211200
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 211300
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒«▒▒ 211400
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒ 220000[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒ ▒▒▒▒ 220100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 220200
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒ƽ 220300
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒Դ 220400
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ͨ▒▒ 220500
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒ɽ 220600
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒ԭ 220700
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒׳▒ 220800
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒ӱ▒ 222400
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒ 230000[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒ ▒▒▒▒▒ 230100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒▒▒▒ 230200
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 230300
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒׸▒ 230400
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ˫Ѽɽ 230500
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 230600
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒ 230700
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒ľ˹ 230800
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒̨▒▒ 230900
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ĵ▒▒▒▒ 231000
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒ں▒ 231100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒绯 231200
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒˰▒▒▒ 232700
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒Ϻ▒ 310000[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒ 320000[vrspider:LM] [20170124 16:14:31] [cf76e860] location ▒▒▒▒  ▒Ͼ▒ 320100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 320200
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 320300
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 320400
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 320500
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒ͨ 320600
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒Ƹ▒ 320700
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 320800
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒γ▒ 320900
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 321000
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒ 321100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ̩▒▒ 321200
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒Ǩ 321300
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒㽭 330000[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒㽭   ▒▒▒▒ 330100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒㽭 ▒▒▒▒ 330200
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒㽭 ▒▒▒▒ 330300
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒㽭 ▒▒▒▒ 330400
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒㽭 ▒▒▒▒ 330500
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒㽭 ▒▒▒▒ 330600
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒㽭 ▒▒ 330700
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒㽭 ▒▒▒▒ 330800
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒㽭 ▒▒ɽ 330900
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒㽭 ̨▒▒ 331000
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒㽭 ▒▒ˮ 331100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒ 340000[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒ ▒Ϸ▒ 340100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒ߺ▒ 340200
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒ 340300
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 340400
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒ɽ 340500
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 340600
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ͭ▒▒ 340700
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 340800
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒ɽ 341000
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 341100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 341200
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 341300
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 341400
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒ 341500
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 341600
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 341700
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒ 341800
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒ 350000[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒ ▒▒▒▒ 350100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 350200
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 350300
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 350400
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        Ȫ▒▒ 350500
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 350600
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒ƽ 350700
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 350800
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 350900
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒ 360000[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒ ▒ϲ▒ 360100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒▒▒ 360200
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        Ƽ▒▒ 360300
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒Ž▒ 360400
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 360500
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ӥ̶ 360600
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 360700
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 360800
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒˴▒ 360900
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 361000
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 361100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ɽ▒▒ 370000[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ɽ▒▒   ▒▒▒▒ 370100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ɽ▒▒ ▒ൺ 370200
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ɽ▒▒ ▒Ͳ▒ 370300
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ɽ▒▒ ▒▒ׯ 370400
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ɽ▒▒ ▒▒Ӫ 370500
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ɽ▒▒ ▒▒̨ 370600
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ɽ▒▒ Ϋ▒▒ 370700
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ɽ▒▒ ▒▒▒▒ 370800
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ɽ▒▒ ̩▒▒ 370900
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ɽ▒▒ ▒▒▒▒ 371000
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ɽ▒▒ ▒▒▒▒ 371100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ɽ▒▒ ▒▒▒ 371200
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ɽ▒▒ ▒▒▒▒ 371300
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ɽ▒▒ ▒▒▒▒ 371400
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ɽ▒▒ ▒ĳ▒ 371500
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ɽ▒▒ ▒▒▒▒ 371600
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ɽ▒▒ ▒▒▒▒ 371700
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒ 410000[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒ ֣▒▒ 410100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 410200
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 410300
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ƽ▒▒ɽ 410400
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 410500
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒ױ▒ 410600
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 410700
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 410800
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒ 410900
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒ 411000
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒ 411100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒Ͽ 411200
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 411300
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 411400
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 411500
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒ܿ▒ 411600
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        פ▒▒▒ 411700
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒ 420000[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒ ▒人 420100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒ʯ 420200
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ʮ▒▒ 420300
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒˲▒ 420500
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒差 420600
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 420700
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 420800
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        Т▒▒ 420900
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 421000
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒Ƹ▒ 421100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 421200
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 421300
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒ʩ 422800
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒ 430000[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒ ▒▒ɳ 430100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 430200
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒̶ 430300
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 430400
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 430500
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 430600
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 430700
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒żҽ▒ 430800
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 430900
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 431000
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 431100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 431200
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ¦▒▒ 431300
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 433100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒㶫 440000[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒㶫   ▒▒▒▒ 440100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒㶫 ▒ع▒ 440200
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒㶫 ▒▒▒▒ 440300
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒㶫 ▒麣 440400
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒㶫 ▒▒ͷ 440500
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒㶫 ▒▒ɽ 440600
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒㶫 ▒▒▒▒ 440700
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒㶫 տ▒▒ 440800
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒㶫 ï▒▒ 440900
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒㶫 ▒▒▒▒ 441200
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒㶫 ▒▒▒▒ 441300
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒㶫 ÷▒▒ 441400
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒㶫 ▒▒β 441500
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒㶫 ▒▒Դ 441600
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒㶫 ▒▒ 441700
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒㶫 ▒▒Զ 441800
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒㶫 ▒▒ݸ 441900
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒㶫 ▒▒ɽ 442000
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒㶫 ▒▒▒▒ 445100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒㶫 ▒▒▒▒ 445200
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒㶫 ▒Ƹ▒ 445300
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒ 450000[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒ ▒▒▒▒ 450100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 450200
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 450300
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 450400
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 450500
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒Ǹ▒ 450600
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 450700
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒ 450800
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 450900
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒ɫ 451000
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 451100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒ӳ▒ 451200
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒ 451300
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 451400
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒ 460000[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒ ▒▒▒▒ 460100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 460200
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒ 500000[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒Ĵ▒ 510000[vrspider:LM] [20170124 16:14:31] [cf76e860] location ▒Ĵ▒   ▒ɶ▒ 510100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒Ĵ▒ ▒Թ▒ 510300
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒Ĵ▒ ▒▒֦▒▒ 510400
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒Ĵ▒ ▒▒▒▒ 510500
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒Ĵ▒ ▒▒▒▒ 510600
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒Ĵ▒ ▒▒▒▒ 510700
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒Ĵ▒ ▒▒Ԫ 510800
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒Ĵ▒ ▒▒▒▒ 510900
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒Ĵ▒ ▒ڽ▒ 511000
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒Ĵ▒ ▒▒ɽ 511100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒Ĵ▒ ▒ϳ▒ 511300
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒Ĵ▒ üɽ 511400
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒Ĵ▒ ▒˱▒ 511500
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒Ĵ▒ ▒㰲 511600
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒Ĵ▒ ▒▒▒▒ 511700
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒Ĵ▒ ▒Ű▒ 511800
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒Ĵ▒ ▒▒▒▒ 511900
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒Ĵ▒ ▒▒▒▒ 512000
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒Ĵ▒ ▒▒▒▒ 513200
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒Ĵ▒ ▒▒▒▒ 513300
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒Ĵ▒ ▒ɽ 513400
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒ 520000[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒ ▒▒▒▒ 520100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ˮ 520200
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 520300
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒˳ 520400
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ͭ▒▒ 522200
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ǭ▒▒▒▒ 522300
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒Ͻ▒ 522400
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ǭ▒▒▒▒ 522600
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ǭ▒▒ 522700
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒ 530000[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒ ▒▒▒ 530100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒ 530300
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒Ϫ 530400
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒ɽ 530500
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒ͨ 530600
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒ 530700
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ˼é 530800
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒ٲ▒ 530900
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 532300
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒ 532500
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒ɽ 532600
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒˫▒▒▒▒ 532800
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 532900
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒º▒ 533100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ŭ▒▒ 533300
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 533400
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒ 540000[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒   ▒▒▒ 540100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒ ▒▒ 542100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒ ɽ▒▒ 542200
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒ ▒տ▒▒▒ 542300
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒ ▒▒▒▒ 542400
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒ ▒▒▒▒ 542500
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒ ▒▒֥ 542600
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒ 610000[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒ ▒▒ 610100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ͭ▒▒ 610200
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 610300
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 610400
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        μ▒▒ 610500
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒Ӱ▒ 610600
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 610700
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 610800
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 610900
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 611000
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒ 620000[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒ ▒▒▒ 620100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒▒ 620200
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒ 620300
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 620400
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒ˮ 620500
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 620600
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒Ҵ 620700
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ƽ▒ 620800
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒Ȫ 620900
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 621000
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 621100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ¤▒▒ 621200
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 622900
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 623000
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒ຣ 630000[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒ຣ     ▒▒▒▒ 630100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒ຣ  ▒▒▒▒ 632100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒ຣ  ▒▒▒▒ 632200
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒ຣ  ▒▒▒▒ 632300
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒ຣ  ▒▒▒▒ 632500
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒ຣ  ▒▒▒▒ 632600
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒ຣ  ▒▒▒▒ 632700
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒ຣ  ▒▒▒▒ 632800
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒ 640000[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒ ▒▒ 640100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ʯ▒▒ɽ 640200
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 640300
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒ԭ 640400
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒▒        ▒▒▒▒ 640500
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒½▒ 650000[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒½▒   ▒▒³ľ▒▒ 650100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒½▒ ▒▒▒▒▒▒▒ 650200
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒½▒ ▒▒³▒▒ 652100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒½▒ ▒▒▒▒ 652200
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒½▒ ▒▒ 652300
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒½▒ ▒▒▒▒▒▒▒▒ɹ▒ 652700
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒½▒ ▒▒▒▒▒▒▒▒ɹ▒ 652800
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒½▒ ▒▒▒▒▒▒ 652900
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒½▒ ▒▒▒▒▒▒▒տ¶▒▒▒▒ 653000
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒½▒ ▒▒ʲ 653100
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒½▒ ▒▒▒▒ 653200
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒½▒ ▒▒▒▒ 654000
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒½▒ ▒▒▒▒ 654200
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒½▒ ▒▒▒▒̩ 654300
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ̨▒▒ 710000[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] location ▒▒▒ 810000[vrspider:LM_T[20170124 16:14:31] [cf76e860] location ▒▒▒▒ 820000[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] reload location list data/location.dat finished, 36s have been loaded
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] CWriteTask::open(0085e7a8):load length success
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] [CWriteTask::open] thread num:6
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] [CUrlUpdateTask::open] thread num:8
+[vrspider:LM_ERROR] [20170124 16:14:31] [cf34a700] CWriteTask::svc(0085e7a8):Mysql: connect vr fail: Can't connect to MySQL server on '10.139.22.134' (11.139.22.134: root :root
+[vrspider:LM_ERROR] [20170124 16:14:31] [cf34a700] CWriteTask::svc(0085e7a8):Mysql: open database fail: MySQL server has gone away
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] [CFetchTask::open] thread num:8
+[vrspider:LM_INFO] [20170124 16:14:31] [cf76e860] load  vr_resource configiguration: 10.139.22.134 root root open_data
+[vrspider:LM_INFO] [20170124 16:14:31] [cf76e860] load vr_resource configiguration: 10.139.22.134 root root external
+[Mysql::execute] time:1275
+[vrspider:LM_TRACE] [20170124 16:14:31] [cdf48700] CWriteTask::svc(0085e7a8):Mysql vr success
+[vrspider:LM_ERROR] [20170124 16:14:31] [cf76e860] CScanTask::svc(008647e8):redis: get random unique_set_name success5_IncrUniqueNum_Set_2
+[vrspider:LM_INFO] [20170124 16:14:31] [cf76e860] CDeleteTask load vr_resource configiguration: 10.139.22.134 root root open_data
+[TEST] the FileterTplids is 700
+[vrspider:LM_INFO] [20170124 16:14:31] [cf76e860] [COnlineTask::open]load vr_resource configiguration: 10.139.22.134 root root open_data
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf76e860] [COnlineTask::open] thread num: 3
+[Mysql::execute] time:1198
+[vrspider:LM_TRACE] [20170124 16:14:31] [cd547700] CWriteTask::svc(0085e7a8):Mysql vr success
+[Mysql::execute] time:1198
+[vrspider:LM_TRACE] [20170124 16:14:31] [ccb46700] CWriteTask::svc(0085e7a8):Mysql vr success
+[Mysql::execute] time:1752
+[vrspider:LM_TRACE] [20170124 16:14:31] [bffff700] CWriteTask::svc(0085e7a8):Mysql vr success
+[Mysql::execute] time:1256
+[vrspider:LM_TRACE] [20170124 16:14:31] [bf5fe700] CUrlUpdateTask::svc(0085c448):Mysql vr success
+[vrspider:LM_TRACE] [20170124 16:14:31] [bf5fe700] CUrlUpdateTask::svc(0085c448): begin to loop
+[Mysql::execute] time:1225
+[vrspider:LM_TRACE] [20170124 16:14:31] [bebfd700] CUrlUpdateTask::svc(0085c448):Mysql vr success
+[vrspider:LM_TRACE] [20170124 16:14:31] [bebfd700] CUrlUpdateTask::svc(0085c448): begin to loop
+[Mysql::execute] time:1281
+[vrspider:LM_TRACE] [20170124 16:14:31] [be1fc700] CUrlUpdateTask::svc(0085c448):Mysql vr success
+[vrspider:LM_TRACE] [20170124 16:14:31] [be1fc700] CUrlUpdateTask::svc(0085c448): begin to loop
+[Mysql::execute] time:1320
+[vrspider:LM_TRACE] [20170124 16:14:31] [bd7fb700] CUrlUpdateTask::svc(0085c448):Mysql vr success
+[vrspider:LM_TRACE] [20170124 16:14:31] [bd7fb700] CUrlUpdateTask::svc(0085c448): begin to loop
+[Mysql::execute] time:1239
+[vrspider:LM_TRACE] [20170124 16:14:31] [bcbec700] CUrlUpdateTask::svc(0085c448):Mysql vr success
+[vrspider:LM_TRACE] [20170124 16:14:31] [bcbec700] CUrlUpdateTask::svc(0085c448): begin to loop
+[Mysql::execute] time:1332
+[vrspider:LM_TRACE] [20170124 16:14:31] [9ffff700] CUrlUpdateTask::svc(0085c448):Mysql vr success
+[vrspider:LM_TRACE] [20170124 16:14:31] [9ffff700] CUrlUpdateTask::svc(0085c448): begin to loop
+[Mysql::execute] time:1172
+[vrspider:LM_TRACE] [20170124 16:14:31] [9f5fe700] CUrlUpdateTask::svc(0085c448):Mysql vr success
+[vrspider:LM_TRACE] [20170124 16:14:31] [9f5fe700] CUrlUpdateTask::svc(0085c448): begin to loop
+[Mysql::execute] time:1457
+[vrspider:LM_TRACE] [20170124 16:14:31] [cf34a700] CWriteTask::svc(0085e7a8):Mysql vr success
+[Mysql::execute] time:1274
+[vrspider:LM_TRACE] [20170124 16:14:31] [ce949700] CWriteTask::svc(0085e7a8):Mysql vr success
+[Mysql::execute] time:1251
+[vrspider:LM_TRACE] [20170124 16:14:31] [9ebfd700] CUrlUpdateTask::svc(0085c448):Mysql vr success
+[vrspider:LM_TRACE] [20170124 16:14:31] [9ebfd700] CUrlUpdateTask::svc(0085c448): begin to loop
+[Mysql::execute] time:1246
+[vrspider:LM_TRACE] [20170124 16:14:31] [9e1fc700] CFetchTask::svc(00862448):Mysql vr success
+[vrspider:LM_TRACE] [20170124 16:14:31] [9e1fc700] CFetchTask::svc(00862448): begin to loop
+[Mysql::execute] time:1217
+[vrspider:LM_TRACE] [20170124 16:14:31] [9d7fb700] CFetchTask::svc(00862448):Mysql vr success
+[vrspider:LM_TRACE] [20170124 16:14:31] [9d7fb700] CFetchTask::svc(00862448): begin to loop
+[Mysql::execute] time:1272
+[vrspider:LM_TRACE] [20170124 16:14:31] [9cdfa700] CFetchTask::svc(00862448):Mysql vr success
+[vrspider:LM_TRACE] [20170124 16:14:31] [9cdfa700] CFetchTask::svc(00862448): begin to loop
+[Mysql::execute] time:1298
+[vrspider:LM_TRACE] [20170124 16:14:32] [87fff700] CFetchTask::svc(00862448):Mysql vr success
+[vrspider:LM_TRACE] [20170124 16:14:32] [87fff700] CFetchTask::svc(00862448): begin to loop
+[Mysql::execute] time:1195
+[vrspider:LM_TRACE] [20170124 16:14:32] [875fe700] CFetchTask::svc(00862448):Mysql vr success
+[vrspider:LM_TRACE] [20170124 16:14:32] [875fe700] CFetchTask::svc(00862448): begin to loop
+[Mysql::execute] time:1220
+[vrspider:LM_TRACE] [20170124 16:14:32] [86bfd700] CFetchTask::svc(00862448):Mysql vr success
+[vrspider:LM_TRACE] [20170124 16:14:32] [86bfd700] CFetchTask::svc(00862448): begin to loop
+[Mysql::execute] time:1841
+[vrspider:LM_TRACE] [20170124 16:14:32] [861fc700] CFetchTask::svc(00862448):Mysql vr success
+[vrspider:LM_TRACE] [20170124 16:14:32] [861fc700] CFetchTask::svc(00862448): begin to loop
+[Mysql::execute] time:1231
+[vrspider:LM_TRACE] [20170124 16:14:32] [857fb700] CFetchTask::svc(00862448):Mysql vr success
+[vrspider:LM_TRACE] [20170124 16:14:32] [857fb700] CFetchTask::svc(00862448): begin to loop
+[Mysql::execute] time:1295
+[vrspider:LM_TRACE] [20170124 16:14:32] [cdf48700] CWriteTask::svc(0085e7a8):Mysql vi success
+[Mysql::execute] time:1175
+[vrspider:LM_TRACE] [20170124 16:14:32] [84dfa700] CScanTask::svc(008647e8):Mysql vr success
+[Mysql::execute] time:1269
+[vrspider:LM_TRACE] [20170124 16:14:32] [63fff700] CDeleteTask::svc(00865578):Mysql vr success
+[vrspider:LM_TRACE] [20170124 16:14:32] [63fff700] CDeleteTask::svc(00865578): begin to loop
+[Mysql::execute] time:1269
+[vrspider:LM_TRACE] [20170124 16:14:32] [635fe700] COnlineTask::svc(00865bb8):Mysql vr success
+[Mysql::execute] time:1262
+[vrspider:LM_TRACE] [20170124 16:14:32] [62bfd700] COnlineTask::svc(00865bb8):Mysql vr success
+[Mysql::execute] time:1277
+[vrspider:LM_TRACE] [20170124 16:14:32] [cd547700] CWriteTask::svc(0085e7a8):Mysql vi success
+[Mysql::execute] time:1714
+[vrspider:LM_TRACE] [20170124 16:14:32] [621fc700] COnlineTask::svc(00865bb8):Mysql vr success
+[Mysql::execute] time:1306
+[vrspider:LM_TRACE] [20170124 16:14:32] [ccb46700] CWriteTask::svc(0085e7a8):Mysql vi success
+[Mysql::execute] time:1257
+[vrspider:LM_TRACE] [20170124 16:14:32] [bffff700] CWriteTask::svc(0085e7a8):Mysql vi success
+[Mysql::execute] time:1362
+[vrspider:LM_TRACE] [20170124 16:14:32] [cf34a700] CWriteTask::svc(0085e7a8):Mysql vi success
+[Mysql::execute] time:1302
+[vrspider:LM_TRACE] [20170124 16:14:32] [ce949700] CWriteTask::svc(0085e7a8):Mysql vi success
+[Mysql::execute] time:1190
+[vrspider:LM_TRACE] [20170124 16:14:32] [cdf48700] CWriteTask::svc(0085e7a8):Mysql cr success
+[vrspider:LM_INFO] [20170124 16:14:32] [cdf48700] load vr_resource configiguration: 10.139.22.134 root root open_data
+[vrspider:LM_INFO] [20170124 16:14:32] [cdf48700] load cr_info configiguration: 10.139.22.134 root root external
+[vrspider:LM_TRACE] [20170124 16:14:32] [cdf48700] CWriteTask::svc(0085e7a8): begin to loop
+[Mysql::execute] time:1227
+[vrspider:LM_TRACE] [20170124 16:14:32] [84dfa700] CScanTask::svc(008647e8):Mysql vr success
+[vrspider:LM_TRACE] [20170124 16:14:32] [84dfa700] CScanTask::svc(008647e8): begin to loop -2065717504
+[vrspider:LM_TRACE] [20170124 16:14:32] [84dfa700] CScanTask::get_resource(008647e8):write_task_queue : 0, fetch_task_queue : 0, online_task_queue : 0, udelete_task_queue : 0
+[Mysql::execute] time:1198
+[vrspider:LM_TRACE] [20170124 16:14:32] [635fe700] COnlineTask::svc(00865bb8):Mysql mysql_remind success
+[vrspider:LM_TRACE] [20170124 16:14:32] [635fe700] COnlineTask::svc(00865bb8): begin to loop 1667229440
+[Mysql::execute] time:1397
+[vrspider:LM_TRACE] [20170124 16:14:32] [62bfd700] COnlineTask::svc(00865bb8):Mysql mysql_remind success
+[vrspider:LM_TRACE] [20170124 16:14:32] [62bfd700] COnlineTask::svc(00865bb8): begin to loop 1656739584
+[Mysql::execute] time:1465
+[vrspider:LM_TRACE] [20170124 16:14:32] [cd547700] CWriteTask::svc(0085e7a8):Mysql cr success
+[vrspider:LM_INFO] [20170124 16:14:32] [cd547700] load vr_resource configiguration: 10.139.22.134 root root open_data
+[vrspider:LM_INFO] [20170124 16:14:32] [cd547700] load cr_info configiguration: 10.139.22.134 root root external
+[vrspider:LM_TRACE] [20170124 16:14:32] [cd547700] CWriteTask::svc(0085e7a8): begin to loop
+[Mysql::execute] time:1293
+[vrspider:LM_TRACE] [20170124 16:14:32] [621fc700] COnlineTask::svc(00865bb8):Mysql mysql_remind success
+[vrspider:LM_TRACE] [20170124 16:14:32] [621fc700] COnlineTask::svc(00865bb8): begin to loop 1646249728
+[Mysql::execute] time:1165
+[vrspider:LM_TRACE] [20170124 16:14:32] [ccb46700] CWriteTask::svc(0085e7a8):Mysql cr success
+[vrspider:LM_INFO] [20170124 16:14:32] [ccb46700] load vr_resource configiguration: 10.139.22.134 root root open_data
+[vrspider:LM_INFO] [20170124 16:14:32] [ccb46700] load cr_info configiguration: 10.139.22.134 root root external
+[vrspider:LM_TRACE] [20170124 16:14:32] [ccb46700] CWriteTask::svc(0085e7a8): begin to loop
+[Mysql::execute] time:1350
+[vrspider:LM_TRACE] [20170124 16:14:32] [bffff700] CWriteTask::svc(0085e7a8):Mysql cr success
+[vrspider:LM_INFO] [20170124 16:14:32] [bffff700] load vr_resource configiguration: 10.139.22.134 root root open_data
+[vrspider:LM_INFO] [20170124 16:14:32] [bffff700] load cr_info configiguration: 10.139.22.134 root root external
+[vrspider:LM_TRACE] [20170124 16:14:32] [bffff700] CWriteTask::svc(0085e7a8): begin to loop
+[Mysql::execute] time:1186
+[vrspider:LM_TRACE] [20170124 16:14:32] [cf34a700] CWriteTask::svc(0085e7a8):Mysql cr success
+[vrspider:LM_INFO] [20170124 16:14:32] [cf34a700] load vr_resource configiguration: 10.139.22.134 root root open_data
+[vrspider:LM_INFO] [20170124 16:14:32] [cf34a700] load cr_info configiguration: 10.139.22.134 root root external
+[vrspider:LM_TRACE] [20170124 16:14:32] [cf34a700] CWriteTask::svc(0085e7a8): begin to loop
+[Mysql::execute] time:1214
+[vrspider:LM_TRACE] [20170124 16:14:32] [ce949700] CWriteTask::svc(0085e7a8):Mysql cr success
+[vrspider:LM_INFO] [20170124 16:14:32] [ce949700] load vr_resource configiguration: 10.139.22.134 root root open_data
+[vrspider:LM_INFO] [20170124 16:14:32] [ce949700] load cr_info configiguration: 10.139.22.134 root root external
+[vrspider:LM_TRACE] [20170124 16:14:32] [ce949700] CWriteTask::svc(0085e7a8): begin to loop
+[Mysql::execute] time:1222
+[vrspider:LM_TRACE] [20170124 16:14:32] [53fff700] CMysqlHandle::svc(cdf47970):Mysql vr success
+[Mysql::execute] time:1825
+[vrspider:LM_TRACE] [20170124 16:14:32] [535fe700] CMysqlHandle::svc(cd546970):Mysql vr success
+[Mysql::execute] time:1218
+[vrspider:LM_TRACE] [20170124 16:14:32] [52bfd700] CMysqlHandle::svc(ccb45970):Mysql vr success
+[Mysql::execute] time:1153
+[vrspider:LM_TRACE] [20170124 16:14:32] [521fc700] CMysqlHandle::svc(bfffe970):Mysql vr success
+[Mysql::execute] time:1208
+[vrspider:LM_TRACE] [20170124 16:14:32] [517fb700] CMysqlHandle::svc(cf349970):Mysql vr success
+[Mysql::execute] time:1257
+[vrspider:LM_TRACE] [20170124 16:14:32] [50dfa700] CMysqlHandle::svc(ce948970):Mysql vr success
+[Mysql::execute] time:1240
+[vrspider:LM_TRACE] [20170124 16:14:32] [53fff700] CMysqlHandle::svc(cdf47970):Mysql cr success
+[vrspider:LM_TRACE] [20170124 16:14:32] [53fff700] CMysqlhandle::svc(cdf47970): begin to loop
+[Mysql::execute] time:1265
+[vrspider:LM_TRACE] [20170124 16:14:32] [535fe700] CMysqlHandle::svc(cd546970):Mysql cr success
+[vrspider:LM_TRACE] [20170124 16:14:32] [535fe700] CMysqlhandle::svc(cd546970): begin to loop
+[Mysql::execute] time:1257
+[vrspider:LM_TRACE] [20170124 16:14:32] [52bfd700] CMysqlHandle::svc(ccb45970):Mysql cr success
+[vrspider:LM_TRACE] [20170124 16:14:32] [52bfd700] CMysqlhandle::svc(ccb45970): begin to loop
+[Mysql::execute] time:1782
+[vrspider:LM_TRACE] [20170124 16:14:32] [521fc700] CMysqlHandle::svc(bfffe970):Mysql cr success
+[vrspider:LM_TRACE] [20170124 16:14:32] [521fc700] CMysqlhandle::svc(bfffe970): begin to loop
+[Mysql::execute] time:1192
+[vrspider:LM_TRACE] [20170124 16:14:32] [517fb700] CMysqlHandle::svc(cf349970):Mysql cr success
+[vrspider:LM_TRACE] [20170124 16:14:32] [517fb700] CMysqlhandle::svc(cf349970): begin to loop
+[Mysql::execute] time:1266
+[vrspider:LM_TRACE] [20170124 16:14:32] [50dfa700] CMysqlHandle::svc(ce948970):Mysql cr success
+[vrspider:LM_TRACE] [20170124 16:14:32] [50dfa700] CMysqlhandle::svc(ce948970): begin to loop
+[vrspider:LM_TRACE] [20170124 16:14:33] [84dfa700] CScanTask::get_resource(008647e8):write_task_queue : 0, fetch_task_queue : 0, online_task_queue : 0, udelete_task_queue : 0
+[vrspider:LM_TRACE] [20170124 16:14:34] [84dfa700] CScanTask::get_resource(008647e8):write_task_queue : 0, fetch_task_queue : 0, online_task_queue : 0, udelete_task_queue : 0
+[vrspider:LM_TRACE] [20170124 16:14:35] [84dfa700] CScanTask::get_resource(008647e8):write_task_queue : 0, fetch_task_queue : 0, online_task_queue : 0, udelete_task_queue : 0
+[vrspider:LM_TRACE] [20170124 16:14:36] [84dfa700] CScanTask::get_resource(008647e8):write_task_queue : 0, fetch_task_queue : 0, online_task_queue : 0, udelete_task_queue : 0
+[vrspider:LM_TRACE] [20170124 16:14:37] [84dfa700] CScanTask::get_resource(008647e8):write_task_queue : 0, fetch_task_queue : 0, online_task_queue : 0, udelete_task_queue : 0
+[vrspider:LM_TRACE] [20170124 16:14:38] [84dfa700] CScanTask::get_resource(008647e8):write_task_queue : 0, fetch_task_queue : 0, online_task_queue : 0, udelete_task_queue : 0
+^C[vrspider:LM_TRACE] [20170124 16:14:38] [84dfa700] CScanTask::sl_update = 1 manual_update = 1 svc(008647e8): exit from loop
+[vrspider:LM_TRACE] [20170124 16:14:38] [bf5fe700] CUrlUpdateTask::svc(0085c448): exit from loop
+[vrspider:LM_TRACE] [20170124 16:14:38] [be1fc700] CUrlUpdateTask::svc(0085c448): exit from loop
+[vrspider:LM_TRACE] [20170124 16:14:38] [bebfd700] CUrlUpdateTask::svc(0085c448): exit from loop
+[vrspider:LM_TRACE] [20170124 16:14:38] [bcbec700] CUrlUpdateTask::svc(0085c448): exit from loop
+[vrspider:LM_TRACE] [20170124 16:14:38] [bd7fb700] CUrlUpdateTask::svc(0085c448): exit from loop
+[vrspider:LM_TRACE] [20170124 16:14:38] [9f5fe700] CUrlUpdateTask::svc(0085c448): exit from loop
+[vrspider:LM_TRACE] [20170124 16:14:38] [9ffff700] CUrlUpdateTask::svc(0085c448): exit from loop
+[vrspider:LM_TRACE] [20170124 16:14:38] [9ebfd700] CUrlUpdateTask::svc(0085c448): exit from loop
+[vrspider:LM_TRACE] [20170124 16:14:38] [9e1fc700] CFetchTask::svc(00862448): exit from loop
+[vrspider:LM_TRACE] [20170124 16:14:38] [9d7fb700] CFetchTask::svc(00862448): exit from loop
+[vrspider:LM_TRACE] [20170124 16:14:38] [9cdfa700] CFetchTask::svc(00862448): exit from loop
+[vrspider:LM_TRACE] [20170124 16:14:38] [87fff700] CFetchTask::svc(00862448): exit from loop
+[vrspider:LM_TRACE] [20170124 16:14:38] [875fe700] CFetchTask::svc(00862448): exit from loop
+[vrspider:LM_TRACE] [20170124 16:14:38] [857fb700] CFetchTask::svc(00862448): exit from loop
+[vrspider:LM_TRACE] [20170124 16:14:38] [86bfd700] CFetchTask::svc(00862448): exit from loop
+[vrspider:LM_TRACE] [20170124 16:14:38] [861fc700] CFetchTask::svc(00862448): exit from loop
+[vrspider:LM_TRACE] [20170124 16:14:38] [cd547700] CWriteTask::svc(0085e7a8): exit from loop
+[vrspider:LM_TRACE] [20170124 16:14:38] [ccb46700] CWriteTask::svc(0085e7a8): exit from loop
+[vrspider:LM_TRACE] [20170124 16:14:38] [cdf48700] CWriteTask::svc(0085e7a8): exit from loop
+[vrspider:LM_TRACE] [20170124 16:14:38] [cf34a700] CWriteTask::svc(0085e7a8): exit from loop
+[vrspider:LM_TRACE] [20170124 16:14:38] [ce949700] CWriteTask::svc(0085e7a8): exit from loop
+[vrspider:LM_TRACE] [20170124 16:14:38] [bffff700] CWriteTask::svc(0085e7a8): exit from loop
+[vrspider:LM_TRACE] [20170124 16:14:38] [63fff700] CDeleteTask::svc(00865578): exit from loop
+[vrspider:LM_TRACE] [20170124 16:14:38] [635fe700] COnlineTask::svc(00865bb8): exit from loop
+[vrspider:LM_TRACE] [20170124 16:14:38] [62bfd700] COnlineTask::svc(00865bb8): exit from loop
+[vrspider:LM_TRACE] [20170124 16:14:38] [621fc700] COnlineTask::svc(00865bb8): exit from loop
