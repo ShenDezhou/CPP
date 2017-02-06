@@ -1,29 +1,49 @@
+/*
+Copyright (c) 2017-2018 Dezhou Shen, Sogou Inc.
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+*/
+
 #ifndef  __CWRITETASK 
 #define  __CWRITETASK 
 
+#include <pthread.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <unistd.h>
+
 #include <vector>
- #include <map>
- #include <ace/Singleton.h>
- #include <ace/Synch.h>
- #include <ace/Task.h>
- #include <libxml/xmlschemas.h>
- #include "database.h"
- #include "ExVrFetcher.h"
- #include <pthread.h>
- #include <sys/types.h>
- #include <sys/stat.h>
- #include <unistd.h>
- #include "QdbWriter.hpp"
- #include "Sender.hpp"
-#include "VrCounter.hpp"
-#include "CMysqlHandle.hpp"
-#include "CurlHttp.h"
+#include <map>
+
+#include <ace/Singleton.h>
+#include <ace/Synch.h>
+#include <ace/Task.h>
+#include <libxml/xmlschemas.h>
 #include <libxml/xpath.h>
 #include <Platform/bchar.h>
 #include <Platform/bchar_cxx.h>
 #include <Platform/bchar_utils.h>
 #include <Platform/unicode_encoding.h>
+
+#include "database.h"
+#include "ExVrFetcher.h"
+#include "QdbWriter.hpp"
+#include "Sender.hpp"
+#include "VrCounter.hpp"
+#include "CMysqlHandle.hpp"
+#include "CurlHttp.h"
 #include "redis_tool.h"
+
 #define MAX_ITEM_LEN   (1024*10)
 
 struct mysql_cost

@@ -1,3 +1,30 @@
+/*
+Copyright (c) 2017-2018 Dezhou Shen, Sogou Inc.
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+*/
+
+#define _USE_TYPE_STR_
+//#define _USE_TAG_STR_
+#include "CWriteTask.hpp"
+
+#include <stdlib.h>
+
+#include <vector>
+#include <unordered_set>
+#include <sstream>
+#include <algorithm>
+
 #include <libxml/xmlschemas.h>
 #include <libxml/schemasInternals.h>
 #include <libxml/xmlschemastypes.h>
@@ -9,8 +36,6 @@
 #include <libxml/parser.h>
 #include <libxml/tree.h>
 #include <libxml/schemasInternals.h>
-
-#include <algorithm>
 #include "ace/Message_Block.h"
 #include "ace/OS_Memory.h"
 #include "ace/Guard_T.h"
@@ -21,18 +46,10 @@
 #include <ace/Time_Value.h>
 #include <Platform/encoding/EncodingConvertor.h>
 #include <Platform/encoding.h>
-#include "Configuration.hpp"
-#define _USE_TYPE_STR_
-//#define _USE_TAG_STR_
-#include "CWriteTask.hpp"
-#include <sstream>
 
+#include "Configuration.hpp"
 #include "scribemonitor.h"
 #include "Util.hpp"
-
-#include <stdlib.h>
-#include <vector>
-#include <unordered_set>
 #include "ConfigManager.h"
 #include "COnlineTask.hpp"
 #include "CDeleteTask.hpp"
