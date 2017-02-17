@@ -15,7 +15,7 @@ Copyright (c) 2017-2018 Dezhou Shen, Sogou Inc.
 */
 
 #define _USE_TYPE_STR_
-//#define _USE_TAG_STR_
+// #define _USE_TAG_STR_
 #include "CWriteTask.hpp"
 
 #include <stdlib.h>
@@ -35,7 +35,6 @@ Copyright (c) 2017-2018 Dezhou Shen, Sogou Inc.
 #include <libxml/xmlIO.h>
 #include <libxml/parser.h>
 #include <libxml/tree.h>
-#include <libxml/schemasInternals.h>
 #include "ace/Message_Block.h"
 #include "ace/OS_Memory.h"
 #include "ace/Guard_T.h"
@@ -60,28 +59,26 @@ pthread_mutex_t unique_set_name_mutex = PTHREAD_MUTEX_INITIALIZER;
 
 using namespace std;
 
-const static int MAXBUFCOUNT = 1000;
-const static string CONTENTA = "content_A";
-const static string CONTENTB = "content_B";
-const static char *RULEAB = "AxB";
-const static char *RULEABP = "AxBxP";
+static const int MAXBUFCOUNT = 1000;
+static const string CONTENTA = "content_A";
+static const string CONTENTB = "content_B";
+static const char *RULEAB = "AxB";
+static const char *RULEABP = "AxBxP";
 
 //item 最大数量
-const static int MAXIMEMNUNBER = 1000000;
+static const int MAXIMEMNUNBER = 1000000;
 //urls 最大数量
-const static int MAXURLSNUMBER = 50;
-const static int MAXURLSITEMNUMBER = 10000;
+static const int MAXURLSNUMBER = 50;
+static const int MAXURLSITEMNUMBER = 10000;
 
 
-static void toLower(std::basic_string<char>& s)
-{
+static void toLower(std::basic_string<char>& s) {
 	for (std::basic_string<char>::iterator p = s.begin();p!=s.end();++p){
 		*p =tolower(*p);
 	}
 }
 
-int splitStr(const string &str, const char separator, vector<string> &res)
-{
+int splitStr(const string &str, const char separator, vector<string> &res) {
     //fprintf(stderr, "enter splitStr\n");
 	size_t startPos = 0;
 
@@ -107,8 +104,7 @@ int splitStr(const string &str, const char separator, vector<string> &res)
 }       
 
 //多个空格转换为一个
-int multi_space_to_one(char *str)
-{
+int multi_space_to_one(char *str) {
 	char *pos = str;
 	char *over_pos = str;
 	while (*pos) {
@@ -129,8 +125,7 @@ int multi_space_to_one(char *str)
  *out:    str
  *return: void
  */
-void trim(char *str)
-{
+void trim(char *str) {
 	if(str != NULL) {
 		//trim left
 		char *pos = str;
@@ -158,8 +153,7 @@ void trim(char *str)
  *out:    str
  *return: void
  */
-void multichar_to_onechar(char *str, const string &nullspace, const char ch)
-{
+void multichar_to_onechar(char *str, const string &nullspace, const char ch) {
 	if(str != NULL) 
 	{
 		char *curr_end=str, *pos=str;
@@ -222,8 +216,7 @@ void multichar_to_onechar(char *str, const string &nullspace, const char ch)
  *out:    str
  *return: void
  */
-inline void multichar_to_onechar(string &str, const string &nullspace, const char ch)
-{
+inline void multichar_to_onechar(string &str, const string &nullspace, const char ch) {
 	if(str.size() > 0)
 	{
 		char temp[256];
@@ -234,8 +227,7 @@ inline void multichar_to_onechar(string &str, const string &nullspace, const cha
 	}
 }
 
-int prune_suffix(std::string &location)
-{
+int prune_suffix(std::string &location) {
 	static const int subCount = 26;                                                                                                          
 	static const char* subList[] = {"省", "市", "自治区", "自治县", "自治州", "直辖市", "维吾尔族", "壮族", "苗族", "彝族",
 		"土家族", "藏族", "地区", "朝鲜族", "羌族", "布依族", "侗族", "哈尼族", "傣族", "白族", 
@@ -265,8 +257,7 @@ int prune_suffix(std::string &location)
 	return 0;
 }
 
-int prune_suffix_tab(std::string &location)
-{
+int prune_suffix_tab(std::string &location) {
 	std::string tmp_str;
 	std::string res_location;
 	size_t prepos = 0;
@@ -286,8 +277,7 @@ int prune_suffix_tab(std::string &location)
 	return 0;
 }
 
-std::string urlEncode(const std::string input)
-{
+std::string urlEncode(const std::string input) {
     std::string conv_words = "";
     conv_words.reserve(input.length() * 3);
     const unsigned char* c = (const unsigned char*)input.c_str();
@@ -305,8 +295,7 @@ int g_subCount = 26;
 int *g_subLength = NULL;
 bchar_t (*g_subList)[16] = NULL;
 
-void init_suffix()
-{
+void init_suffix() {
         static const char* subList[] = {"省", "市", "自治区", "自治县", "自治州", "直辖市", "维吾尔族", "壮族", "苗族", "彝族",
                 "土家族", "藏族", "地区", "朝鲜族", "羌族", "布依族", "侗族", "哈尼族", "傣族", "白族",
                 "景颇族", "傈僳族", "回族", "蒙古族", "维吾尔", "哈萨克"};
@@ -322,13 +311,13 @@ void init_suffix()
                 g_subLength[i] = bcslen(g_subList[i]);
         }
 }
-void free_suffix()
-{
+
+void free_suffix() {
         delete g_subLength;
         delete g_subList;
 }
-int prune_suffix_u16(std::bstring &location)
-{
+
+int prune_suffix_u16(std::bstring &location) {
         bool isHit = true;
         while (isHit) {
                 isHit = false;
@@ -350,8 +339,7 @@ int prune_suffix_u16(std::bstring &location)
         return 0;
 }
 
-int prune_suffix_tab_u16(std::bstring &location)
-{
+int prune_suffix_tab_u16(std::bstring &location) {
         std::bstring tmp_str;
         std::bstring res_location;
         size_t prepos = 0;
@@ -371,9 +359,7 @@ int prune_suffix_tab_u16(std::bstring &location)
         return 0;
 }
 
-
-int prune_suffix_tab_u8(std::string src,std::string &result)
-{
+int prune_suffix_tab_u8(std::string src,std::string &result) {
 	Util::UTF82UTF16(src,src);
 	std::bstring tmp_src;
 	tmp_src.assign((const bchar_t*)src.c_str(),src.length()/2);
@@ -385,35 +371,31 @@ int prune_suffix_tab_u8(std::string src,std::string &result)
 	
 }
 
-
-
-static inline bool ispunct_u16(const int ch)
-{
+static inline bool ispunct_u16(const int ch) {
 	return (ch < 128 && ispunct(ch)) && ch != '@' && ch != '&' && ch!='%' && ch!='*' ||	// 半角标点。"@&%" 暂时不算标点
 		(ch > 0xff00 && ch < 0xff5f && ispunct(ch - 0xfee0)) ||	// 可转换为半角的全角标点
 		(ch >= 0x3001 && ch <= 0x3004) || (ch >= 0x3008 && ch <= 0x301f) ||	// 、。〈〉《》「」『』【】等
 		(ch >= 0x2010 && ch <= 0x203a);	// —…等
 }
-static inline bool isalpha_u16(const int ch)
-{
+
+static inline bool isalpha_u16(const int ch) {
 	return (ch < 128 && isalpha(ch)) ||	// 半角英文
 		(ch > 0xff00 && ch < 0xff5f && isalpha(ch - 0xfee0));	// 全角英文
 }
-static inline bool isdigit_u16(const int ch)
-{
+
+static inline bool isdigit_u16(const int ch) {
 	return (ch < 128 && isdigit(ch)) ||	// 半角数字
 		(ch > 0xff00 && ch < 0xff5f && isdigit(ch - 0xfee0));	// 全角数字
 }
-static inline bool isspace_u16(const int ch)
-{
+
+static inline bool isspace_u16(const int ch) {
 	return ((ch < 128 && isspace(ch)) || ch == 0x3000);
 }
 
 // 删除标点，除非标点前后都是数字字符
 // 如果 delSpace==true，则也删除空格，除非空格前后都是英文字符或都是数字字符
 // delNumberSign: 设为false时，保留'#'，用于vrqo的逐条可有可无词归一化 
-char *PuncNormalize_gbk(char *str,std::string encoding="gbk", bool delSpace = false, bool delNumberSign = true)
-{
+char *PuncNormalize_gbk(char *str,std::string encoding="gbk", bool delSpace = false, bool delNumberSign = true) {
 	iconv_t gbk2u16 = iconv_open("utf-16le//IGNORE", encoding.c_str());	// "le" makes iconv to omit BOM
 	iconv_t u162gbk = iconv_open(encoding.c_str(), "utf-16le//IGNORE");
 	size_t slen = strlen(str) + 1;
@@ -523,27 +505,26 @@ char *PuncNormalize_gbk(char *str,std::string encoding="gbk", bool delSpace = fa
 	return str;
 }
 
-static inline bool ispunct_gchar(const gchar_t ch)
-{
-	const static std::set<gchar_t> puncts({44195 /*，*/, 41889 /*。*/, 41379 /*！*/, 49059 /*？*/,
+static inline bool ispunct_gchar(const gchar_t ch) {
+	static const std::set<gchar_t> puncts({44195 /*，*/, 41889 /*。*/, 41379 /*！*/, 49059 /*？*/,
 		 48035 /*；*/, 47779 /*：*/, 42915 /*＇*/, 41635 /*＂*/, 41633 /*、*/, 43171 /*（*/,
 		 43427 /*）*/, 44451 /*－*/, 48291 /*＜*/, 48803 /*＞*/, 46753 /*《*/, 47009 /*》*/,
 		 44707 /*．*/, 64419 /*｛*/, 64931 /*｝*/, 56227 /*［*/, 56739 /*］*/, 48801 /*【*/,
 		 49057 /*】*/, 43937 /*～*/});
 	return puncts.find(ch) != puncts.end();
 }
-static inline bool isalpha_gchar(const gchar_t ch)
-{
+
+static inline bool isalpha_gchar(const gchar_t ch) {
 	return ((ch & 0xff) == 0xa3 &&
 			( ((ch & 0xff00) >= 0xe100 && (ch & 0xff00) <= 0xfa00) ||	// ａ-ｚ
 			  ((ch & 0xff00) >= 0xc100 && (ch & 0xff00) <= 0xda00) ));	// Ａ-Ｚ
 }
-static inline bool isdigit_gchar(const gchar_t ch)
-{
+
+static inline bool isdigit_gchar(const gchar_t ch) {
 	return ((ch & 0xff) == 0xa3 && (ch & 0xff00) >= 0xb000 && (ch & 0xff00) <= 0xb900);
 }
-static inline bool isspace_gchar(const gchar_t ch)
-{
+
+static inline bool isspace_gchar(const gchar_t ch) {
 	return (ch == 0xa1a1);
 }
 
@@ -551,19 +532,15 @@ static inline bool isspace_gchar(const gchar_t ch)
 // 如果 delSpace==true，则也删除空格，除非空格前后都是英文字符或都是数字字符
 // delNumberSign: 设为false时，保留'#'，用于vrqo的逐条可有可无词归一化 
 // 返回结果字符串的长度，单位是gchar，不包含结尾的0
-size_t PuncNormalize_gchar(gchar_t *str, bool delSpace = false, bool delNumberSign = true)
-{
+size_t PuncNormalize_gchar(gchar_t *str, bool delSpace = false, bool delNumberSign = true) {
 	enum {AD_NORM, AD_ALPHA, AD_DIGIT} adstate = AD_NORM;
 	gchar_t *out = str, *in = str;
-	for( ; *in; ++in)
-	{
-		if(isdigit_gchar(*in))
-		{
+	for( ; *in; ++in) {
+		if(isdigit_gchar(*in)) {
 			adstate = AD_DIGIT;
 			*out++ = *in;
 		}
-		else if(isalpha_gchar(*in) || (!delNumberSign && *in == '#'))
-		{
+		else if(isalpha_gchar(*in) || (!delNumberSign && *in == '#')) {
 			adstate = AD_ALPHA;
 			*out++ = *in;
 		}

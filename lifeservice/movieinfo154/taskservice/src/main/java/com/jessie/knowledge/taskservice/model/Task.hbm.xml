@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+		
+<hibernate-mapping>
+	<class name="com.jessie.knowledge.taskservice.model.Task"
+		table="service_task_info" catalog="knowledge">
+		<id name="taskId" type="java.lang.Integer">
+			<column name="task_id" />
+			<generator class="identity" />
+		</id>
+		<property name="seeds" type="java.lang.String">
+			<column name="seed" not-null="true" />
+		</property>
+		<list name="parser" cascade="all" lazy="false" > 
+         	<key column="task_id"/>
+         	<list-index column="idx"/>
+         	<one-to-many class="com.jessie.knowledge.taskservice.model.TaskParser"/>
+      	</list>
+		<property name="regex" type="java.lang.String">
+			<column name="regex" not-null="true" />
+		</property>
+		<property name="listregex" type="java.lang.String">
+			<column name="listregex" />
+		</property>
+		<property name="depth" type="java.lang.Integer">
+			<column name="depth" not-null="true" />
+		</property>
+		<property name="description" type="java.lang.String">
+			<column name="description" not-null="true" />
+		</property>
+		<property name="mark" type="java.lang.String">
+			<column name="mark" not-null="true" />
+		</property>
+		<property name="listcycle" type="java.lang.Integer">
+			<column name="listcycle" not-null="true" />
+		</property>
+		<property name="cycle" type="java.lang.Integer">
+			<column name="cycle" not-null="true" />
+		</property>
+		<property name="spiderFreq" type="java.lang.Double">
+			<column name="spider_freq" not-null="true" />
+		</property>
+		<property name="pageLoadMaxWait" type="java.lang.Integer">
+			<column name="page_load_max_wait" not-null="true" />
+		</property>
+<!-- 	
+		<property name="tryCount" type="java.lang.Integer">
+			<column name="try_count" not-null="true" />
+		</property>
+		<property name="tryInteval" type="java.lang.Double">
+			<column name="try_inteval" not-null="true" />
+		</property>
+-->
+		<property name="loadImg" type="java.lang.Boolean">
+			<column name="load_img" not-null="true" />
+		</property>
+		<property name="creator" type="java.lang.String">
+			<column name="creator" not-null="true" />
+		</property>
+		<property name="lastupdate" type="java.sql.Timestamp">
+			<column name="lastupdate" length="19" not-null="true" />
+		</property>	
+		<property name="taskLocked" type="java.lang.Boolean">
+			<column name="task_locked" length="19" not-null="true" />
+		</property>
+		<property name="bufferCount" type="java.lang.Integer">
+			<column name="buffer_count" not-null="true" />
+		</property>
+	</class>
+</hibernate-mapping>

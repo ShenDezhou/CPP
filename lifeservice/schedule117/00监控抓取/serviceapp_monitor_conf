@@ -1,0 +1,32 @@
+# type	site	desc	path	fileregex
+电影	时光网	详情	/task/result/system/task-118/	14*
+电影	猫眼电影	短评	/task/result/system/task-119/	14*
+电影	猫眼电影	长评	/task/result/system/task-120/	14*
+电影	时光网	演员表	/task/result/system/task-121/	14*
+电影	时光网	剧照	/task/result/system/task-122/	14*
+电影	时光网	片花	/task/result/system/task-123/	14*
+电影	时光网	短评	/task/result/system/task-144/	14*
+电影	时光网	简介	/fuwu/Source/Crawler/beijing/movie/	mtime_summary$
+电影	大众点评	排片信息	/fuwu/Source/Cooperation/Dianping/data/	dianping_movie_cm_relation
+电影	猫眼电影	排片信息	/fuwu/Source/Cooperation/Maoyan/data/	maoyan_movie_cm_relation
+电影	微票电影	排片信息	/fuwu/Source/Cooperation/Wepiao/data/	wepiao_movie_cm_relation
+电影	抠电影	排片信息	/fuwu/Source/Cooperation/KouMovie/data/	kou_movie_cm_relation
+#电影	糯米电影	拍片信息	/fuwu/Spider/Nuomi/data/	nuomi_movie_cm_relation
+电影	中国电影网	票房	/fuwu/Spider/Cbooo/data/	cbo_allbox
+电影	时光网	排序信息	/search/zhangk/Fuwu/Source/Crawler/beijing/movie/	mtime_rank$
+电影	基础数据	电影详情	/fuwu/Merger/Output/movie/	cinema_movie_rel.table$
+
+#美食	糯米	团购	/fuwu/Source/Cooperation/Nuomi/data/	beijing_shop$
+#美食	大众点评	团购	/fuwu/Source/Cooperation/Dianping/tuan/	beijing.daily
+#美食	基础数据	团购更新	/fuwu/Merger/Output/beijing/restaurant/	dianping_detail.tuan.table$
+#美食	美味不用等	排号	/fuwu/Spider/9Now/data/	id.map
+
+#休闲	玩周末	发现频道	/fuwu/Spider/Wanzhoumo/data/	wanzhoumo_activity.table
+#休闲	鲜橙	发现频道	/fuwu/Spider/Xiancheng/data/	xiancheng_article.table
+
+团购	大众点评	每日新增	/fuwu/Source/Cooperation/Dianping/tuandata/daily/	beijing.data
+团购	大众点评	每日更新	/fuwu/Source/Cooperation/Dianping/tuandata/update/	beijing.data
+#团购	百度糯米	团购详情	/fuwu/Source/Cooperation/Nuomi/data/	beijing_tuan
+#团购	百度糯米	团购店铺	/fuwu/Source/Cooperation/Nuomi/data/	beijing_shop
+团购	华佗驾到	预约服务	/fuwu/Spider/Huatuojiadao/data/	huatuojiadao_service.beijing
+

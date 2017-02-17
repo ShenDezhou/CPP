@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+		<!-- ${table.task_parser_info} -->
+<hibernate-mapping>
+	<class name="com.jessie.knowledge.taskservice.model.TaskParser"
+		table="service_task_parser_info" catalog="knowledge">
+		<id name="id" type="java.lang.Integer">
+			<column name="id" />
+			<generator class="identity" />
+		</id>
+		<many-to-one name="task"  class="com.jessie.knowledge.taskservice.model.Task" lazy="false" >
+            <column name="task_id" not-null="true" />
+        </many-to-one>
+		<property name="parserUrl" type="java.lang.String">
+			<column name="parser_url" not-null="true" />
+		</property>
+		<property name="tableId" type="java.util.UUID">
+			<column name="table_id" not-null="true" />
+		</property>
+			<property name="creator" type="java.lang.String">
+			<column name="creator" not-null="true" />
+		</property>
+		<property name="latestVersion" type="java.lang.Double">
+			<column name="latest_version" not-null="true" />
+		</property>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,20 @@
+# serverApp movie mtime's desc/image/actor/video 电影类 时光网 数据接入
+10 5,22 * * * cd /fuwu/Spider/Mtime/; /usr/bin/python bin/getMtimeMovie.py 1>>std 2>>err
+10 8 * * * cd /fuwu/; sh build_movie.sh 1>>movie.std 2>>movie.err
+
+
+# serverApp  movie three-part Cinema-Movie Sale Info  电影类  第三方影院排片信息接入
+0 6 * * * cd /fuwu/Source/Cooperation/;  sh build_download_cooperation_data.sh 1>std 2>err
+
+
+# serverApp movie allbox    电影类，票房数据接入
+0 6,12,18 * * * cd /fuwu/Spider/Cbooo; sh build.sh 1>std 2>err
+
+
+# serverApp dianping tuan info  美食类  大众点评团购 数据接入
+30 11 * * * cd /fuwu/Source/Cooperation/Dianping/; sh bin/build_dianping_tuan.sh 1>>tuan.std 2>>tuan.err &
+10 5 * * * cd /fuwu/Source/Cooperation/Nuomi; sh bin/build_tuan.sh 1>std 2>err &
+
+
+# serverApp Find  休闲类 发现频道  数据接入
+0 5 * * * cd /fuwu/Spider/; sh build_play_find.sh 1>std 2>err

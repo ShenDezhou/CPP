@@ -1,0 +1,305 @@
+#!/bin/python
+#coding=gb2312
+
+import sys, re
+import logging
+import copy
+
+from keyConfig import *
+from DateTimeTool import DateTimeTool as dateTool
+
+class MovieParser:
+
+	# load conf file, init log file
+	def __init__(self, conf):
+		self.BEGIN_TAG = '<item>'
+		self.END_TAG = '</item>'
+		self.RANGE_KEY = 'range'
+		self.MOVIE_KEY = 'movie'
+		self.CINEMA_KEY = 'cinema'
+		self.CMR_KEY = 'cinema_movie'
+		self.DAYITEM_KEY = 'day_item'
+		self.TIMEITEM_KEY = 'time_item'
+
+	
+		self.THEATER_KEY = 'theater'
+		self.DAY1_KEY = 'day1'
+		self.DAY2_KEY = 'day2'
+		self.DAY3_KEY = 'day3'
+		self.DAYLIST = [self.DAY1_KEY, self.DAY2_KEY, self.DAY3_KEY]
+
+
+		self.sep = '\t'
+
+		self.confMap = dict()
+		self.loadConfFile(conf)
+	
+		self.movieItemList = []
+		self.cinemaItemList = []
+		self.CMRItemList = []
+
+		# config log format
+		today = dateTool.today()
+		logging.basicConfig(level=logging.DEBUG,
+                format='%(asctime)s %(filename)s[line:%(lineno)d] [%(levelname)s] %(message)s',
+                datefmt='%Y-%m-%d %H:%M:%S',
+                filename='logs/DianpingParser_' + today + '.log',
+                filemode='a')
+		logging.info('init MovieParser')
+		
+
+	def loadConfFile(self, conf):
+		for line in open(conf):
+			line = line.strip('\n')
+			if len(line) == 0 or line.startswith('#'):
+				continue
+			segs = line.split('\t')
+			if len(segs) != 3:
+				continue
+			type, key, regex = segs[0], segs[1], segs[2]
+			if type not in self.confMap:
+				map = dict()
+				self.confMap[type] = map
+			self.confMap[type][key] = regex
+
+
+	def printItemList(self, itemList, fd):
+		for item in itemList:
+			fd.write("%s\n" % item)
+
+
+	def printParseResult(self, file):
+		filename = re.sub('\..*', '', file)
+		filename = re.sub('.*/', '', filename)
+		movieOutput = 'data/' + filename + '_movie'
+		cinemaOutput = 'data/' + filename + '_cinema'
+		relationOutput = 'data/' + filename + '_cm_relation'
+		movieFD = open(movieOutput, 'w')
+		cinemaFD = open(cinemaOutput, 'w')
+		relationFD = open(relationOutput, 'w')
+		
+		self.printItemList(self.movieItemList, movieFD)
+		self.printItemList(self.cinemaItemList, cinemaFD)
+		self.printItemList(self.CMRItemList, relationFD)
+
+		movieFD.close()
+		cinemaFD.close()
+		relationFD.close()
+
+	
+	# 根据key列表从map中获取对应val的数组
+	def getValueList(self, keyList, kvMap):
+		valueList = []
+		for key in keyList:
+			value = ''
+			if key in kvMap:
+				value = kvMap[key]
+				valueList.append(value)
+		return valueList
+
+	# 是否list中元都为空
+	def isListItemAllEmpty(self, list):
+		for item in list:
+			if len(item) != 0:
+				return False
+		return True
+
+
+	# 生成影院-电影的场次信息
+	def insertCMItem(self, itemMap, keyList, itemList):
+		#print keyList, itemMap
+		valueList = []
+		# 获取 cinemaid  movieid
+		for key in keyList:
+			value = ''
+			if key in itemMap:
+				value = itemMap[key]
+				valueList.append(value)
+		# 三天的场次信息
+		#{key = dayN: {day, week, theater: [] }}
+		for dayKey in self.DAYLIST:
+			if dayKey not in itemMap:
+				continue
+			# date  week 信息
+			dayInfoMap = itemMap[dayKey]
+			dateValList = self.getValueList(day_itemKey, dayInfoMap)
+			if self.isListItemAllEmpty(dateValList):
+				continue
+			# 没有场次信息直接退出
+			if self.THEATER_KEY not in dayInfoMap:
+				logging.error('%s key not exist' % self.THEATER_KEY)
+				return
+			# 场次信息 [start end price ....]
+			theaterInfoList = dayInfoMap[self.THEATER_KEY]
+			for theaterItemMap in theaterInfoList:
+				theaterItemValList = self.getValueList(time_itemKey, theaterItemMap)
+				CMRValList = copy.deepcopy(valueList)	
+				CMRValList.extend(dateValList)
+				CMRValList.extend(theaterItemValList)
+				# insert
+				item = self.sep.join(CMRValList)
+				if item not in itemList:
+					itemList.append(item)
+
+
+	# 将一个类别下待抽取的key对应的value组成一个item
+	# 然后将其加入到一个list中，去重
+	def insertItem(self, itemMap, keyList, itemList):
+		valueList = []
+		for key in keyList:
+			value = ''
+			if key in itemMap:
+				value = itemMap[key]
+			valueList.append(value)
+		# insert
+		item = self.sep.join(valueList)
+		if item not in itemList:
+			itemList.append(item)
+
+
+
+
+	def normalValue(self, value):
+		value = value.strip()
+		value = re.sub('\t', '  ', value)
+		value = value.replace('<![CDATA[', '')
+		value = value.replace(']]>', '')
+		return value.strip()
+
+	def getRegexValue(self, regex, content):
+		findList = re.findall(regex, content)
+		if len(findList) == 0:
+			return ''
+		value = findList[0]
+		return self.normalValue(value)
+
+
+	
+	def commonExtractInfo(self, typeKey, content):
+		infoMap = dict()
+		# extract tuan info
+		if typeKey not in self.confMap:
+			logging.error('[%s] type is not in config' % typeKey)
+			return
+		for key in self.confMap[typeKey]:
+			if key == self.RANGE_KEY:
+				continue
+			regex = self.confMap[typeKey][key]
+			value = self.getRegexValue(regex, content)
+			infoMap[key] = value
+			if key == "day1":
+				print key, value
+		return infoMap
+
+
+	def extractMovieInfo(self, content):
+		movieInfoMap = dict()
+		# extract tuan info
+		if self.MOVIE_KEY not in self.confMap:
+			logging.error('[%s] type is not in config' % self.MOVIE_KEY)
+			return
+		for key in self.confMap[self.MOVIE_KEY]:
+			if key == self.RANGE_KEY:
+				continue
+			regex = self.confMap[self.MOVIE_KEY][key]
+			value = self.getRegexValue(regex, content)
+			movieInfoMap[key] = value
+		return movieInfoMap
+
+	
+	# 抽取 <day week start end room ...>信息
+	def extractTheaterInfo(self, content):
+		infoMap = dict()
+		# 解析 date week
+		for key in self.confMap[self.DAYITEM_KEY]:
+			regex = self.confMap[self.DAYITEM_KEY][key]
+			value = self.getRegexValue(regex, content)
+			infoMap[key] = value
+		
+		theaterMapList = []
+		# 解析 theater 信息  多场次
+		if self.RANGE_KEY not in self.confMap[self.TIMEITEM_KEY]:
+			logging.error('[%s] key is not in tiem_item config' % self.RANGE_KEY)
+			return
+		rangeRegex = self.confMap[self.TIMEITEM_KEY][self.RANGE_KEY]
+		# 1 cinema  .vs. n theater
+		for rangeContent in re.findall(rangeRegex, content):
+			theaterMap = dict()
+			for key in self.confMap[self.TIMEITEM_KEY]:
+				if key == self.RANGE_KEY:
+					continue
+				regex = self.confMap[self.TIMEITEM_KEY][key]
+				value = self.getRegexValue(regex, rangeContent)
+				theaterMap[key] = value
+			theaterMapList.append(theaterMap)
+		infoMap[self.THEATER_KEY] = theaterMapList
+		return infoMap
+
+
+
+	# extract cinema-movie relation info
+	def extractCinamaMovieRelInfo(self, content):
+		# cinemaid movieid day1 day2 day3
+		relationInfoMap = dict()
+		if self.CMR_KEY not in self.confMap:
+			logging.error('[%s] type is not in config' % self.CMR_KEY)
+			return
+		for key in self.confMap[self.CMR_KEY]:
+			if key == self.RANGE_KEY:
+				continue
+			regex = self.confMap[self.CMR_KEY][key]
+			value = self.getRegexValue(regex, content)
+			relationInfoMap[key] = value
+		
+		# 针对day1 day2 day3 计算场次信息
+		#key = day1  value = {day, week, theater: [] }
+		for dayKey in self.DAYLIST:
+			if dayKey not in relationInfoMap:
+				continue
+			dayInfo = self.extractTheaterInfo(relationInfoMap[dayKey])
+			relationInfoMap[dayKey] = dayInfo
+		
+		return relationInfoMap
+
+
+
+
+	def parseImp(self, content):
+		# extract movie info & cinema info
+		movieInfoMap = self.commonExtractInfo(self.MOVIE_KEY, content)
+		cinemaInfoMap = self.commonExtractInfo(self.CINEMA_KEY, content)
+		relationInfoMap = self.extractCinamaMovieRelInfo(content)
+		
+		# insert every movie & cinema item
+		self.insertItem(movieInfoMap, movieKey, self.movieItemList)
+		self.insertItem(cinemaInfoMap, cinemaKey, self.cinemaItemList)
+		# 排片场次信息，与上述两个不同
+		self.insertCMItem(relationInfoMap, cinema_movieKey, self.CMRItemList)
+
+
+	def parse(self, file):
+		content = ''
+		lineNum = 0
+		for line in open(file):
+			lineNum += 1
+			if lineNum % 100000 == 0:
+				logging.info("handle %d lines" % lineNum)
+			line = line.strip()
+			if re.search(self.BEGIN_TAG, line) is not None:
+				content = line
+			elif re.search(self.END_TAG, line) is not None:
+				self.parseImp(content)
+			else:
+				content += line
+		self.printParseResult(file)
+
+
+if __name__ == '__main__':
+	opt = sys.argv[1]
+	if opt == '-dianping':
+		conf, input = sys.argv[2], sys.argv[3]
+		parser = MovieParser(conf)
+		parser.parse(input)
+
+
+

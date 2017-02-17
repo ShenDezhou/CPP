@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:oauth="http://www.springframework.org/schema/security/oauth2" 
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
+            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.2.xsd
+            http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.2.xsd
+            http://www.springframework.org/schema/security/oauth2 http://www.springframework.org/schema/security/spring-security-oauth2-2.0.xsd"
+       default-lazy-init="true">
+	<context:property-placeholder location="classpath:application.properties" />
+    <tx:annotation-driven/>
+	<aop:aspectj-autoproxy/>
+    <context:annotation-config/>
+    <context:component-scan base-package="com.jessie.knowledge"/>
+	<!-- bean config -->
+	<!-- ======================TaskService======================= -->
+	<bean id="taskService" class="com.jessie.knowledge.taskservice.service.impl.TaskServiceImpl">
+		<property name="taskDao" ref="taskDao"/>
+		<property name="userTaskDao" ref="userTaskDao"/>
+		<!--  <property name="seedManageService" ref="seedManageService"/> -->
+	</bean>
+
+		<bean id="urlService" class="com.jessie.knowledge.taskservice.service.impl.UrlServiceImpl">
+	</bean>
+	
+	<!-- 
+	<bean id="seedManageService" class="com.jessie.knowledge.taskservice.service.impl.SeedManageServiceImpl">
+	</bean>
+	-->
+	
+  	<bean id="taskDao" class="com.jessie.knowledge.taskservice.dao.impl.TaskDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="userTaskDao" class="com.jessie.knowledge.taskservice.dao.impl.UserTaskDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
+  	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean" destroy-method="destroy">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="configLocation" value="classpath:hibernate.cfg.xml"/>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">${hibernate.dialect}</prop>
+                <prop key="hibernate.cache.use_second_level_cache">false</prop>
+                <prop key="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</prop>
+                <!-- 
+                <prop key="hibernate.cache.use_query_cache">false</prop>               
+                <prop key="hibernate.enable_lazy_load_no_trans">true</prop>
+               	 -->
+            </props>
+        </property>
+    </bean>
+  	
+	<!-- dataSource -->
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="${jdbc.driverClassName}" />
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />		
+	</bean>
+
+
+	
+ 	<!-- =================================================================== -->
+    <!-- AOP: Configuration and Aspects                                      -->
+    <!-- =================================================================== -->
+    <aop:config>
+          <aop:advisor advice-ref="serviceTxAdvice" pointcut="execution(* *..service.*.*(..))" order="0"/>
+          <aop:advisor advice-ref="daoTxAdvice" pointcut="execution(* *..dao.*.*(..))" order="0"/>
+    </aop:config>
+	
+	<tx:advice id="daoTxAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+        	<tx:method name="*" read-only="false"/>
+            <tx:method name="create*" read-only="false" rollback-for="UserExistsException" propagation="REQUIRED"/>
+            <tx:method name="get*" read-only="true" propagation="REQUIRED"/>
+			<tx:method name="find*" read-only="true" propagation="REQUIRED"/>
+			<tx:method name="update*" read-only="false" propagation="REQUIRED"/> 
+			<tx:method name="delete*" read-only="false" propagation="REQUIRED"/>		
+        </tx:attributes>
+    </tx:advice>
+	
+	<tx:advice id="serviceTxAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+        	<tx:method name="*" read-only="true" /> 
+            <tx:method name="create*" read-only="false" rollback-for="TaskExistsException" propagation="REQUIRED"/>
+            <tx:method name="get*" read-only="true" propagation="REQUIRED"/>
+			<tx:method name="find*" read-only="true" propagation="REQUIRED"/>
+			<tx:method name="update*" read-only="false" propagation="REQUIRED"/> 
+			<tx:method name="delete*" read-only="false" propagation="REQUIRED"/>
+        </tx:attributes>
+    </tx:advice>
+
+    <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    
+ </beans>

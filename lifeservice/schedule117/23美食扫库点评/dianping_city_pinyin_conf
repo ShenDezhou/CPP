@@ -1,0 +1,899 @@
+
+
+==== 直辖市
+北京	北京	beijing
+上海	上海	shanghai
+重庆	重庆	chongqing
+天津	天津	tianjin
+
+
+==== 省会 重要城市
+广东	广州	guangzhou
+广东	深圳	shenzhen
+江苏	南京	nanjing
+陕西	西安	xian
+福建	厦门	xiamen
+四川	成都	chengdu
+河北	石家庄	shijiazhuang
+山西	太原	taiyuan
+内蒙古	呼和浩特	huhehaote
+黑龙江	哈尔滨	haerbin
+吉林	长春	changchun
+山东	青岛	qingdao
+山东	济南	jinan
+浙江	杭州	hangzhou
+安徽	合肥	hefei
+福建	福州	fuzhou
+河南	郑州	zhengzhou
+湖北	武汉	wuhan
+湖南	长沙	changsha
+江西	南昌	nanchang
+云南	昆明	kunming
+云南	丽江	lijiang
+贵州	贵阳	guiyang
+西藏	拉萨	lasa
+新疆	乌鲁木齐	wulumuqi
+青海	西宁	xining
+甘肃	兰州	lanzhou
+广西	桂林	guilin
+海南	三亚	sanya
+
+
+海南	海口	haikou
+
+
+
+===== 大城市
+
+河北	保定	baoding
+河北	秦皇岛	qinhuangdao
+河北	邯郸	handan
+河北	廊坊	langfang
+河北	唐山	tangshan
+河北	邢台	xingtai
+河北	承德	chengde
+河北	沧州	cangzhou
+河北	张家口	zhangjiakou
+河北	衡水	hengshui
+河北	南戴河	nandaihe
+
+
+山西	大同	datong
+山西	晋中	jinzhong
+山西	临汾	linfen
+山西	长治	changzhi
+山西	忻州	xinzhou
+山西	运城	yuncheng
+山西	晋城	jincheng
+山西	朔州	shuozhou
+山西	阳泉	yangquan
+山西	吕梁	lvliang
+山西	孝义市	xiaoyi
+
+
+
+
+内蒙古	包头	baotou
+内蒙古	呼伦贝尔	hulunbeier
+内蒙古	赤峰	chifeng
+内蒙古	鄂尔多斯	eerduosi
+内蒙古	通辽	tongliao
+内蒙古	乌海	wuhai
+内蒙古	兴安盟	xingan
+内蒙古	巴彦淖尔	bayannaoer
+内蒙古	锡林郭勒	xilinguole
+内蒙古	阿拉善	alashan
+内蒙古	乌兰察布	wulanchabu
+内蒙古	锡林浩特市	xilinhaote
+内蒙古	乌兰浩特市	wulanhaote
+内蒙古	满洲里市	manzhouli
+
+
+黑龙江	大庆	daqing
+黑龙江	黑河	heihe
+黑龙江	牡丹江	mudanjiang
+黑龙江	齐齐哈尔	qiqihaer
+黑龙江	佳木斯	jiamusi
+黑龙江	鸡西	jixi
+黑龙江	大兴安岭	daxinganling
+黑龙江	七台河	qitaihe
+黑龙江	鹤岗	hegang
+黑龙江	伊春	yichun
+黑龙江	双鸭山	shuangyashan
+黑龙江	绥化	suihua
+
+吉林	吉林	jilin
+吉林	延边	yanbian
+吉林	松原	songyuan
+吉林	四平	siping
+吉林	通化	tonghua
+吉林	白山	baishan
+吉林	辽源	liaoyuan
+吉林	白城	baicheng
+吉林	延吉市	yanji
+吉林	长白山	changbaishan
+吉林	梅河口市	meihekou
+吉林	德惠市	dehui
+
+
+江苏	苏州	suzhou
+江苏	扬州	yangzhou
+江苏	无锡	wuxi
+江苏	常州	changzhou
+江苏	徐州	xuzhou
+
+辽宁	沈阳	shenyang
+辽宁	大连	dalian
+辽宁	鞍山	anshan
+辽宁	锦州	jinzhou
+辽宁	抚顺	fushun
+辽宁	营口	yingkou
+辽宁	丹东	dandong
+辽宁	葫芦岛	huludao
+辽宁	辽阳	liaoyang
+辽宁	盘锦	panjin
+辽宁	本溪	benxi
+辽宁	阜新	fuxin
+辽宁	铁岭	tieling
+辽宁	朝阳	chaoyang
+
+
+山东	烟台	yantai
+山东	威海	weihai
+山东	潍坊	weifang
+山东	泰安	taian
+山东	淄博	zibo
+山东	临沂	linyi
+山东	济宁	jining
+山东	东营	dongying
+山东	日照	rizhao
+
+
+浙江	宁波	ningbo
+浙江	嘉兴	jiaxing
+浙江	温州	wenzhou
+浙江	台州	zhejiangtaizhou
+浙江	金华	jinhua
+浙江	绍兴	shaoxing
+浙江	湖州	huzhou
+浙江	舟山	zhoushan
+浙江	衢州	quzhou
+
+
+安徽	黄山	huangshan
+安徽	蚌埠	bengbu
+安徽	芜湖	wuhu
+安徽	宿州	anhuisuzhou
+安徽	淮南	huainan
+安徽	滁州	chuzhou
+安徽	安庆	anqing
+安徽	马鞍山	maanshan
+
+
+福建	泉州	quanzhou
+福建	漳州	zhangzhou
+福建	龙岩	longyan
+福建	南平	nanping
+福建	宁德	ningde
+福建	三明	sanming
+福建	莆田	putian
+福建	福清	fuqing
+
+
+河南	新乡	xinxiang
+河南	洛阳	luoyang
+河南	开封	kaifeng
+河南	许昌	xuchang
+河南	安阳	anyang
+
+
+湖北	宜昌	yichang
+湖北	荆州	jingzhou
+湖北	黄冈	huanggang
+湖北	十堰	shiyan
+湖北	黄石	huangshi
+湖北	襄阳	xiangyang
+湖北	荆门	jinmen
+
+
+湖南	湘西	xiangxi
+湖南	张家界	zhangjiajie
+湖南	衡阳	hengyang
+湖南	株洲	zhuzhou
+湖南	湘潭	xiangtan
+湖南	邵阳	shaoyang
+湖南	岳阳	yueyang
+湖南	常德	changde
+湖南	益阳	yiyang
+
+
+江西	赣州	ganzhou
+江西	九江	jiujiang
+江西	上饶	shangrao
+江西	景德镇	jingdezhen
+江西	吉安	jian
+江西	新余	xinyu
+江西	宜春	jiangxiyichun
+江西	萍乡	pingxiang
+
+
+四川	自贡	zigong
+四川	乐山	leshan
+四川	绵阳	mianyang
+四川	南充	nanchong
+四川	阿坝	aba
+四川	宜宾	yibin
+四川	德阳	deyang
+四川	雅安	yaan
+
+
+云南	大理州	dali
+云南	迪庆	diqing
+云南	西双版纳	xishuangbanna
+云南	玉溪	yuxi
+
+
+贵州	遵义	zunyi
+贵州	黔东南	qiandongnan
+贵州	安顺	anshun
+贵州	六盘水	liupanshui
+
+
+
+陕西	宝鸡	baoji
+陕西	咸阳	xianyang
+陕西	延安	yanan
+陕西	渭南	weinan
+陕西	榆林	yulin
+陕西	汉中	hanzhong
+陕西	安康	ankang
+
+
+海南	博鳌	boao
+
+广西	南宁	nanning
+广西	柳州	liuzhou
+广西	梧州	wuzhou
+广西	北海	beihai
+广西	贺州	hezhou
+广西	贵港	guigang
+广西	钦州	qinzhou
+广西	玉林	guangxiyulin
+
+广东	珠海	zhuhai
+广东	佛山	foshan
+广东	东莞	dongguan
+广东	汕头	shantou
+广东	江门	jiangmen
+广东	中山	zhongshan
+
+甘肃	酒泉	jiuquan
+甘肃	天水	tianshui
+甘肃	庆阳	qingyang
+甘肃	张掖	zhangye
+甘肃	嘉峪关	jiayuguan
+甘肃	甘南	gannanzhou
+
+
+
+
+
+
+
+
+
+河北	辛集市	xinji
+河北	藁城市	gaocheng
+河北	晋州市	jinzhoushi
+河北	新乐市	xinle
+河北	鹿泉市	luquan
+河北	冀州市	jizhou
+河北	深州市	shenzhou
+河北	泊头市	botou
+河北	任丘市	renqiu
+河北	黄骅市	huanghua
+河北	河间市	hejian
+河北	南宫市	nangong
+河北	沙河市	shahe
+
+山西	古交市	gujiao
+山西	潞城市	lucheng
+山西	高平市	gaoping
+山西	原平市	yuanping
+山西	介休市	jiexiu
+山西	侯马市	houma
+山西	霍州市	huozhou
+山西	汾阳市	fengyang
+山西	永济市	yongji
+山西	河津市	hejin
+
+
+内蒙古	霍林郭勒市	huolinguole
+内蒙古	扎兰屯市	zalantun
+内蒙古	牙克石市	yakeshi
+内蒙古	根河市	genhe
+内蒙古	额尔古纳市	eerguna
+内蒙古	丰镇市	fengzhen
+内蒙古	阿尔山市	aershan
+内蒙古	二连浩特市	erlianhaote
+内蒙古	土默特左旗	tuzuoqi
+内蒙古	土默特右旗	tuyouqi
+内蒙古	达尔罕茂明安联合旗	daerhanqi
+内蒙古	阿鲁科尔沁旗	aluqinqi
+内蒙古	巴林左旗	bazuoqi
+内蒙古	巴林右旗	bayouqi
+内蒙古	克什克腾旗	ketengqi
+内蒙古	翁牛特旗	wenteqi
+内蒙古	喀喇沁旗	keqinqi
+内蒙古	敖汉旗	aohanqi
+内蒙古	科尔沁左翼中旗	kezuozhongqi
+内蒙古	科尔沁左翼后旗	kezuohouqi
+内蒙古	库伦旗	kulunqi
+内蒙古	奈曼旗	naimanqi
+内蒙古	扎鲁特旗	zhaluteqi
+内蒙古	达拉特旗	dalateqi
+内蒙古	准格尔旗	zhungeerqi
+内蒙古	鄂托克前旗	eqianqi
+内蒙古	鄂托克旗	eqi
+内蒙古	杭锦旗	hangjinqi
+内蒙古	乌审旗	wushenqi
+内蒙古	伊金霍洛旗	yijinqi
+内蒙古	阿荣旗	arongqi
+内蒙古	莫力达瓦达斡尔族自治旗	molidawaqi
+内蒙古	鄂伦春自治旗	elunchunqi
+内蒙古	鄂温克族自治旗	ewenkeqi
+内蒙古	陈巴尔虎旗	chenhuqi
+内蒙古	新巴尔虎左旗	chenhuzuoqi
+内蒙古	新巴尔虎右旗	chenhuyouqi
+内蒙古	乌拉特前旗	wuqianqi
+内蒙古	乌拉特中旗	wuzhongqi
+内蒙古	乌拉特后旗	wuhouqi
+内蒙古	杭锦后旗	hangjinhouqi
+内蒙古	察哈尔右翼前旗	chayouqianqi
+内蒙古	察哈尔右翼中旗	chayouzhongqi
+内蒙古	察哈尔右翼后旗	chayouhouqi
+内蒙古	四子王旗	siziwangqi
+内蒙古	科尔沁右翼前旗	keyouqianqi
+内蒙古	科尔沁右翼中旗	keyouzhongqi
+内蒙古	扎赉特旗	zhalaiteqi
+内蒙古	阿巴嘎旗	abagaqi
+内蒙古	苏尼特左旗	suzuoqi
+内蒙古	苏尼特右旗	suyouqi
+内蒙古	东乌珠穆沁旗	dongwuqinqi
+内蒙古	西乌珠穆沁旗	xiwuqinqi
+内蒙古	太仆寺旗	taipusiqi
+内蒙古	镶黄旗	xianghuangqi
+内蒙古	正镶白旗	zhengbaiqi
+内蒙古	正蓝旗	zhenglanqi
+内蒙古	阿拉善左旗	azuoqi
+内蒙古	阿拉善右旗	ayouqi
+内蒙古	额济纳旗	ejinaqi
+
+
+
+黑龙江	亚布力	yabuli
+黑龙江	讷河市	nehe
+黑龙江	北安市	beian
+黑龙江	五大连池市	wudalianchi
+黑龙江	铁力市	tieli
+黑龙江	同江市	tongjiang
+黑龙江	富锦市	fujin
+黑龙江	虎林市	hulin
+黑龙江	密山市	mishan
+黑龙江	穆棱市	muleng
+黑龙江	绥芬河市	suifenhe
+黑龙江	海林市	hailin
+黑龙江	宁安市	ningan
+黑龙江	安达市	anda
+黑龙江	肇东市	zhaodong
+黑龙江	海伦市	hailun
+
+
+
+吉林	珲春市	huichun
+吉林	九台市	jiutai
+吉林	榆树市	yushushi
+吉林	大安市	daan
+吉林	洮南市	taonan
+吉林	磐石市	panshi
+吉林	蛟河市	jiaohe
+吉林	桦甸市	huadian
+吉林	舒兰市	shulan
+吉林	双辽市	shuangliao
+吉林	公主岭市	gongzhuling
+吉林	集安市	jianshi
+吉林	临江市	linjian
+吉林	图们市	tumen
+吉林	敦化市	dunhua
+吉林	龙井市	liujing
+吉林	和龙市	heliu
+
+辽宁	瓦房店市	wafangdian
+辽宁	普兰店市	pulandian
+辽宁	庄河市	zhuanghe
+辽宁	新民市	xinmin
+辽宁	北票市	beipiao
+辽宁	凌源市	lingyuan
+辽宁	调兵山市	diaobingshan
+辽宁	开原市	kaiyuan
+辽宁	灯塔市	dengta
+辽宁	海城市	haicheng
+辽宁	凤城市	fengcheng
+辽宁	东港市	donggang
+辽宁	大石桥市	dashiqiao
+辽宁	盖州市	gaizhou
+辽宁	凌海市	linghai
+辽宁	北宁市	beining
+辽宁	兴城市	xingcheng
+
+山东	枣庄	zaozhuang
+山东	德州	dezhou
+山东	滨州	binzhou
+山东	聊城	liaocheng
+山东	菏泽	heze
+山东	莱芜	laiwu
+山东	章丘	zhangqiu
+山东	荣成	rongcheng
+山东	文登	wendeng
+山东	临清市	linqing
+山东	乐陵市	leling
+山东	禹城市	yucheng
+山东	安丘市	anqiu
+山东	昌邑市	cangyi
+山东	高密市	gaomi
+山东	青州市	qingzhou
+山东	诸城市	zhucheng
+山东	寿光市	shouguang
+山东	栖霞市	qixia
+山东	海阳市	haiyang
+山东	龙口市	liukou
+山东	莱阳市	laiyang
+山东	莱州市	laizhou
+山东	蓬莱市	penglai
+山东	招远市	zhaoyuan
+山东	乳山市	rushan
+山东	滕州市	tengzhou
+山东	曲阜市	qufu
+山东	兖州市	yanzhou
+山东	邹城市	zoucheng
+山东	新泰市	xintai
+山东	肥城市	feicheng
+
+江苏	南通	nantong
+江苏	镇江	zhenjiang
+江苏	淮安	huaian
+江苏	连云港	lianyuangang
+江苏	泰州	taizhou
+江苏	盐城	yancheng
+江苏	宿迁	suqian
+江苏	昆山	kunshan
+江苏	常熟	changshu
+江苏	张家港	zhangjiagang
+江苏	吴江	wujiang
+江苏	太仓	taicang
+江苏	江阴	jiangyin
+江苏	宜兴	yixing
+江苏	靖江	jingjian
+江苏	金坛市	jintan
+江苏	溧阳	liyang
+江苏	周庄	zhouzhuang
+江苏	天目湖	tianmuhu
+江苏	甪直	luzhi
+江苏	同里	tongli
+江苏	仪征市	yizheng
+江苏	高邮市	gaoyou
+江苏	邳州市	pizhou
+江苏	新沂市	xinyi
+江苏	东台市	dongtai
+江苏	大丰市	dafeng
+江苏	泰兴市	taixing
+江苏	兴化市	xinghua
+江苏	海门市	haimen
+江苏	启东市	qidong
+江苏	如皋市	rugao
+江苏	扬中市	yangzhong
+江苏	丹阳市	danyang
+江苏	句容市	jurong
+
+
+浙江	丽水	lishui
+浙江	义乌	yiwu
+浙江	慈溪	cixi
+浙江	奉化	fenghua
+浙江	余姚	yuyao
+浙江	临安	linan
+浙江	富阳	fuyangfy
+浙江	诸暨	zhuji
+浙江	永康	yongkang
+浙江	瑞安	ruian
+浙江	乐清	yueqing
+浙江	平阳	pingyang
+浙江	苍南	cangnan
+浙江	宁海	ninghai
+浙江	象山	xiangshan
+浙江	西塘	xitang
+浙江	乌镇	wuzhen
+浙江	富春江	fuchunjiang
+浙江	千岛湖	qiandaohu
+浙江	天目山	tianmushan
+浙江	雁荡山	yandangshan
+浙江	莫干山	moganshan
+浙江	横店	hengdian
+浙江	朱家尖	zhujiajian
+浙江	普陀山	putuoshan
+浙江	仙都	xiandu
+浙江	建德市	jiande
+浙江	平湖市	pinghu
+浙江	海宁市	haining
+浙江	桐乡市	tongxiang
+浙江	上虞区	shangyu
+浙江	嵊州市	shengzhou
+浙江	柯桥区	shaoxingxian
+浙江	江山市	jianshan
+浙江	兰溪市	lanxi
+浙江	东阳	dongyang
+浙江	临海市	linhai
+浙江	温岭市	wenling
+浙江	龙泉市	liuquan
+
+安徽	淮北	huaibei
+安徽	阜阳	fuyang
+安徽	巢湖	chaohu
+安徽	宣城	xuancheng
+安徽	亳州	bozhou
+安徽	铜陵	tongling
+安徽	池州	chizhou
+安徽	六安	liuan
+安徽	天柱山	tianzhushan
+安徽	宏村	hongcun
+安徽	西递	xidi
+安徽	九华山	jiuhuashan
+安徽	界首市	jieshou
+安徽	明光市	mingguang
+安徽	天长市	tianchang
+安徽	桐城市	tongcheng
+安徽	宁国市	ningguo
+安徽	大通区	datongqu
+
+福建	长乐	changle
+福建	武夷山	wuyishan
+福建	石狮	shishi
+福建	晋江	jinjiang
+福建	南安市	nanan
+福建	龙海	liuhai
+福建	福鼎	fuding
+福建	鼓浪屿	gulangyu
+福建	邵武市	shaowu
+福建	建瓯市	jianou
+福建	建阳市	jianyangshi
+福建	永安市	yongan
+福建	漳平市	zhangping
+福建	福安市	fuan
+
+
+河南	濮阳	puyang
+河南	南阳	nanyang
+河南	焦作	jiaozuo
+河南	平顶山	pingdingshan
+河南	周口	zhoukou
+河南	商丘	shangqiu
+河南	信阳	xinyang
+河南	三门峡	sanmenxia
+河南	漯河	luohe
+河南	驻马店	zhumadian
+河南	鹤壁	hebi
+河南	济源	jiyuan
+河南	新郑市	xinzheng
+河南	登封市	dengfeng
+河南	新密市	xinmi
+河南	巩义市	gongyi
+河南	荥阳市	yingyang
+河南	义马市	yima
+河南	灵宝市	lingbao
+河南	偃师市	yanshi
+河南	孟州市	mengzhou
+河南	沁阳市	qinyang
+河南	卫辉市	weihui
+河南	辉县市	huixian
+河南	林州市	linzhou
+河南	永城市	yongcheng
+河南	禹州市	yuzhou
+河南	长葛市	changge
+河南	舞钢市	wugang
+河南	汝州市	ruzhou
+河南	邓州市	dengzhou
+河南	项城市	xiangcheng
+
+
+
+湖北	咸宁	xianning
+湖北	潜江	qianjiang
+湖北	随州	suizhou
+湖北	孝感	xiaogan
+湖北	恩施	enshizhou
+湖北	鄂州	ezhou
+湖北	天门	tianmen
+湖北	仙桃	xiantao
+湖北	武当山	wudangshan
+湖北	三峡	sanxia
+湖北	神农架林区	shennongjia
+湖北	丹江口市	danjiangkou
+湖北	老河口市	laohekou
+湖北	枣阳市	zaoyang
+湖北	宜城市	yicheng
+湖北	钟祥市	zhongxiang
+湖北	应城市	yingcheng
+湖北	安陆市	anlu
+湖北	汉川市	hanchuan
+湖北	麻城市	macheng
+湖北	武穴市	wuxue
+湖北	大冶市	daye
+湖北	赤壁市	chibi
+湖北	石首市	shishou
+湖北	洪湖市	honghu
+湖北	松滋市	songzi
+湖北	枝江市	zhijian
+湖北	宜都市	yidu
+湖北	当阳市	dangyang
+湖北	广水市	guangshui
+湖北	恩施市	enshi
+湖北	利川市	lichuan
+湖北	夷陵区	yiling
+
+湖南	怀化	huaihua
+湖南	郴州	chenzhou
+湖南	娄底	loudi
+湖南	永州	yongzhou
+湖南	浏阳	liuyang
+湖南	津市市	jinshi
+湖南	沅江市	yuanjian
+湖南	汨罗市	miluo
+湖南	临湘市	linxiang
+湖南	醴陵市	liling
+湖南	湘乡市	xiangxiang
+湖南	韶山市	shaoshan
+湖南	常宁市	changning
+湖南	耒阳市	leiyang
+湖南	资兴市	zixing
+湖南	武冈市	wugangshi
+湖南	洪江市	hongjian
+湖南	冷水江市	lengshuijiang
+湖南	涟源市	lianyuan
+湖南	吉首市	jishou
+
+江西	鹰潭	yingtan
+江西	抚州	jiangxifuzhou
+江西	三清山	sanqingshan
+江西	龙虎山	longhushan
+江西	明月山	mingyueshan
+江西	瑞昌市	ruicang
+江西	乐平市	leping
+江西	贵溪市	guixi
+江西	瑞金市	ruijin
+江西	南康市	nankang
+江西	德兴市	dexing
+江西	丰城市	fengchengshi
+江西	樟树市	zhangshu
+江西	高安市	gaoan
+江西	井冈山市	jinggangshan
+江西	庐山区	lushan
+
+四川	凉山	liangshan
+四川	遂宁	suining
+四川	内江	neijiang
+四川	泸州	luzhou
+四川	达州	dazhou
+四川	甘孜州	ganzi
+四川	广元	guangyuan
+四川	广安	guangan
+四川	眉山	meishan
+四川	攀枝花	panzhihua
+四川	资阳	ziyang
+四川	巴中	bazhong
+四川	花水湾	huashuiwan
+四川	西岭雪山	xilingxueshan
+四川	青城山	qingchengshan
+四川	天台山	tiantaishan
+四川	泸沽湖	luguhu
+四川	西昌市	xichang
+四川	都江堰市	dujiangyan
+四川	彭州市	pengzhou
+四川	江油市	jianyou
+四川	什邡市	shifang
+四川	广汉市	guanghan
+四川	绵竹市	mianzhu
+四川	阆中市	langzhong
+四川	华蓥市	huayinshi
+四川	峨眉山市	emeishan
+四川	万源市	wanyuan
+四川	简阳市	jianyang
+四川	巴州区	bazhouqu
+四川	新都区	xindu
+四川	温江区	wenjiang
+
+云南	保山	baoshan
+云南	曲靖	qujing
+云南	德宏	dehong
+云南	红河	honghe
+云南	楚雄州	chuxiongzhou
+云南	普洱	puer
+云南	怒江	nujiang
+云南	昭通	zhaotong
+云南	文山州	wenshan
+云南	临沧	linchang
+云南	喜洲	xizhou
+云南	双廊	shuanglang
+云南	安宁市	anning
+云南	宣威市	xuanwei
+云南	潞西市	luxishi
+云南	瑞丽市	ruili
+云南	楚雄市	chuxiong
+云南	景洪市	jinghong
+云南	个旧市	gejiu
+云南	开远市	kaiyuanshi
+云南	大理市	dalishi
+
+贵州	铜仁地区	tongrendiqu
+贵州	黔南	qiannan
+贵州	毕节地区	bijiediqu
+贵州	黔西南	qianxinan
+贵州	黄果树	huangguoshu
+贵州	西江千户苗寨	xijiangqianhu
+贵州	清镇市	qingzhen
+贵州	赤水市	chishui
+贵州	仁怀市	renhuai
+贵州	铜仁市	tongren
+贵州	凯里市	kaili
+贵州	都匀市	duyun
+贵州	福泉市	fuquan
+贵州	兴义市	xingyi
+
+西藏	林芝地区	linzhi
+西藏	日喀则地区	rikazediqu
+西藏	阿里	ali
+西藏	山南	shannan
+西藏	昌都地区	changdudiqu
+西藏	那曲	naqu
+西藏	日喀则市	rikaze
+宁夏	银川	yinchuan
+宁夏	石嘴山	shizuishan
+宁夏	中卫	zhongwei
+宁夏	吴忠	wuzhong
+宁夏	固原	guyuan
+宁夏	灵武市	lingwu
+宁夏	青铜峡市	qingtongxia
+
+新疆	巴音郭楞	bayinguoleng
+新疆	伊犁	yili
+新疆	石河子	shihezi
+新疆	阿勒泰地区	aletaidiqu
+新疆	吐鲁番地区	tulufandiqu
+新疆	喀什地区	kashidiqu
+新疆	哈密地区	hamidiqu
+新疆	克拉玛依	kelamayi
+新疆	昌吉州	changjizhou
+新疆	塔城地区	tachengdiqu
+新疆	阿克苏地区	akesudiqu
+新疆	和田地区	hetiandiqu
+新疆	博尔塔拉	boertala
+新疆	克孜勒苏	kezilesu
+新疆	阿拉尔	alaer
+新疆	北屯	beitun
+新疆	奎屯市	kuitun
+新疆	库尔勒市	kuerle
+新疆	图木舒克	tumushuke
+新疆	五家渠	wujiaqu
+新疆	喀什市	kashi
+新疆	阿克苏市	akesu
+新疆	和田市	hetian
+新疆	吐鲁番市	tulufan
+新疆	哈密市	hami
+新疆	阿图什市	atushi
+新疆	博乐市	bole
+新疆	昌吉市	changji
+新疆	阜康市	fukang
+新疆	伊宁市	yining
+新疆	塔城市	tacheng
+新疆	乌苏市	wusu
+新疆	阿勒泰市	aletai
+新疆	阿拉山口市	alashankoushi
+
+
+青海	海西	haixi
+青海	海东	haidong
+青海	海北	haibei
+青海	黄南	huangnan
+青海	玉树	yushu
+青海	果洛	guoluo
+青海	青海湖	qinghaihu
+青海	格尔木市	geermu
+青海	德令哈市	delingha
+
+
+
+陕西	铜川	tongchuan
+陕西	商洛	shangluo
+陕西	华山	huashan
+陕西	华阴市	huayin
+陕西	韩城市	hancheng
+陕西	兴平市	xingping
+
+
+
+甘肃	武威	wuwei
+甘肃	平凉	pingliang
+甘肃	陇南	longnan
+甘肃	白银	baiyin
+甘肃	临夏州	linxiazhou
+甘肃	金昌	jinchang
+甘肃	定西	dingxi
+甘肃	玉门市	yumen
+甘肃	敦煌市	dunhuang
+甘肃	临夏市	linxia
+甘肃	合作市	hezuo
+
+
+
+广东	茂名	maoming
+广东	阳江	yangjiang
+广东	肇庆	zhaoqing
+广东	惠州	huizhou
+广东	湛江	zhanjiang
+广东	韶关	shaoguan
+广东	清远	qingyuan
+广东	梅州	meizhou
+广东	河源	heyuan
+广东	揭阳	jieyang
+广东	潮州	chaozhou
+广东	汕尾	shanwei
+广东	云浮	yunfu
+广东	英德市	yingde
+广东	连州市	lianzhou
+广东	乐昌市	lecang
+广东	南雄市	nanxiong
+广东	兴宁市	xingning
+广东	普宁市	puning
+广东	陆丰市	lufeng
+广东	恩平市	enping
+广东	台山市	taishan
+广东	开平市	kaiping
+广东	鹤山市	heshan
+广东	高要市	gaoyao
+广东	四会市	sihui
+广东	罗定市	luoding
+广东	阳春市	yangchun
+广东	化州市	huazhou
+广东	信宜市	xinyishi
+广东	高州市	gaozhou
+广东	吴川市	wuchuan
+广东	廉江市	lianjian
+广东	雷州市	leizhou
+广东	顺德区	shunde
+
+
+广西	百色	baise
+广西	河池	hechi
+广西	防城港	fangchenggang
+广西	崇左	chongzuo
+广西	来宾	laibin
+广西	涠洲岛	weizhoudao
+广西	岑溪市	cenxi
+广西	桂平市	guiping
+广西	北流市	beiliu
+广西	东兴市	dongxing
+广西	凭祥市	pingxiangshi
+广西	宜州市	yizhou
+广西	合山市	heshanshi
+
+海南	儋州	danzhou
+海南	白沙	baisha
+海南	保亭	baoting
+海南	昌江	changjiang
+海南	东方	dongfang
+海南	乐东	ledong
+海南	陵水	lingshui
+海南	琼海	qionghai
+海南	琼中	qiongzhong
+海南	万宁	wanning
+海南	文昌	wenchang
+海南	五指山	wuzhishan

@@ -1,0 +1,146 @@
+#!/bin/bash
+#coding=gb2312
+#/*******************************************************************************
+# * Author	 : liubing@sogou-inc.com
+# * Last modified : 2016-04-21 12:02
+# * Filename	 : build_nuomi_dianping_merge_hadoop.sh
+# * Description	 : 利用hadoop计算店铺的合并
+# * *****************************************************************************/
+
+. ./bin/Tool.sh
+
+
+Log=logs/liangzi_tuan.log
+LiangziShopConf=conf/liangzi_conf
+
+LOG "begin to merge" >> $Log
+
+function create_foot_service_imp() {
+	FoodServices=$1;  output=$2; city=$3
+	rm -f $output.bak;  mv $output $output.bak
+	# 生成足疗服务的数据
+	awk -F'\t' -v CITY=$city 'BEGIN {
+		idx = 30000000; site="脉度良子"; type="预"
+	} 
+	function normTitle(title) {
+		gsub(/（/, "(", title)
+		gsub(/）/, ")", title)
+		return title
+	}
+	ARGIND==1 {
+		if (NF < 4) {
+			next
+		}
+		city=$1; title=normTitle($3); destid=$4;
+		if (city != CITY) {
+			next
+		}
+		#print "b [" city "] [" title "]"
+		idMap[city "\t" title] = destid
+	} ARGIND==2 {
+		if ($1 == "Shop") {
+			city=$2;  title=normTitle($5);  dianpingid="";
+			#print "a [" city "] [" title "]"
+			if (city "\t" title in idMap) {
+				dianpingid = idMap[city "\t" title]
+			}
+		} else if($1 == "Service") {
+			#print dianpingid " ===== " $0
+			if (dianpingid == "") {
+				next
+			}
+			title=$2; url=$3; img=$4; value=$5; price=$6; min=$8; mode=$9
+			if (img !~ /http/) { img = "" }
+			if (url == "") { next }
+			gsub("分钟", "", min)
+			serviceItem = dianpingid "\t" site "\t" type "\t" url "\t" title "\t" img "\t" price "\t" value "\t" min "\t" mode
+			if (!(serviceItem in existServiceItems)) {
+				existServiceItems[serviceItem]
+				print ++idx "\t" serviceItem
+			}
+		}
+	}' $LiangziShopConf $FoodServices > $output
+
+	LOG "create liangzi foot service done."
+}
+
+# 每个城市的足疗服务
+function create_foot_service() {
+:<<EOF
+	serviceResultPrefix=data/huatuojiadao_service
+	for mergeFile in $(ls data/merge_shops.*); do
+		city=${mergeFile/*./}
+		output=$serviceResultPrefix.$city
+		create_foot_service_imp $mergeFile $output
+		echo "create foot service for $city done."
+	done
+	LOG "create all liangzi services done." >> $Log
+EOF
+	all_service=$1
+	# 逐个城市处理
+	cat data/city_conf | while read city cityen; do
+		# 抽取大众点评的数据
+		echo "handle $city"
+		
+		output=data/liangzi_service.$cityen
+		create_foot_service_imp $all_service $output $city
+	done
+
+
+}
+
+
+
+# 将数据写入团购数据中心
+function dispatch() {
+	footDestPath=/search/zhangk/Fuwu/Source/Cooperation/Tuan/Output/liangzi_foot
+	for serviceFile in $(ls data/liangzi_service.*); do
+		city=${serviceFile/.bak/}
+		if [ "$city" != "$serviceFile" ]; then
+			continue
+		fi
+		# 检查线上团购数据是否存在
+		city=${city/*./}
+
+		footDestFile=$footDestPath/$city
+
+		# 检查华佗驾到数据是否为空
+		lines=$(cat $serviceFile | wc -l)
+		if [ $lines -gt 0 ]; then
+			if [ -f $footDestFile ]; then
+				rm -f $footDestFile.bak;  mv $footDestFile $footDestFile.bak
+			fi
+			cp $serviceFile $footDestFile
+		fi
+	done
+	LOG "dispatch liangzi services done." >> $Log
+}
+
+# 下载华夏良子的数据
+function get_liangzi_services() {
+	output=data/liangzi_all_services 
+	rm -f $output.bak;  mv $output $output.bak
+	
+	xmlFile=tmp/liangzi.xml
+	getServiceAPI="http://api.maidu360.com/getStoreAndProducts"
+	wget $getServiceAPI -O $xmlFile
+	
+
+	/usr/bin/python bin/get_liangzi.py $xmlFile > $output
+	LOG "get liangzi services done." >> $Log
+}
+
+
+function main() {
+	# 请求华佗驾到的数据
+	get_liangzi_services
+
+	# 现在只有北京的数据，如果后面还有其他城市数据，则需要修改
+	#create_foot_service_imp data/liangzi_all_services data/liangzi_service.beijing
+	create_foot_service data/liangzi_all_services
+
+	# 分发到Tuan下
+	dispatch
+}
+
+main

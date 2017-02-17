@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+
+
+        <service_task_parser_info id="1" parser_url="http://10.134.14.117/parser/multi.mtime.com.movie.js" table_id="ENDeA3BmRB+rmroiq4LsJQ=='"  creator="zhangkun" latest_version="0.5" task_id="118" idx="0" />
+    	<service_task_parser_info id="2" parser_url="http://10.134.14.117/parser/multi.m.maoyan.com.shortdesc.js" table_id="ENDeA3BmRB+rmroiq4LsJQ=='"  creator="zhangkun" latest_version="0.5" task_id="119" idx="0" />
+    	<service_task_parser_info id="3" parser_url="http://10.134.14.117/parser/multi.m.maoyan.com.hotcomment.js" table_id="ENDeA3BmRB+rmroiq4LsJQ=='"  creator="zhangkun" latest_version="0.5" task_id="120" idx="0" />
+<!--    		
+ 		<service_task_parser_info id="4" parser_url="http://10.134.14.117/parser/multi.dianping.com.shop.list.js " table_id="ENDeA3BmRB+rmroiq4LsJQ=='"  creator="zhangkun" latest_version="0.5" task_id="2" idx="0" />
+ 		<service_task_parser_info id="5" parser_url="http://10.134.14.117/parser/multi.dianping.com.shop.js" table_id="ENDeA3BmRB+rmroiq4LsJQ=='"  creator="zhangkun" latest_version="0.5" task_id="3" idx="0" />
+ 		<service_task_parser_info id="6" parser_url="http://10.134.14.117/parser/multi.dianping.com.shop.list.js " table_id="ENDeA3BmRB+rmroiq4LsJQ=='"  creator="zhangkun" latest_version="0.5" task_id="4" idx="0" />
+-->
+
+
+            <!--     
+
+
+ 	
+            
+     <movie_task_parser_info id="1" parser_url="http://10.134.14.117/parser/multi.mtime.com.movie.js" table_id="ENDeA3BmRB+rmroiq4LsJQ=='"  creator="zhangkun" latest_version="0.5" task_id="118" idx="0" />
+    <movie_task_parser_info id="2" parser_url="http://10.134.14.117/parser/multi.m.maoyan.com.shortdesc.js" table_id="ENDeA3BmRB+rmroiq4LsJQ=='"  creator="zhangkun" latest_version="0.5" task_id="119" idx="0" />
+    <movie_task_parser_info id="3" parser_url="http://10.134.14.117/parser/multi.m.maoyan.com.hotcomment.js" table_id="ENDeA3BmRB+rmroiq4LsJQ=='"  creator="zhangkun" latest_version="0.5" task_id="120" idx="0" />
+    <movie_task_parser_info id="4" parser_url="http://10.134.14.117/parser/multi.nuomi.com.movie.js" table_id="ENDeA3BmRB+rmroiq4LsJQ=='"  creator="zhangkun" latest_version="0.5" task_id="130" idx="0" />
+
+ <task_parser_info id="1" parser_url="http://10.134.14.117/parser/multi.nuomi.com.movie.js" table_id="ENDeA3BmRB+rmroiq4LsJQ=='"  creator="zhangkun" latest_version="0.5" task_id="10" idx="0" />
+ 
+ <task_parser_info id="1" parser_url="http://10.134.14.117/parser/multi.nuomi.com.movie.js" table_id="ENDeA3BmRB+rmroiq4LsJQ=='"  creator="zhangkun" latest_version="0.5" task_id="10" idx="0" />
+ 
+
+
+    <task_parser_info id="4" parser_url="http://10.134.14.117/parser/multi.dianping.com.shop.js" table_id="20125452" creator="zhangkun" latest_version="0.5" task_id="4" idx="0" />
+    <task_parser_info id="2" parser_url="http://10.134.14.117/parser/multi.mtime.com.movie.js" table_id="20125452" creator="zhangkun" latest_version="0.5" task_id="2" idx="0" /> 	 
+    
+    
+    	 
+     	
+ 	
+ 	<task_parser_info id="1" parser_url="http://10.134.14.117/parser/baidu.com.js" table_id="20125452" creator="zhangkun" latest_version="0.5" task_id="1" idx="0" />
+ 	<task_parser_info id="1" parser_url="parser/lianjia.com.js" table_id="20125452" creator="zhangkun" latest_version="0.5" task_id="1" idx="0" />
+ 	<task_parser_info id="2" parser_url="parser/lianjia.com.2.js" table_id="20125453" creator="zhangkun" latest_version="0.2" task_id="1" idx="1"/>
+ 	<task_parser_info id="3" parser_url="parser/jd.com.js" table_id="20125454" creator="zhangkun" latest_version="0.2" task_id="2" idx="0"/>
+ 	<task_parser_info id="4" parser_url="parser/jd1.com.js" table_id="20125454" latest_version="0.2" task_id="3" idx="0"/>
+ 	<task_parser_info id="5" parser_url="parser/jd2.com.js" table_id="20125454" latest_version="0.2" task_id="4" idx="0"/>
+ 	<task_parser_info id="6" parser_url="parser/jd6.com.js" table_id="20125454" latest_version="0.2" task_id="5" idx="0"/>
+ 	<task_parser_info id="7" parser_url="parser/jd7.com.js" table_id="20125454" latest_version="0.2" task_id="6" idx="0"/>
+ 	<task_parser_info id="8" parser_url="parser/jd8.com.js" table_id="20125454" latest_version="0.2" task_id="7" idx="0"/>
+ 	<task_parser_info id="9" parser_url="parser/jd8.com.js" table_id="20125454" latest_version="0.2" task_id="8" idx="0"/>
+ 	<task_parser_info id="10" parser_url="parser/jd8.com.js" table_id="20125454" latest_version="0.2" task_id="9" idx="0"/>
+ 	<task_parser_info id="11" parser_url="parser/jd8.com.js" table_id="20125454" latest_version="0.2" task_id="10" idx="0"/>
+ 	 -->
+</dataset>
+ 

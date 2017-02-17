@@ -14,8 +14,8 @@ Copyright (c) 2017-2018 Dezhou Shen, Sogou Inc.
    limitations under the License.
 */
 
-#ifndef  __CWRITETASK 
-#define  __CWRITETASK 
+#ifndef  __CWRITETASK_H_
+#define  __CWRITETASK_H_
 
 #include <pthread.h>
 #include <sys/types.h>
@@ -175,5 +175,5 @@ private:
 	//std::string unique_set_name;
 };
 
-#endif
+#endif  // __CWRITETASK_H_
 

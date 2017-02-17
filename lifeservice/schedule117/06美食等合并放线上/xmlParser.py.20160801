@@ -1,0 +1,50 @@
+#coding=gb2312
+import libxml2, sys
+
+
+def printItem(item):
+	if type(item) == unicode:
+		print item.encode('gb2312', 'ignore')
+	else:
+		print item.decode('utf8', 'ignore').encode('gb2312', 'ignore')
+
+def taskFirst(item):
+	if type(item) == list and len(item) > 0:
+		return item[0].content.strip()
+	return item
+
+def parseService(input, source='Huatuojiadao'):
+	doc = libxml2.parseFile(input)
+	for item in doc.xpathEval('//item'):
+		title = taskFirst(item.xpathEval('./name'))
+		img = taskFirst(item.xpathEval('./imgs/img'))
+		openTime = taskFirst(item.xpathEval('./opening_time'))
+		tel = taskFirst(item.xpathEval('./phone'))
+
+		# location
+		city = taskFirst(item.xpathEval('./location/city'))
+		district = taskFirst(item.xpathEval('./location/district'))
+		area = taskFirst(item.xpathEval('./location/area'))
+		poi = taskFirst(item.xpathEval('./location/latlng'))
+		addr = taskFirst(item.xpathEval('./location/storeAddress'))
+		printItem('Shop\t%s\t%s\t%s@@@%s\t%s\t%s\t%s\t%s' % (city, source, title, poi, title, poi, tel, addr))
+
+		
+		# services
+		for service in item.xpathEval('./services/service'):
+			serviceName = taskFirst(service.xpathEval('./service_name'))
+			serviceImg = taskFirst(service.xpathEval('./service_imgs/service_img'))
+			serviceValue = taskFirst(service.xpathEval('./original_price'))
+			servicePrice = taskFirst(service.xpathEval('./discount_price'))
+			serviceScore = taskFirst(service.xpathEval('./service_score'))
+			serviceTime = taskFirst(service.xpathEval('./service_time'))
+			serviceMode = taskFirst(service.xpathEval('./service_mode'))
+			serviceUrl = taskFirst(service.xpathEval('./url'))
+			
+			printItem('Service\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s' % (serviceName, serviceUrl, serviceImg, serviceValue, servicePrice, serviceScore, serviceTime, serviceMode))
+
+
+if __name__ == '__main__':
+	# 解析足疗按摩的数据
+	input, source = sys.argv[1], sys.argv[2]
+	parseService(input, source)

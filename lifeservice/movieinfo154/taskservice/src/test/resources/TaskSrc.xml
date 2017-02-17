@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+
+
+         
+        <service_task_info task_id="118" seed="http://10.134.14.117/seed/root/task-118/mtime_movie_detail_seed" regex="^http://movie.mtime.com/[0-9]+/$"  listregex="" depth="1" description="mtime movie detail" mark="mtime movie detail" listcycle="7200" cycle="7000" spider_freq="2" page_load_max_wait="200" creator="zhangkun" load_img="true" lastupdate="2014-12-31 17:42:43.0" task_locked="false"  buffer_count="1" />
+        <service_task_info task_id="119" seed="http://10.134.14.117/seed/root/task-119/maoyan_short_review_seed" regex="^http://m.maoyan.com/#type=movies$"  listregex="" depth="0" description="maoyan short review" mark="maoyan short review" listcycle="3600" cycle="3500" spider_freq="2" page_load_max_wait="200" creator="zhangkun" load_img="true" lastupdate="2014-12-31 17:42:43.0" task_locked="false"  buffer_count="1" />
+        <service_task_info task_id="120" seed="http://10.134.14.117/seed/root/task-119/maoyan_short_review_seed" regex="^http://m.maoyan.com/movie/[0-9]+/comments._v_=yes$"  listregex="^http://m.maoyan.com/movie/[0-9]+._v_=yes$" depth="2" description="maoyan review" mark="maoyan review" listcycle="7200" cycle="7000" spider_freq="2" page_load_max_wait="200" creator="zhangkun" load_img="true" lastupdate="2014-12-31 17:42:43.0" task_locked="false"  buffer_count="1" />
+ <!--       
+        <service_task_info task_id="2" seed="http://10.134.14.117/seed/root/service_app/dianping_restaurant_list_seed" regex="^http://www.dianping.com/search/category/[0-9]+/10/[gcr0-9]+p[0-9]+(.*?)$"  listregex="" depth="100" description="dianping restaurant list" mark="dianping restaurant list" listcycle="2592000" cycle="2590000" spider_freq="5" page_load_max_wait="200" creator="zhangkun" load_img="true" lastupdate="2014-12-31 17:42:43.0" task_locked="false"  buffer_count="2" />       
+        <service_task_info task_id="3" seed="http://10.134.14.117/seed/root/service_app/dianping_restaurant_shop_seed" regex="^http://www.dianping.com/shop/[0-9]+$"  listregex="" depth="0" description="dianping restaurant shop" mark="dianping restaurant shop" listcycle="8640000000" cycle="8600000000" spider_freq="5" page_load_max_wait="200" creator="zhangkun" load_img="true" lastupdate="2014-12-31 17:42:43.0" task_locked="false"  buffer_count="2" />       
+		<service_task_info task_id="4" seed="http://10.134.14.117/seed/root/service_app/dianping_play_list_seed" regex="^http://www.dianping.com/search/category/[0-9]+/(30|50|35|45)/[gcr0-9]+p[0-9]+(.*?)$"  listregex="" depth="100" description="dianping play list" mark="dianping play list" listcycle="2592000" cycle="2590000" spider_freq="5" page_load_max_wait="200" creator="zhangkun" load_img="true" lastupdate="2014-12-31 17:42:43.0" task_locked="false"  buffer_count="2" />  
+ -->     
+ 
+     <!--   
+
+
+
+
+         <task_info task_id="10" seed="http://10.134.14.117/seed/root/service_app/nuomi_cinema_list_seed" regex="^http://[a-z]+.nuomi.com/cinema/[0-9a-z]+$"  listregex="^http://[a-z]+.nuomi.com/cinema/0-0/sub0d0/cb0-d10000-s0-o-b1-f0-p[0-9]+$" depth="1" description="nuomi movie cinema" mark="nuomi movie cinema" listcycle="1800" cycle="1700" spider_freq="2" page_load_max_wait="200" creator="zhangkun" load_img="true" lastupdate="2014-12-31 17:42:43.0" task_locked="false"  buffer_count="5" />       
+       
+              <task_info task_id="10" seed="http://10.134.14.117/seed/root/service_app/mdianying_baidu_list_seed" regex="^https://mdianying.baidu.com/info/cinema/"  listregex="" depth="0" description="mdianying cinema list" mark="mdianying cinema list" listcycle="7200" cycle="7000" spider_freq="2" page_load_max_wait="200" creator="zhangkun" load_img="true" lastupdate="2014-12-31 17:42:43.0" task_locked="false"  buffer_count="2" />       
+      
+     
+    
+         <task_info task_id="10" seed="http://10.134.14.117/seed/root/service_app/nuomi_cinema_list_seed" regex="^https://mdianying.baidu.com/info/cinema/detail?cinemaId=[0-9]+$"  listregex="" depth="1" description="nuomi movie cinema" mark="nuomi movie cinema" listcycle="1800" cycle="1700" spider_freq="2" page_load_max_wait="200" creator="zhangkun" load_img="true" lastupdate="2014-12-31 17:42:43.0" task_locked="false"  buffer_count="5" />       
+       
+
+        <task_info task_id="4" seed="http://10.134.14.117/seed/root/task-3/dianping_food_url_seed" regex="^http://www.dianping.com/shop/[0-9]+$"  listregex="^http://www.dianping.com/search/category/6/10/g[0-9]+r1699(p[0-9]+.*)*$" depth="1" description="ServiceApp Dianping_Play Detail" mark="ServiceApp Dianping_Play Detail" listcycle="3600" cycle="100000000" spider_freq="3" page_load_max_wait="200" try_count="2" try_inteval="3" creator="zhangkun" load_img="true" lastupdate="2014-12-31 17:42:43.0" task_locked="false" />
+        <task_info task_id="2" seed="http://10.134.14.117/seed/root/task-118/mtime_movie_detail_seed" regex="^http://movie.mtime.com/[0-9]+/$"  listregex="" depth="1" description="mtime movie" mark="mtime movie" listcycle="3600" cycle="100000000" spider_freq="2" page_load_max_wait="200" try_count="2" try_inteval="3" creator="zhangkun" load_img="true" lastupdate="2014-12-31 17:42:43.0" task_locked="false" />
+                    		
+
+    
+    	<task_info task_id="1" seed="http://10.134.14.117/seed/root/task-1/0303.hot.360" regex="http[s]*://www.(baidu|sogou|so).com/"  listregex="" depth="0" description="baidu detail" mark="baidu" listcycle="2000000000" cycle="100000000" spider_freq="2" page_load_max_wait="200" try_count="2" try_inteval="3" creator="zhangkun" load_img="true" lastupdate="2014-12-31 17:42:43.0" task_locked="false" />
+ 	
+ 
+ 	<task_info task_id="1" seed="http://bj.lianjia.com/chengjiao/" regex="http://bj.lianjia.com/chengjiao/pg[0-9]*"  listregex="" depth="2" description="链家数据" mark="房地产" listcycle="2" cycle="100000" spider_freq="0.5" page_load_max_wait="200" try_count="5" try_inteval="0.2" creator="zhangkun" load_img="true" lastupdate="2014-12-31 17:42:43.0" task_locked="false" />
+ 	<task_info task_id="2" seed="http://item.jd.com/1352940.html" regex="http://item.jd.com/[0-9]*.html"  listregex="" depth="2" description="京东" mark="电子商务" listcycle="5" cycle="100000" spider_freq="0.5" page_load_max_wait="200" try_count="5" try_inteval="0.2" creator="zhangkun" load_img="true" lastupdate="2014-12-31 17:42:43.0" task_locked="false" />
+ 	<task_info task_id="3" seed="http://item.jd.com/1352941.html" regex="http://item.jd.com/[0-9]*.html"  listregex="" depth="2" description="京东" mark="电子商务" cycle="0" spider_freq="0.5" page_load_max_wait="200" try_count="5" try_inteval="0.2" creator="zhangkun" lastupdate="2014-12-31 17:42:43.0" task_locked="false" /> 	
+ 	<task_info task_id="4" seed="http://item.jd.com/1352942.html" regex="http://item.jd.com/[0-9]*.html"  listregex="" depth="2" description="京东" mark="电子商务" cycle="0" spider_freq="0.5" page_load_max_wait="200" try_count="5" try_inteval="0.2" creator="zhangkun" lastupdate="2014-12-31 17:42:43.0" task_locked="false" /> 	
+ 	<task_info task_id="5" seed="http://item.jd.com/1352943.html" regex="http://item.jd.com/[0-9]*.html"  listregex="" depth="2" description="京东" mark="电子商务" cycle="0" spider_freq="0.5" page_load_max_wait="200" try_count="5" try_inteval="0.2" creator="zhangkun" lastupdate="2014-12-31 17:42:43.0" task_locked="false" /> 	
+ 	<task_info task_id="6" seed="http://item.jd.com/1352944.html" regex="http://item.jd.com/[0-9]*.html"  listregex="" depth="2" description="京东" mark="电子商务" cycle="0" spider_freq="0.5" page_load_max_wait="200" try_count="5" try_inteval="0.2" creator="zhangkun" lastupdate="2014-12-31 17:42:43.0" task_locked="false" /> 	
+ 	<task_info task_id="7" seed="http://item.jd.com/1352945.html" regex="http://item.jd.com/[0-9]*.html"  listregex="" depth="2" description="京东" mark="电子商务" cycle="0" spider_freq="0.5" page_load_max_wait="200" try_count="5" try_inteval="0.2" creator="zhangkun" lastupdate="2014-12-31 17:42:43.0" task_locked="false" /> 	
+ 	<task_info task_id="8" seed="http://item.jd.com/1352946.html" regex="http://item.jd.com/[0-9]*.html"  listregex="" depth="2" description="京东" mark="电子商务" cycle="0" spider_freq="0.5" page_load_max_wait="200" try_count="5" try_inteval="0.2" creator="zhangkun" lastupdate="2014-12-31 17:42:43.0" task_locked="false" /> 	
+ 	<task_info task_id="9" seed="http://item.jd.com/1352947.html" regex="http://item.jd.com/[0-9]*.html"  listregex="" depth="2" description="京东" mark="电子商务" cycle="0" spider_freq="0.5" page_load_max_wait="200" try_count="5" try_inteval="0.2" creator="zhangkun" lastupdate="2014-12-31 17:42:43.0" task_locked="false" /> 	
+ 	<task_info task_id="10" seed="http://item.jd.com/1352948.html" regex="http://item.jd.com/[0-9]*.html"  listregex="" depth="2" description="京东" mark="电子商务" cycle="0" spider_freq="0.5" page_load_max_wait="200" try_count="5" try_inteval="0.2" creator="zhangkun" lastupdate="2014-12-31 17:42:43.0" task_locked="false" /> 	
+ 	<task_info task_id="11" seed="http://item.jd.com/1352949.html" regex="http://item.jd.com/[0-9]*.html"  listregex="" depth="2" description="京东" mark="电子商务" cycle="0" spider_freq="0.5" page_load_max_wait="200" try_count="5" try_inteval="0.2" creator="zhangkun" lastupdate="2014-12-31 17:42:43.0" task_locked="false" /> 	
+ 	 -->
+</dataset>
+ 

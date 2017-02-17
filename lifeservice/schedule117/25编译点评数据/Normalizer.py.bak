@@ -1,0 +1,195 @@
+#!/bin/python
+#coding=gb2312
+import re
+
+
+# 大众点评的餐馆面包线的归一化类
+class DPCrumbNormlizer:
+	def __init__(self, conf):
+		# 保留背个城市的 商圈 菜系这些数据
+		self.AREA_KEY = 'area'
+		self.CUISINE_KEY = 'cuisine'
+		self.SUB_CUISINE_KEY = 'subcuisine'
+		self.DISTRICT_KEY = 'district'
+
+		self.cityBusinessConf = dict()
+		self.loadConf(conf)
+
+
+	def loadConf(self, conf):
+		for line in open(conf):
+			line = line.strip('\n')
+			segs = line.split('\t')
+			if len(segs) < 2:
+				continue
+			if segs[0] == 'business':
+				if len(segs) < 6:
+					continue
+				city, area, district = segs[1], segs[2], segs[5]
+				if city not in self.cityBusinessConf:
+					cityDict = dict()
+					self.cityBusinessConf[city] = cityDict
+				# 添加 area
+				if self.AREA_KEY not in self.cityBusinessConf[city]:
+					areaList = []
+					self.cityBusinessConf[city][self.AREA_KEY] = areaList
+				if area not in self.cityBusinessConf[city][self.AREA_KEY]:
+					self.cityBusinessConf[city][self.AREA_KEY].append(area)
+				# 添加 district
+				if self.DISTRICT_KEY not in self.cityBusinessConf[city]:
+					districtList = []
+					self.cityBusinessConf[city][self.DISTRICT_KEY] = districtList
+				if district not in self.cityBusinessConf[city][self.DISTRICT_KEY]:
+					self.cityBusinessConf[city][self.DISTRICT_KEY].append(district)
+
+
+			elif segs[0] == 'cook':
+				if len(segs) < 4:
+					continue
+				city, cuisine = segs[1].strip(), segs[3].strip()
+				if city not in self.cityBusinessConf:
+					ciryDict = dict()
+					self.cityBusinessConf[city] = cityDict
+				if self.CUISINE_KEY not in self.cityBusinessConf[city]:
+					cuisineList = []
+					self.cityBusinessConf[city][self.CUISINE_KEY] = cuisineList
+				# 添加 cuisine
+				if cuisine not in self.cityBusinessConf[city][self.CUISINE_KEY]:
+					self.cityBusinessConf[city][self.CUISINE_KEY].append(cuisine)
+		
+		#print ','.join(self.cityBusinessConf[city][self.CUISINE_KEY])
+
+
+	def normlize(self, crumbKey, crumbVal):
+		#print crumbVal
+		normKVDict = dict()
+		normKVDict[crumbKey] = crumbVal
+		valSegs = crumbVal.split('>')
+		if valSegs[0].find('餐厅') != '':
+			city = re.sub('餐厅', '', valSegs[0].strip())
+			if city not in self.cityBusinessConf:
+				return normKVDict
+			normKVDict['city'] = city
+		cityConfMap = self.cityBusinessConf[city]
+		
+		# set default value
+		normKVDict[self.AREA_KEY] = '其他'
+		normKVDict[self.CUISINE_KEY] = '其他'
+		normKVDict[self.DISTRICT_KEY] = '其他'
+		
+		cuisineIdx = -1
+		for idx in xrange(1, len(valSegs)):
+			val = valSegs[idx].strip()
+			if val in cityConfMap[self.AREA_KEY]:
+				normKVDict[self.AREA_KEY] = val	
+			elif val in cityConfMap[self.CUISINE_KEY]:
+				normKVDict[self.CUISINE_KEY] = val	
+				cuisineIdx = idx
+			elif val in cityConfMap[self.DISTRICT_KEY]:
+				normKVDict[self.DISTRICT_KEY] = val	
+		# 如果菜系的idx 与 店铺的idx 相差2 说明有子菜系在中间
+		if cuisineIdx == len(valSegs) -3:
+			normKVDict[self.SUB_CUISINE_KEY] = valSegs[cuisineIdx + 1].strip()
+	
+		#for key in normKVDict:
+		#	print key, normKVDict[key]
+		#print '=============='
+		
+		return normKVDict
+		
+
+
+
+
+# 归一化大众点评的面包线，抽取城市，商区，菜系字段
+# e.g. 北京餐厅 > 湖北菜 > 九头鸟酒家
+# e.g. 北京餐厅 > 西城区 > 清真菜 > 紫光园(西直门店)
+# e.g. 北京餐厅 > 西城区 > 广外大街 > 新疆菜 > 新疆兵团食府
+# e.g. 北京餐厅 > 朝阳区 > 对外经贸 > 川菜 > 川菜/家常菜 > 兄弟川菜(元大都店)
+def normDianpingFoodBreadCrumb(key, val):
+	normKVDict = dict()
+	normKVDict[key] = val
+	if len(key) == 0 or len(val) == 0:
+		return normKVDict
+	valSegs = val.split('>')
+	if valSegs[0].find('餐厅') != '':
+		city = re.sub('餐厅', '', valSegs[0].strip())
+		normKVDict['city'] = city
+	if len(valSegs) == 4:
+		normKVDict['cuisine'] = valSegs[2].strip()
+	if len(valSegs) == 6:
+		normKVDict['subcuisine'] = valSegs[4].strip()
+	if len(valSegs) >= 4:
+		normKVDict['area'] = valSegs[1].strip()
+	if len(valSegs) >= 5:
+		normKVDict['district'] = valSegs[2].strip()
+		normKVDict['cuisine'] = valSegs[3].strip()
+	return normKVDict
+
+
+
+# 归一化大众点评网的电话
+# 处理错误的电话号码  e.g. http://www.dianping.com/shop/23588151
+def normDianpingFoodTel(key, val):
+	normKVDict = dict()
+	if len(key) == 0 or len(val) == 0:
+		return normKVDict
+	val = re.sub('-', '', val)
+	normalVal = []
+	for tel in val.split(','):
+		if len(tel) < 7:
+			continue
+		if tel not in normalVal:
+			normalVal.append(tel)
+	normKVDict[key] = ','.join(normalVal)
+	return normKVDict
+	
+
+
+
+# 归一化大众点评的tags, commentSummary
+# e.g. 无线上网(8),可以刷卡(8),情侣约会(4),免费停车(4),朋友聚餐(4),休闲小憩(3),家庭聚会(2)
+def	normTag(key, val):
+	normKVDict = dict()
+	if len(key) == 0 or len(val) == 0:
+		return normKVDict
+	val = re.sub('\)', '', val)
+	val = re.sub('\(', '@@@', val)
+	normKVDict[key] = val
+	return normKVDict
+
+
+
+
+
+# 归一化大众点评的推荐菜字段
+# 归一化为 foodUrl@@@foodName@@@recomCnt@@@foodPhoto@@@price
+def normRecommFood(key, val):
+	normKVDict = dict()
+	if len(key) == 0 or len(val) == 0:
+		return normKVDict
+	# 看产品需求，也可以选择过滤没有图片的数据
+	valSegs = val.split('@@@')
+	if len(valSegs) == 3:
+		val = val + '@@@@@@'
+	normKVDict[key] = val
+	return normKVDict
+
+
+
+def testNormalFun():
+	print normDianpingFoodTel('tel', '15040380068,010-')
+
+
+def testDPCrumbNormlizer():
+	conf = "/search/liubing/spiderTask/result/dianping/task-78/1447142745681.gbk"
+	testFile = '/search/zhangk/Fuwu/Source/test.dat'
+	
+	normlizer = DPCrumbNormlizer(conf)
+	for line in open(testFile):
+		#print line
+		segs = line.strip('\n').split('\t')
+		key, value = segs[0], segs[1]
+		normlizer.normlize(key, value)
+
+

@@ -1,0 +1,16 @@
+PATH=/usr/bin:/bin:/usr/local/sbin
+
+10 11 * * * /sbin/clock -w
+50 17 * * * /sbin/clock -w
+
+#10 15 * * * cd /search/data2/VREvaluation && sh build.sh 1>std 2>err
+#15 8,12,16 * * * cd /search/data2/VREvaluation && sh build.sh 1>>std 2>>err
+
+#add by xieyubin
+00 13 * * * cd /search/fangzi/xieyubin/get_engine; sh scpIP.sh 1>log.scpip 2>log.scpip
+00 11 * * * cd /search/fangzi/xieyubin/get_engine; sh -x gen_crawl_result.sh > log.gen_crawl_result 2>&1
+#00 17 * * 2 cd /search/fangzi/xieyubin/get_engine; sh -x deal_all_flow_hot.sh > log.deal_all_flow_hot 2>&1
+
+#add by kangq  
+00 02 */2 * * cd /search/kangq/dianping; sh -x batch.sh 1>tmp/std 2>tmp/err &
+00 17 * * * cd /search/kangq/dianping; sh -x batch_play.sh 1>tmp/std.play 2>tmp/err.play &

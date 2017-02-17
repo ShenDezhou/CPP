@@ -1,0 +1,57 @@
+#!/bin/python
+#coding=gb2312
+
+import sys
+
+input = '/fuwu/Merger/Output/movie/cinema_movie_rel.table'
+if len(sys.argv) > 1:
+	input = sys.argv[1]
+
+
+sourceTingMap = dict()
+
+for line in open(input):
+	segs = line.strip('\n').decode('gb2312', 'ignore').split('\t')
+	if len(segs) < 10:
+		continue
+	cid, mid, source, date = segs[1:5]
+	#id      cinemaid        movieid source  date    week    start   end     price   room    language        dimensional     seat
+	time, ting = segs[6], segs[9]
+
+	key = (cid, mid, date, time)
+	value = (cid, source, ting)
+	if key not in sourceTingMap:
+		sourceTingMap[key] = []
+	sourceTingMap[key].append(value)
+
+for key in sourceTingMap:
+	tingMap = dict()
+	cid = ''
+	for cid, source, ting in sourceTingMap[key]:
+		if ting not in tingMap:
+			tingMap[ting] = []
+		if source not in tingMap[ting]:
+			tingMap[ting].append(source)
+
+	# 如果一致
+	if len(tingMap) == 1:
+		continue
+	#for ting in tingMap:
+	#	print (cid + "\t" + ting + "\t" + "\t".join(tingMap[ting])).encode('gb2312', 'ignore')
+	
+	# 糯米的，1的都需要映射
+	tingName, tingCount = '', 0
+	for ting in tingMap:
+		if ting.find('..') != -1:
+			continue
+		name, count = ting, len(tingMap[ting])
+		if count > tingCount:
+			tingName, tingCount = name, count
+	# 生成映射
+	for ting in tingMap:
+		if ting == tingName:
+			continue
+		for source in tingMap[ting]:	
+			print ('%s\t%s\t%s\t%s' % (cid, source,ting, tingName)).encode('gb2312', 'ignore')
+
+

@@ -1,0 +1,60 @@
+# ==== BEGIN 服务搜索 定时任务
+
+# 团购数据接入
+# 1. 大众点评团购数据接入
+5 5 * * * cd /fuwu/Manage/Schedule; sh schedule_get_dianping_all_tuan.sh
+30 6 * * * cd /fuwu/Manage/Schedule; sh schedule_get_dianping_daily_tuan.sh 
+5 7,15,23 * * * cd /fuwu/Manage/Schedule; sh schedule_get_dianping_update_tuan.sh 
+# 接入110线下抓取的大众点评的优惠买单和团购信息
+5 3 * * * cd /fuwu/Source/Cooperation/Tuan/; sh bin/create_dianping_tuan_from_kq.sh
+
+
+# 2. 百度糯米团购数据接入
+30 4 * * * cd /fuwu/Manage/Schedule; sh schedule_get_nuomi_tuan.sh
+
+# 3. 足疗按摩的团购数据接入
+30 5 * * * cd /fuwu/Manage/Schedule; sh schedule_get_foot_tuan.sh
+
+# 每天合并一次团购数据，put到线上
+5 18 * * * cd /fuwu/Manage/Schedule; sh schedule_merge_tuan.sh
+
+# 索引制作
+#5 2 * * * cd /fuwu/Manage/Schedule; sh schedule_index_tuan.sh
+
+30 4 * * * cd /fuwu/Manage/Schedule; sh schedule_index_baseinfo.sh 
+
+
+# 电影类基础数据制作
+#30 3 * * * cd /fuwu/Manage/Schedule; sh schedule_build_movie_data.sh
+
+# 抓取糯米网电影，近三个小时
+30 2,21 * * * cd /fuwu/Spider/Nuomi/; sh bin/get_nuomi_cinema_movie.sh 1>>movie.std 2>>movie.err
+
+# 电影类第三方数据接入, 接入完毕后进行数据制作
+30 2,8,14 * * * cd /fuwu/Manage/Schedule; sh schedule_get_movie_threepart_info.sh 1>>logs/threepart.std 2>>logs/threepart.err
+
+# 美食类团购数据接入
+#10 7 * * * cd /fuwu/Manage/Schedule; sh schedule_get_restaurant_tuan.sh 1>logs/restaurant_tuan.std 2>logs/restaurant_tuan.err
+
+# 休闲类发现频道数据接入
+#30 6 * * * cd /fuwu/Manage/Schedule; sh schedule_get_play_find_channel.sh
+
+# 电影类票房数据接入
+10 1,6,12,18 * * * cd /fuwu/Manage/Schedule; sh schedule_get_movie_allbox.sh
+
+
+# 监控
+3 9,17 * * * cd /fuwu/Manage/Monitor/; sh -x bin/build_serviceapp_monitor.sh
+
+# 数据基础备份
+30 22 * * * cd /fuwu/Manage/Schedule/; sh schedule_backup_service_data.sh 
+
+# 定期清理一下电影抓取任务
+0 21 * * 1,4 cd /fuwu/Manage/Schedule/; sh schedule_clean_movie_task.sh
+
+# 定期生成在线urls文件，推送到110机器上，用于下次抓取数据合并使用
+10 23 * * 2,4,6 cd /fuwu/DataCenter/; sh bin/get_dianping_online_urls.sh
+
+
+# === END 服务搜索 定时任务
+
