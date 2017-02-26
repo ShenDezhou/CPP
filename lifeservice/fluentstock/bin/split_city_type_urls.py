@@ -47,7 +47,7 @@ def split_url_use_crumb(input, output, inCode='gb2312'):
 	lines = 0
 	for line in open(input):
 		lines += 1
-		if lines % 100000 == 0:
+		if lines % 1000 == 0:
 			print 'handle %d' % lines
 
 
@@ -65,10 +65,11 @@ def split_url_use_crumb(input, output, inCode='gb2312'):
 			if major.find(_category) != -1 or crumb.find(_category) != -1:
 				category = _category
 				break
-		if not category in crumbTypeMap:
-			continue
-		if city in cityNameMap:
-			write_line(fd, '%s\t%s\t%s\t%s\t%s' % (url, city, cityNameMap[city], category, crumbTypeMap[category]), inCode)
+		#if not category in crumbTypeMap:
+		#	crumbTypeMap[category] = ""
+		#if not city in cityNameMap:
+		#	cityNameMap[city] = ""
+		write_line(fd, '%s\t%s\t%s\t%s\t%s' % (url, city, cityNameMap.get(city), category, crumbTypeMap.get(category)), inCode)
 		
 		# if crumb == 'null':
 		# 	continue
