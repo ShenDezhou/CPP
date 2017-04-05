@@ -1,0 +1,110 @@
+var timeoutPid=null;
+var result=[];
+
+function main()
+{
+	clickFunc();
+	timeoutPid=window.setTimeout(parseFuncLoop,1);
+}
+
+function clickFunc(){
+	
+	//$(".pager_v1").find("a").each(function(){this.click()});
+	$(".nextpage").find("a").each(function(){this.click()});
+}
+
+
+function normalStr(str) {
+    return str.replace(/[\r\n]/g, '').replace(/\s+/g,' ');
+}
+
+function getGooglePoi(mapUri) {
+    //&center=26.2142925262451,127.682273864746&
+    matchGroup = mapUri.match(/&center=([0-9\.,]+)&/);
+    if (matchGroup.length > 1) {
+        return matchGroup[1];
+    }
+    return mapUri;
+}
+
+
+function parseFunc(){
+	var title = $('body > div.content.cf > div.breadbar_v1.cf > ul > li:last > h1').text();
+	var photo = $("#detailCarousel div.item > a > img").attr('src');
+	var addrInfo = $('.s_sight_infor > ul.s_sight_in_list > li').text();
+	var businessDate = $('.s_sight_infor > dl.s_sight_in_list > dd').text();
+    var breadcrumb = $('.breadbar_v1.cf > ul > li > a,i[class="icon_gt"]').text();	
+    var description = $('.toggle_s > div[itemprop="description"]').text();
+    var googleMapUri = $('.s_sight_check_infor > div.s_sight_map > a > img').attr('src');
+	
+	result.push('title\t' + title);
+    result.push('photo\t' + photo);
+    result.push('addrInfo\t' + normalStr(addrInfo));
+    result.push('busiessDate\t' + normalStr(businessDate));
+    result.push('breadcrumb\t' + normalStr(breadcrumb));
+    result.push('description\t' + normalStr(description));
+    result.push('poi\t' + getGooglePoi(googleMapUri));
+    
+    // user comments
+    $('.comment_single').each(
+        function(){
+            var userPhoto = $(this).find('.userimg > a > img').attr('src');
+            var userName = $(this).find('.ellipsis > a').text();
+			var commentStar = $(this).find('.title.cf span.starlist > span').attr('style');
+			var commentDetailStar = $(this).find('.title.cf span.sblockline').text();
+            var comment = $(this).find('.main_con > span.heightbox').text();
+
+            var photoArray = [];
+            var photos = $(this).find('.comment_piclist.cf > a').each(
+                function() {
+                    var photo = $.trim($(this).find('img').attr('src'));
+                    photoArray.push(photo);
+                }
+            );
+            var commentDate = $(this).find('.time_line > em').text();
+            
+            result.push('userName\t' + userName);
+            result.push('userPhoto\t' + userPhoto);
+			result.push('commentStar\t' + commentStar);
+            result.push('commentDetailStar\t' + normalStr(commentDetailStar));
+            result.push('comment\t' + comment);
+            result.push('commentDate\t' + commentDate);
+            if (photoArray.length > 0) {
+                result.push('photo\t' + photoArray.toString());
+            }
+        }
+    );
+    
+    
+    
+    
+	//
+	/*
+	$('.heightbox').each(
+		function() {
+			result.push($(this).text());
+		}
+	
+	);
+	
+	$(".p-comment").each(
+		function(){
+			result.push($(this).text());
+		}
+	);
+	*/
+}
+
+function parseFuncLoop(){
+	if(result.length===0)
+	{
+		window.clearTimeout(timeoutPid);
+		timeoutPid=window.setTimeout(parseFuncLoop,500);
+	}
+	else
+	{
+		sendMessage(result);
+	}
+	parseFunc();
+}
+

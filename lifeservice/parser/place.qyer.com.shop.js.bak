@@ -1,0 +1,148 @@
+var timeoutPid=null;
+var result=[];
+
+function main()
+{
+    parseFunc();
+    window.setTimeout(clickFunc,500);
+}
+
+function clickFunc(){
+    // get every page's comments
+    getAllComments();
+    var nextPage = $('.ui_page_item.ui_page_next');
+    if (nextPage.length > 0) {
+        nextPage[0].click();
+		window.setTimeout(clickFunc, 500);
+		return;
+    }
+    sendMessage(result);
+}
+
+
+function getAllComments() {
+    // user comments
+    $('#commentlist > li').each(
+        function(){
+            var userPhoto = $(this).find('.largeavatar > img').attr('src');
+            var userName = $(this).find('.largeavatar > span').text();
+			var commentStar = $(this).find('.comment.clearfix span.poiDet-stars > em.singlestar.full').length;
+			var commentDetailStar = $(this).find('.title.cf span.sblockline').text();
+            var comment = $.trim($(this).find('.comment.clearfix > .content').text());
+
+            var photoArray = [];
+            var photos = $(this).find('.comment.clearfix > .album > span').each(
+                function() {
+                    var photo = $.trim($(this).find('a > img').attr('datalarge'));
+                    photoArray.push(photo);
+                }
+            );
+            var commentDate = $.trim($(this).find('.comment.clearfix a.date').text());
+            
+            result.push('userName\t' + userName);
+            result.push('userPhoto\t' + userPhoto);
+			result.push('commentStar\t' + commentStar);
+            result.push('comment\t' + comment);
+            result.push('commentDate\t' + commentDate);
+            if (photoArray.length > 0) {
+                result.push('commentPhoto\t' + photoArray.toString());
+            }
+        }
+    );    
+}
+
+
+
+function normalStr(str) {
+    return str.replace(/[\r\n]/g, '').replace(/\s+/g,' ');
+}
+
+
+function normalBreadCrumb(breadCrumb) {
+    breadCrumb = normalStr(breadCrumb);
+    //breadCrumb = breadCrumb.replace(/\>目的地\>/g, "");
+    return breadCrumb; 
+}
+
+
+function getGooglePoi(mapUri) {
+    //png|26.215769,127.687141&
+    matchGroup = mapUri.match(/png\|([0-9\.,]+)&/);
+    if (matchGroup && matchGroup.length > 1) {
+        return matchGroup[1];
+    }
+    return mapUri;
+}
+
+
+function parseFunc(){
+    var url = window.location.href;
+    var enName = $.trim($('.poiDet-largeTit > h1.en').text());
+    var cnName = $.trim($('.poiDet-largeTit > h1.cn').text());
+	var photo = $('.poiDet-placeinfo p.coverphoto > img').attr('src');
+	
+	var rank = $('li.rank > span').text().replace(/[第名]/g, "");
+	var address = $.trim($('.poiDet-tips > li > span.title:contains("地址")').nextAll().text());
+    var description = $.trim($('.poiDet-detail').text());
+    var tips = $.trim($('.poiDet-tipContent > div.content').text());
+    var breadcrumb = $('.qyer_head_crumb > span.text.drop, span.space').text();	
+
+    var googleMapUri = $('.map > img').attr('src');
+	
+	result.push('url\t' + url);
+	result.push('title\t' + cnName);
+	result.push('enName\t' + enName);
+    result.push('photo\t' + photo);
+    //result.push('breadcrumb\t' + normalBreadCrumb(breadcrumb) + cnName);
+    result.push('address\t' + normalStr(address));
+    result.push('rank\t' + rank);
+    result.push('description\t' + normalStr(description));
+    result.push('tips\t' + normalStr(tips));
+    result.push('poi\t' + getGooglePoi(googleMapUri));
+
+/*    
+    // user comments
+    $('#commentlist > li').each(
+        function(){
+            var userPhoto = $(this).find('.largeavatar > img').attr('src');
+            var userName = $(this).find('.largeavatar > span').text();
+			var commentStar = $(this).find('.comment.clearfix span.poiDet-stars > em.singlestar.full').length;
+			var commentDetailStar = $(this).find('.title.cf span.sblockline').text();
+            var comment = $.trim($(this).find('.comment.clearfix > .content').text());
+
+            var photoArray = [];
+            var photos = $(this).find('.comment.clearfix > .album > span').each(
+                function() {
+                    var photo = $.trim($(this).find('a > img').attr('datalarge'));
+                    photoArray.push(photo);
+                }
+            );
+            var commentDate = $.trim($(this).find('.comment.clearfix a.date').text());
+            
+            result.push('userName\t' + userName);
+            result.push('userPhoto\t' + userPhoto);
+			result.push('commentStar\t' + commentStar);
+            result.push('comment\t' + comment);
+            result.push('commentDate\t' + commentDate);
+            if (photoArray.length > 0) {
+                result.push('photo\t' + photoArray.toString());
+            }
+        }
+    );
+*/
+    
+}
+
+function parseFuncLoop(){
+	if(result.length===0)
+	{
+		window.clearTimeout(timeoutPid);
+		timeoutPid=window.setTimeout(parseFuncLoop,500);
+	}
+	else
+	{
+		sendMessage(result);
+	}
+	parseFunc();
+}
+

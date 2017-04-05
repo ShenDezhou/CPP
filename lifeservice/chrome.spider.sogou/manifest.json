@@ -1,0 +1,27 @@
+{
+   "background": {
+      "page": "background.html"
+   },
+   "devtools_page": "devtools.html",
+   "browser_action": {
+      "default_icon": "icon16.png",
+      "default_popup": "popup.html",
+      "default_title": "抓取分析器"
+   },
+   "description": "抓取分析器",
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon16.png",
+      "48": "icon48.png"
+   },
+   "web_accessible_resources":["injectscript.js"],
+   "content_scripts":[{
+		"matches":["http://*/*", "https://*/*"],
+		"js":["jquery-2.0.0.min.js","content_scripts.js"],
+		"run_at":"document_end"
+	}],
+   "manifest_version" : 2,
+   "name": "抓取分析器",
+   "permissions": [ "tabs","activeTab","webRequest", "webRequestBlocking", "debugger","http://*/*", "https://*/*" ,"storage"],
+   "version": "0.0.1"
+}

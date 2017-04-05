@@ -1,0 +1,113 @@
+<html>
+<head>
+<title id="description"></title>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<script type="text/javascript" src="results.js"></script>
+
+<style type="text/css">
+  body {
+    font-family: sans-serif
+  }
+  #resultsTable {
+    border-spacing: 1px;
+    margin: 15px;
+    width: 99%;
+    table-layout: fixed;
+  }
+  #resultsTable th {
+    text-align: left;
+    background-color: #d0d0d0;
+  }
+  #resultsTable td, #resultsTable th {
+    font-size: 9pt;
+    padding: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  #resultsTable td.x0 {
+    color: #c00;
+  }
+  #resultsTable tr:hover {
+    background: #ffa;
+  }
+  #startingOn, #restrictTo {
+    font-family: monospace;
+  }
+</style>
+</head>
+<body>
+<img src="icon128.png" align="right"/>
+<h1>抓取状态</h1>
+
+<form>
+<input type="button" id="pauseSpider" value="暂停任务"/>
+<input type="button" id="stopSpider" value="停止任务"/>
+</form>
+
+<table>
+  <tr>
+    <td>任务ID:</td>
+    <td id="taskid"></td>
+  </tr>
+  <tr>
+    <td>种子页:</td>
+    <td id="startingOn"></td>
+  </tr>
+  <tr>
+    <td>正则表达式:</td>
+    <td id="restrictTo"></td>
+  </tr>
+  <tr>
+    <td>列表页正则:</td>
+    <td id="listRestrict"></td>
+  </tr>
+  <tr>
+    <td>队列长度:</td>
+    <td id="queue">0</td>
+  </tr>
+  <tr>
+    <td>状态:</td>
+    <td id="status">Initializing...</td>
+  </tr>
+  <tr>
+    <td>存储地址:</td>
+    <td id="store"></td>
+    </tr>
+</table>
+
+
+<table id="resultsTable">
+  <colgroup>
+    <col style="width: 32%">
+    <col style="width: 32%">
+    <col style="width: 32%">
+  </colgroup>
+  <thead>
+    <tr>
+      <th class="nocase">URL</th>
+      <th class="nocase">状态</th>
+      <th class="nocase">Referrer</th>
+    </tr>
+  </thead>
+  <tbody id="resultbody">
+  </tbody>
+</table>
+
+<table style="display:none" id="verboseTable">
+  <colgroup>
+    <col style="width: 48%">
+    <col style="width: 48%">
+  </colgroup>
+  <thead>
+    <tr>
+      <th class="nocase">Referrer</th>
+      <th class="nocase">Found</th>
+    </tr>
+  </thead>
+  <tbody id="verbosebody">
+  </tbody>
+</table>
+
+</body>
+</html>

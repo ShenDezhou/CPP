@@ -1,0 +1,47 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script type="text/javascript" src="jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="popup.js"></script>
+    <style>
+        .main{
+            font-size:12px;
+        }
+        .main th, .main td{
+            font-size:13px;
+            white-space: nowrap;
+            text-align: left;
+            vertical-align: top;
+            padding:5px;
+        }
+
+        .main td label{
+            font-size: 10px;
+            white-space: nowrap;
+        }
+        #seleted-tasks-table{
+            width:100%;
+        }
+        td.hide,th.hide{
+            display:none;
+        }
+        button.authorized { background: green }
+
+    </style>
+</head>
+<body>
+<div class="main">
+    <form>
+        <table>
+            <tr>
+                <td>
+                    <input id="startRun" name="start-type" type="radio"/><label for="startRun">立刻启动</label>
+                    <input id="notRun" name="start-type" type="radio"/><label for="notRun">不启动</label>
+                </td>
+             </tr>
+         </table>
+    </form>
+</div>
+</body>
+</html>

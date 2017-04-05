@@ -1,0 +1,173 @@
+var result=[];
+
+function main()
+{
+    var url = window.location.href;
+    var fetchTime = formatDate();
+    pushResult('url', url);
+    pushResult('fetch time', fetchTime);
+    
+    
+    cinemaName = $.trim($('li.crumb-last').text());
+    movieArray = $('a.j-img-wrapper');
+    setTimeout(parseEveryMovie(movieArray, 0), 1*1000);
+}
+
+// 点击每一个影片
+function parseEveryMovie(movieArray, idx) {
+    if (idx >= movieArray.length) {
+        return;
+    }
+
+    node = movieArray.eq(idx);
+    
+    node[0].click();
+    
+    
+    //movieName = $.trim(node.find('span>b').text());
+    movieName = $.trim(node.find('img').attr('alt'));
+    
+    
+    //result.push(movieName);
+        
+    dateArray = [];
+    // 排片日期     后天03.27(周日)
+    $('div.w-choose-list dd').each(function(){
+        dateStr = $.trim($(this).text());
+        dateArray.push(dateStr);
+    });
+        
+    // 排片信息
+    playArray = [];
+    $('div.w-choose-list div.list').each(function(){
+        playDetailArray = []
+        $(this).find('tr').each(function(){
+            //info = $.trim($(this).text());
+            info = parseEveryRow($(this));
+            if (info.length > 0) {
+                playDetailArray.push(info);
+            }
+        });
+        if (playDetailArray.length > 0) {
+            playArray.push(playDetailArray);
+        }
+    });
+        
+    // 对每一部电影发送一次请求
+    if (dateArray.length === playArray.length) {
+        for (var i=0; i<dateArray.length; i++) {
+            date = dateArray[i];
+            date = normalDate(date);
+            playDetailArray = playArray[i];
+            for (var j=0; j<playDetailArray.length; ++j) {
+                info = playDetailArray[j];
+                //pushResult(i + " info: ", info + "  .");
+                line = cinemaName + '\t' + movieName + '\t' + date + '\t' + info;
+                result.push(line);
+            }
+        }
+            
+    }
+    
+    //sendMessage(result);
+    sendResult(result);
+    result = [];
+    
+    // 递归解析下一个电影
+    setTimeout(parseEveryMovie(movieArray, idx+1), 1*1000);
+}
+
+
+// 解析每场次的信息
+function parseEveryRow(rowObj) {
+    rowInfo = "";
+    timeRow=0, languageRow=1, hallRow=2, priceRow=3;
+    tds = rowObj.find('td');
+    if (tds.length > priceRow) {
+        
+        time = normalTime(normalStr(tds.eq(timeRow).text()));
+        language = normalLanguage(normalStr(tds.eq(languageRow).text()));
+        hall = $.trim(tds.eq(hallRow).text());
+        price = normalPrice(normalStr(tds.eq(priceRow).text()));
+        
+
+        //pushResult('hall', hall);
+        //pushResult('price', price);
+        if (time.length > 0 && hall.length > 0 && price.length > 0) {
+            rowInfo = time + '\t' + language + '\t' + hall + '\t' + price;
+        }
+    }
+    
+    return rowInfo;
+}
+
+
+// 归一化日期
+function normalDate(dateStr) {
+    "明天03.26(周六)"	
+    normDate = "";
+    dateRegex = "([0-9]+\.[0-9]+)\\((周.)\\)";
+    matchGroup = dateStr.match(dateRegex);
+    if (matchGroup && matchGroup.length > 2) {
+        normDate = matchGroup[1] + '\t' + matchGroup[2];
+    }
+    
+    return normDate;
+}
+
+// 归一化时间
+function normalTime(timeStr) {
+    startEndTime = "";
+    timeRegex = "([0-9]+:[0-9]+).*?([0-9]+:[0-9]+)";
+    matchGroup = timeStr.match(timeRegex);
+    if (matchGroup && matchGroup.length > 2) {
+        startEndTime = matchGroup[1] + '\t' + matchGroup[2];
+    }
+    
+    return startEndTime;
+}
+
+// 归一化价格
+function normalPrice(price) {
+   // debugger;
+    normPrice = "";
+    priceRegex = "¥([\.0-9]+).*?¥";
+    matchGroup = price.match(priceRegex);
+    if (matchGroup && matchGroup.length > 1) {
+        normPrice = matchGroup[1];
+    }
+    return normPrice;
+}
+
+// 归一化语言。是否3D
+function normalLanguage(language) {
+    normLanguage = '';
+    language = language.replace('/', '\t');
+    if (language.split('/').length == 2) {
+        normLanguage = language;
+    }
+    return normLanguage;
+}
+
+
+
+// 获取当前时间
+function formatDate() {
+    var today = new Date();
+    var dateStr = today.toISOString().substring(0, 10);
+    var timeStr = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    return dateStr + " " + timeStr;
+}
+
+
+function pushResult(key, val) {
+    if (key && key.length>0 && val && val.length>0) {
+        result.push(key + '\t' + val);
+    }
+}
+
+function normalStr(str) {
+    return str.replace(/[\r\n]/g, '').replace(/\s+/g,' ');
+}
+
+

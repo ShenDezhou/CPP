@@ -1,0 +1,3 @@
+env = Environment( CXX = 'ccache g++' )
+Program('trunc', ['remove_tail.cpp'], LIBS=[''], LIBPATH='.', CXXFLAGS=[''])
+

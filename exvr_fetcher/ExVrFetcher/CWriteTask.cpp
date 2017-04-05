@@ -24,6 +24,7 @@ Copyright (c) 2017-2018 Dezhou Shen, Sogou Inc.
 #include <unordered_set>
 #include <sstream>
 #include <algorithm>
+#include <bitset>
 
 #include <libxml/xmlschemas.h>
 #include <libxml/schemasInternals.h>
@@ -601,6 +602,52 @@ size_t PuncNormalize_gchar(gchar_t *str, bool delSpace = false, bool delNumberSi
 
 	return out - str;
 }
+
+// 删除utf8字段串中超过mysql field length=760的字符:
+// 对于英文字符不存在半字截断情况;
+// 对于中文字符，向前查询两个字符，查看是否是UTF8三字符中的，
+// 若是，则一同去掉.
+size_t trunc_cn_utf8(std::string &utf8_str, size_t trunc_remain_size) {
+  int has_trunc = 0;
+  if (utf8_str.size() < trunc_remain_size) {
+    goto trunc_done;
+  }
+  for (size_t i = trunc_remain_size - 2; i < trunc_remain_size; ++i) {
+    std::bitset<8> ch_bitset(utf8_str[i]);
+    if (!ch_bitset.test(7))
+      continue;
+    if (ch_bitset.test(7) && ch_bitset.test(6) && ch_bitset.test(5)) {
+      utf8_str.erase(utf8_str.begin() + i, utf8_str.end());
+      has_trunc = 1;
+      break;
+    }
+  }
+
+  if (!has_trunc) {
+    utf8_str.erase(utf8_str.begin() + trunc_remain_size, utf8_str.end());
+  }
+trunc_done:
+  return utf8_str.size();
+}
+
+// 删除synonym字段长度超过mysql field length=760的字符:
+// 对于;；分割的集合，去掉最后一个截断元素.
+size_t remove_tail(std::string &long_field, size_t trunc_remain_size) {
+  if (long_field.size() > trunc_remain_size) {
+    long_field.erase(long_field.begin() + trunc_remain_size, long_field.end());
+    size_t semicolon = long_field.find_last_of(";");
+    if (semicolon == std::string::npos) {
+      semicolon = long_field.rfind("\xEF\xBC\x9B"/*"；"*/);
+    }
+    if (semicolon != std::string::npos) {
+      long_field.erase(long_field.begin() + semicolon, long_field.end());
+    } else {
+      trunc_cn_utf8(long_field, trunc_remain_size);
+    }
+  }
+  return long_field.size();
+}
+
 
 int CWriteTask::open (void*)
 {
@@ -3114,8 +3161,7 @@ int CWriteTask::process(request_t *req, std::string &xml,
 						SS_DEBUG((LM_ERROR, "CWriteTask::process(%@):"
 									"synonym size bigger than %d\n",
 									this, req->res_id, 760 ));
-						delete sub_req;
-						goto contin;
+						remove_tail(synonym,760);
 					}                           
 				}
 			}
